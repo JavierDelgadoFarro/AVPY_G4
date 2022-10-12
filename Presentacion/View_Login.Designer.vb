@@ -97,9 +97,9 @@ Partial Class View_Login
         Me.Label1.ForeColor = System.Drawing.Color.Silver
         Me.Label1.Location = New System.Drawing.Point(57, 214)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(150, 20)
+        Me.Label1.Size = New System.Drawing.Size(72, 20)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Nombre de Usuario"
+        Me.Label1.Text = "Nombre "
         '
         'Label2
         '
