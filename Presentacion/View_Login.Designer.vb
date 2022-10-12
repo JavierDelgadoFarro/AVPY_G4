@@ -160,7 +160,7 @@ Partial Class View_Login
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Presentacion.My.Resources.Resources.ferreteria_icono
+        Me.PictureBox1.Image = Global.Presentacion.My.Resources.Resources.iconoprincipal
         Me.PictureBox1.Location = New System.Drawing.Point(57, 56)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(198, 132)
