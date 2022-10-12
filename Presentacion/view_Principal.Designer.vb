@@ -185,7 +185,7 @@ Partial Class view_Principal
         Me.Btn_Ventas.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
         Me.Btn_Ventas.Size = New System.Drawing.Size(220, 43)
         Me.Btn_Ventas.TabIndex = 1
-        Me.Btn_Ventas.Text = "Ventas"
+        Me.Btn_Ventas.Text = "Ventas Javier "
         Me.Btn_Ventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Btn_Ventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Btn_Ventas.UseVisualStyleBackColor = True
