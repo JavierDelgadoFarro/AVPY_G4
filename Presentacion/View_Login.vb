@@ -1,6 +1,8 @@
 ﻿'Para que el formulario sea desplazable'
 Imports System.Drawing.Drawing2D
 Imports System.Runtime.InteropServices
+Imports Negocio
+
 Public Class View_Login
 
 #Region "Formulario Login"
@@ -44,12 +46,12 @@ Public Class View_Login
         txt_password.UseSystemPasswordChar = True
     End Sub
 
-    Private Sub Button1_Paint(sender As Object, e As PaintEventArgs) Handles Button1.Paint
+    Private Sub Button1_Paint(sender As Object, e As PaintEventArgs) Handles Btn_Login.Paint
         Dim buttonPath As Drawing2D.GraphicsPath = New Drawing2D.GraphicsPath()
-        Dim myRectangle As Rectangle = Button1.ClientRectangle
+        Dim myRectangle As Rectangle = Btn_Login.ClientRectangle
         myRectangle.Inflate(0, 30)
         buttonPath.AddEllipse(myRectangle)
-        Button1.Region = New Region(buttonPath)
+        Btn_Login.Region = New Region(buttonPath)
     End Sub
 
 #End Region
@@ -62,7 +64,30 @@ Public Class View_Login
         PersonalizarIconos()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Btn_Login_Click(sender As Object, e As EventArgs) Handles Btn_Login.Click
+        Dim Usuario_Negocio As New Usuario_Negocio()
+        Dim valido_Login = Usuario_Negocio.Login(txt_nombre_login.Text, txt_password.Text)
+        'validacion de login'
+        If valido_Login = True Then
+            'mostramos ventana principal y apunta login'
+            Dim frm As New view_Principal()
+            frm.Show()
+            'Recarga el login'
+            AddHandler frm.FormClosed, AddressOf Me.Cerrar_Sesion
+            Me.Hide()
+        Else
+            MessageBox.Show("Datos incorrectos")
+            txt_password.Clear()
+            txt_password.Focus()
+        End If
+    End Sub
 
+    'Cerrar Sesion'
+
+    Private Sub Cerrar_Sesion(sender As Object, e As FormClosedEventArgs)
+        txt_nombre_login.Clear()
+        txt_password.Clear()
+        Me.Show()
+        txt_nombre_login.Focus()
     End Sub
 End Class

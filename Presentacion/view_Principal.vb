@@ -1,5 +1,6 @@
 ﻿Imports System.Runtime.InteropServices
 Imports FontAwesome.Sharp
+Imports Entidades
 Public Class view_Principal
     'Se declaran campos de forma ´privada y un panel para el color izquierdo del botón'
 
@@ -146,6 +147,8 @@ Public Class view_Principal
         Activacion_Boton(sender, RGBColors.ColorAzulClaro)
         Abrir_Frm_Hijo(New Mantenimiento_Cliente)
     End Sub
+
+
 #End Region
 
     'VENTANA PRINCIPAL'
@@ -185,19 +188,37 @@ Public Class view_Principal
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
+#End Region
+
+    'BOTONES DEL FORMULARIO PRINCIPAL'
+#Region "Botones view"
     'CONFIGURACION DE PANEL PRINCIPAL'
     Private Sub view_Principal_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
         FormBorderStyle = FormBorderStyle.None
     End Sub
 
+    'SALIR DE FORMULARIO'
     Private Sub Btn_Cerrar_Click(sender As Object, e As EventArgs) Handles Btn_Cerrar.Click
-        Application.Exit()
+        If MessageBox.Show("¿Seguro de cerrar la aplicación?", "Advertencia",
+                           MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 
+    'CERRAR SESION'
+    Private Sub Btn_Cerrar_Sesion_Click(sender As Object, e As EventArgs) Handles Btn_Cerrar_Sesion.Click
+        If MessageBox.Show("¿Seguro de cerrar sesión?", "Advertencia",
+                           MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            Me.Close()
+        End If
+    End Sub
+
+    'MINIMIZAR FORMULARIO'
     Private Sub Btn_minimizar_Click(sender As Object, e As EventArgs) Handles Btn_minimizar.Click
         WindowState = FormWindowState.Minimized
     End Sub
 
+    'MAXIMIZAR FORMULARIO'
     Private Sub Btn_Maximizar_Click(sender As Object, e As EventArgs) Handles Btn_Maximizar.Click
         If WindowState = FormWindowState.Normal Then
             WindowState = FormWindowState.Maximized
@@ -207,6 +228,8 @@ Public Class view_Principal
     End Sub
 #End Region
 
+    'BOTONES DEL SUB MENU'
+#Region "Sub Menu"
     'OCULTAR SUBMENU'
     Private Sub OcultarSubmenu()
         Panel_Mantenimiento.Visible = False
@@ -221,5 +244,37 @@ Public Class view_Principal
         End If
     End Sub
 
+    Private Sub view_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Info_Usuario()
+        Permisos_Usuario()
+    End Sub
+    Private Sub Info_Usuario()
+        lbl_Nombre.Text = E_Empleado.nombre + " " + E_Empleado.apellido
+        lbl_usuario.Text = E_Empleado.usuario
+        If E_Empleado.id = Nothing OrElse E_Empleado.id = 0 Then
+
+            MessageBox.Show("Error")
+            Me.Close()
+        End If
+    End Sub
+
+#End Region
+
+#Region "Permisos de usuarios"
+    'administrador = 1
+    'almacenero = 2
+    'vendedor = 3
+
+    Private Sub Permisos_Usuario()
+        If E_Empleado.idRol = 2 Then
+            Btn_Configuracion.Visible = False
+            Btn_Pagos.Visible = False
+        End If
+        If E_Empleado.idRol = 3 Then
+            Btn_Configuracion.Visible = False
+            Btn_Compras.Visible = False
+        End If
+    End Sub
+#End Region
 
 End Class
