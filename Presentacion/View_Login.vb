@@ -2,6 +2,7 @@
 Imports System.Drawing.Drawing2D
 Imports System.Runtime.InteropServices
 Imports Negocio
+Imports Entidades
 
 Public Class View_Login
 
@@ -69,12 +70,14 @@ Public Class View_Login
         Dim valido_Login = Usuario_Negocio.Login(txt_nombre_login.Text, txt_password.Text)
         'validacion de login'
         If valido_Login = True Then
+            Me.Hide()
+            Dim Frm_Bienvenida As New Formulario_Bienvenida()
+            Frm_Bienvenida.ShowDialog()
             'mostramos ventana principal y apunta login'
             Dim frm As New view_Principal()
             frm.Show()
             'Recarga el login'
             AddHandler frm.FormClosed, AddressOf Me.Cerrar_Sesion
-            Me.Hide()
         Else
             MessageBox.Show("Datos incorrectos")
             txt_password.Clear()
