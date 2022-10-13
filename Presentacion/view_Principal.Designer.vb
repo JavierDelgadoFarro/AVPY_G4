@@ -23,6 +23,7 @@ Partial Class view_Principal
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel_Menu = New System.Windows.Forms.Panel()
+        Me.Btn_Cerrar_Sesion = New FontAwesome.Sharp.IconButton()
         Me.Btn_Configuracion = New FontAwesome.Sharp.IconButton()
         Me.Panel_Mantenimiento = New System.Windows.Forms.Panel()
         Me.Btn_Cliente = New FontAwesome.Sharp.IconButton()
@@ -37,6 +38,9 @@ Partial Class view_Principal
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Barra_Titulo = New System.Windows.Forms.Panel()
+        Me.lbl_usuario = New System.Windows.Forms.Label()
+        Me.lbl_Nombre = New System.Windows.Forms.Label()
+        Me.Pic_Perfil = New System.Windows.Forms.PictureBox()
         Me.Btn_minimizar = New System.Windows.Forms.PictureBox()
         Me.Btn_Cerrar = New System.Windows.Forms.PictureBox()
         Me.Btn_Maximizar = New System.Windows.Forms.PictureBox()
@@ -49,6 +53,7 @@ Partial Class view_Principal
         Me.Panel_Logo.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Barra_Titulo.SuspendLayout()
+        CType(Me.Pic_Perfil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Btn_minimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Btn_Cerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Btn_Maximizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,6 +66,7 @@ Partial Class view_Principal
         '
         Me.Panel_Menu.AutoScroll = True
         Me.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.Panel_Menu.Controls.Add(Me.Btn_Cerrar_Sesion)
         Me.Panel_Menu.Controls.Add(Me.Btn_Configuracion)
         Me.Panel_Menu.Controls.Add(Me.Panel_Mantenimiento)
         Me.Panel_Menu.Controls.Add(Me.Btn_Mantenimiento)
@@ -72,8 +78,30 @@ Partial Class view_Principal
         Me.Panel_Menu.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel_Menu.Location = New System.Drawing.Point(0, 0)
         Me.Panel_Menu.Name = "Panel_Menu"
-        Me.Panel_Menu.Size = New System.Drawing.Size(237, 577)
+        Me.Panel_Menu.Size = New System.Drawing.Size(237, 616)
         Me.Panel_Menu.TabIndex = 0
+        '
+        'Btn_Cerrar_Sesion
+        '
+        Me.Btn_Cerrar_Sesion.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_Cerrar_Sesion.FlatAppearance.BorderSize = 0
+        Me.Btn_Cerrar_Sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Cerrar_Sesion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Btn_Cerrar_Sesion.ForeColor = System.Drawing.Color.Silver
+        Me.Btn_Cerrar_Sesion.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight
+        Me.Btn_Cerrar_Sesion.IconColor = System.Drawing.Color.White
+        Me.Btn_Cerrar_Sesion.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_Cerrar_Sesion.IconSize = 35
+        Me.Btn_Cerrar_Sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_Cerrar_Sesion.Location = New System.Drawing.Point(0, 551)
+        Me.Btn_Cerrar_Sesion.Name = "Btn_Cerrar_Sesion"
+        Me.Btn_Cerrar_Sesion.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
+        Me.Btn_Cerrar_Sesion.Size = New System.Drawing.Size(237, 34)
+        Me.Btn_Cerrar_Sesion.TabIndex = 7
+        Me.Btn_Cerrar_Sesion.Text = "Cerrar Sesión"
+        Me.Btn_Cerrar_Sesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_Cerrar_Sesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Btn_Cerrar_Sesion.UseVisualStyleBackColor = True
         '
         'Btn_Configuracion
         '
@@ -323,6 +351,9 @@ Partial Class view_Principal
         'Barra_Titulo
         '
         Me.Barra_Titulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.Barra_Titulo.Controls.Add(Me.lbl_usuario)
+        Me.Barra_Titulo.Controls.Add(Me.lbl_Nombre)
+        Me.Barra_Titulo.Controls.Add(Me.Pic_Perfil)
         Me.Barra_Titulo.Controls.Add(Me.Btn_minimizar)
         Me.Barra_Titulo.Controls.Add(Me.Btn_Cerrar)
         Me.Barra_Titulo.Controls.Add(Me.Btn_Maximizar)
@@ -331,8 +362,43 @@ Partial Class view_Principal
         Me.Barra_Titulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.Barra_Titulo.Location = New System.Drawing.Point(237, 0)
         Me.Barra_Titulo.Name = "Barra_Titulo"
-        Me.Barra_Titulo.Size = New System.Drawing.Size(693, 60)
+        Me.Barra_Titulo.Size = New System.Drawing.Size(693, 76)
         Me.Barra_Titulo.TabIndex = 1
+        '
+        'lbl_usuario
+        '
+        Me.lbl_usuario.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbl_usuario.AutoSize = True
+        Me.lbl_usuario.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_usuario.ForeColor = System.Drawing.Color.White
+        Me.lbl_usuario.Location = New System.Drawing.Point(530, 43)
+        Me.lbl_usuario.Name = "lbl_usuario"
+        Me.lbl_usuario.Size = New System.Drawing.Size(49, 19)
+        Me.lbl_usuario.TabIndex = 8
+        Me.lbl_usuario.Text = "Label2"
+        '
+        'lbl_Nombre
+        '
+        Me.lbl_Nombre.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbl_Nombre.AutoSize = True
+        Me.lbl_Nombre.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_Nombre.ForeColor = System.Drawing.Color.White
+        Me.lbl_Nombre.Location = New System.Drawing.Point(530, 24)
+        Me.lbl_Nombre.Name = "lbl_Nombre"
+        Me.lbl_Nombre.Size = New System.Drawing.Size(49, 19)
+        Me.lbl_Nombre.TabIndex = 6
+        Me.lbl_Nombre.Text = "Label2"
+        '
+        'Pic_Perfil
+        '
+        Me.Pic_Perfil.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Pic_Perfil.Image = Global.Presentacion.My.Resources.Resources.usuario2
+        Me.Pic_Perfil.Location = New System.Drawing.Point(451, 7)
+        Me.Pic_Perfil.Name = "Pic_Perfil"
+        Me.Pic_Perfil.Size = New System.Drawing.Size(73, 63)
+        Me.Pic_Perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Pic_Perfil.TabIndex = 5
+        Me.Pic_Perfil.TabStop = False
         '
         'Btn_minimizar
         '
@@ -370,11 +436,11 @@ Partial Class view_Principal
         'Title_Actual
         '
         Me.Title_Actual.AutoSize = True
-        Me.Title_Actual.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Title_Actual.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Title_Actual.ForeColor = System.Drawing.Color.Silver
-        Me.Title_Actual.Location = New System.Drawing.Point(95, 17)
+        Me.Title_Actual.Location = New System.Drawing.Point(100, 23)
         Me.Title_Actual.Name = "Title_Actual"
-        Me.Title_Actual.Size = New System.Drawing.Size(0, 21)
+        Me.Title_Actual.Size = New System.Drawing.Size(0, 25)
         Me.Title_Actual.TabIndex = 1
         Me.Title_Actual.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -385,9 +451,10 @@ Partial Class view_Principal
         Me.Icon_Form_Actual.IconChar = FontAwesome.Sharp.IconChar.Home
         Me.Icon_Form_Actual.IconColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
         Me.Icon_Form_Actual.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.Icon_Form_Actual.Location = New System.Drawing.Point(36, 12)
+        Me.Icon_Form_Actual.IconSize = 45
+        Me.Icon_Form_Actual.Location = New System.Drawing.Point(35, 12)
         Me.Icon_Form_Actual.Name = "Icon_Form_Actual"
-        Me.Icon_Form_Actual.Size = New System.Drawing.Size(32, 32)
+        Me.Icon_Form_Actual.Size = New System.Drawing.Size(59, 45)
         Me.Icon_Form_Actual.TabIndex = 0
         Me.Icon_Form_Actual.TabStop = False
         '
@@ -397,16 +464,16 @@ Partial Class view_Principal
         Me.Panel_Secundario.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Panel_Secundario.Controls.Add(Me.PictureBox2)
         Me.Panel_Secundario.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel_Secundario.Location = New System.Drawing.Point(237, 60)
+        Me.Panel_Secundario.Location = New System.Drawing.Point(237, 76)
         Me.Panel_Secundario.Name = "Panel_Secundario"
-        Me.Panel_Secundario.Size = New System.Drawing.Size(693, 517)
+        Me.Panel_Secundario.Size = New System.Drawing.Size(693, 540)
         Me.Panel_Secundario.TabIndex = 3
         '
         'PictureBox2
         '
         Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox2.Image = Global.Presentacion.My.Resources.Resources.iconoprincipal
-        Me.PictureBox2.Location = New System.Drawing.Point(246, 162)
+        Me.PictureBox2.Location = New System.Drawing.Point(246, 174)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(220, 174)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -418,7 +485,7 @@ Partial Class view_Principal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(930, 577)
+        Me.ClientSize = New System.Drawing.Size(930, 616)
         Me.Controls.Add(Me.Panel_Secundario)
         Me.Controls.Add(Me.Barra_Titulo)
         Me.Controls.Add(Me.Panel_Menu)
@@ -433,6 +500,7 @@ Partial Class view_Principal
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Barra_Titulo.ResumeLayout(False)
         Me.Barra_Titulo.PerformLayout()
+        CType(Me.Pic_Perfil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Btn_minimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Btn_Cerrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Btn_Maximizar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -466,4 +534,8 @@ Partial Class view_Principal
     Friend WithEvents Btn_Categoria As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel_Secundario As Panel
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Btn_Cerrar_Sesion As FontAwesome.Sharp.IconButton
+    Friend WithEvents Pic_Perfil As PictureBox
+    Friend WithEvents lbl_usuario As Label
+    Friend WithEvents lbl_Nombre As Label
 End Class
