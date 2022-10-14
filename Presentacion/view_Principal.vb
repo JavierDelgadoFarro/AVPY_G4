@@ -68,8 +68,6 @@ Public Class view_Principal
         End If
     End Sub
 
-
-
     'DESACTIVA BOTON'
     Private Sub Desactivar_Boton()
         If Btn_Actual IsNot Nothing Then
@@ -108,6 +106,7 @@ Public Class view_Principal
 #Region "Eventos"
     Private Sub Btn_Ventas_Click(sender As Object, e As EventArgs) Handles Btn_Ventas.Click
         Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Abrir_Frm_Hijo(New View_Ventas)
     End Sub
 
     Private Sub Btn_Compras_Click(sender As Object, e As EventArgs) Handles Btn_Compras.Click
@@ -117,6 +116,7 @@ Public Class view_Principal
 
     Private Sub Btn_Pagos_Click(sender As Object, e As EventArgs) Handles Btn_Pagos.Click
         Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Abrir_Frm_Hijo(New View_Pagos)
     End Sub
 
     Private Sub Btn_Producto_Click(sender As Object, e As EventArgs) Handles Btn_Producto.Click
