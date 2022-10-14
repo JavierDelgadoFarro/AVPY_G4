@@ -112,6 +112,7 @@ Public Class view_Principal
 
     Private Sub Btn_Compras_Click(sender As Object, e As EventArgs) Handles Btn_Compras.Click
         Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Abrir_Frm_Hijo(New View_Compra)
     End Sub
 
     Private Sub Btn_Pagos_Click(sender As Object, e As EventArgs) Handles Btn_Pagos.Click
