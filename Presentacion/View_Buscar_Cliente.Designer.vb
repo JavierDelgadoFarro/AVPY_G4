@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Buscar_Cliente
+Partial Class View_Buscar_Cliente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,8 +23,8 @@ Partial Class Buscar_Cliente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txt_BuscarCliente = New System.Windows.Forms.TextBox()
         Me.LBox_Cliente = New System.Windows.Forms.ListBox()
+        Me.txt_BuscarCliente = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,13 +43,6 @@ Partial Class Buscar_Cliente
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Buscar Cliente"
         '
-        'txt_BuscarCliente
-        '
-        Me.txt_BuscarCliente.Location = New System.Drawing.Point(28, 39)
-        Me.txt_BuscarCliente.Name = "txt_BuscarCliente"
-        Me.txt_BuscarCliente.Size = New System.Drawing.Size(274, 27)
-        Me.txt_BuscarCliente.TabIndex = 0
-        '
         'LBox_Cliente
         '
         Me.LBox_Cliente.FormattingEnabled = True
@@ -58,6 +51,13 @@ Partial Class Buscar_Cliente
         Me.LBox_Cliente.Name = "LBox_Cliente"
         Me.LBox_Cliente.Size = New System.Drawing.Size(275, 184)
         Me.LBox_Cliente.TabIndex = 1
+        '
+        'txt_BuscarCliente
+        '
+        Me.txt_BuscarCliente.Location = New System.Drawing.Point(28, 39)
+        Me.txt_BuscarCliente.Name = "txt_BuscarCliente"
+        Me.txt_BuscarCliente.Size = New System.Drawing.Size(274, 27)
+        Me.txt_BuscarCliente.TabIndex = 0
         '
         'Buscar_Cliente
         '

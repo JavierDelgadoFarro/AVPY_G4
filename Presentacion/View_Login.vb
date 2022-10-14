@@ -71,7 +71,7 @@ Public Class View_Login
         'validacion de login'
         If valido_Login = True Then
             Me.Hide()
-            Dim Frm_Bienvenida As New Formulario_Bienvenida()
+            Dim Frm_Bienvenida As New View_Bienvenida()
             Frm_Bienvenida.ShowDialog()
             'mostramos ventana principal y apunta login'
             Dim frm As New view_Principal()
