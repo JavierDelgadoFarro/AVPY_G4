@@ -31,7 +31,7 @@ Partial Class View_Login
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_password = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Btn_Login = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TitleBar.SuspendLayout()
@@ -132,19 +132,19 @@ Partial Class View_Login
         Me.CheckBox1.Text = "Recordar"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Btn_Login
         '
-        Me.Button1.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(55, 373)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(198, 40)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Login"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Btn_Login.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Btn_Login.FlatAppearance.BorderSize = 0
+        Me.Btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Login.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Btn_Login.ForeColor = System.Drawing.Color.White
+        Me.Btn_Login.Location = New System.Drawing.Point(55, 373)
+        Me.Btn_Login.Name = "Btn_Login"
+        Me.Btn_Login.Size = New System.Drawing.Size(198, 40)
+        Me.Btn_Login.TabIndex = 7
+        Me.Btn_Login.Text = "Login"
+        Me.Btn_Login.UseVisualStyleBackColor = False
         '
         'LinkLabel1
         '
@@ -160,7 +160,7 @@ Partial Class View_Login
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Presentacion.My.Resources.Resources.ferreteria_icono
+        Me.PictureBox1.Image = Global.Presentacion.My.Resources.Resources.iconoprincipal
         Me.PictureBox1.Location = New System.Drawing.Point(57, 56)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(198, 132)
@@ -176,7 +176,7 @@ Partial Class View_Login
         Me.ClientSize = New System.Drawing.Size(320, 517)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LinkLabel1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Btn_Login)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txt_password)
@@ -208,7 +208,7 @@ Partial Class View_Login
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_password As TextBox
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Btn_Login As Button
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents PictureBox1 As PictureBox
 End Class
