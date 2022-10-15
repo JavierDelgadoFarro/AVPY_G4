@@ -30,7 +30,6 @@ Partial Class Mantenimiento_Cliente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -58,17 +57,10 @@ Partial Class Mantenimiento_Cliente
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.Button3)
-<<<<<<< HEAD
         Me.Panel1.Location = New System.Drawing.Point(358, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(556, 564)
-=======
-        Me.Panel1.Location = New System.Drawing.Point(409, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(635, 752)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Panel1.TabIndex = 0
         '
         'GroupBox1
@@ -78,19 +70,11 @@ Partial Class Mantenimiento_Cliente
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.GroupBox1.Location = New System.Drawing.Point(31, 42)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Size = New System.Drawing.Size(497, 434)
-=======
-        Me.GroupBox1.Location = New System.Drawing.Point(35, 56)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(568, 579)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LISTA DE CLIENTES"
@@ -102,53 +86,31 @@ Partial Class Mantenimiento_Cliente
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-<<<<<<< HEAD
         Me.DataGridView1.Location = New System.Drawing.Point(21, 88)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-=======
-        Me.DataGridView1.Location = New System.Drawing.Point(24, 117)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-<<<<<<< HEAD
         Me.DataGridView1.Size = New System.Drawing.Size(454, 322)
-=======
-        Me.DataGridView1.Size = New System.Drawing.Size(519, 429)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.DataGridView1.TabIndex = 10
         '
         'TextBox1
         '
-<<<<<<< HEAD
         Me.TextBox1.Location = New System.Drawing.Point(107, 44)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(349, 20)
-=======
-        Me.TextBox1.Location = New System.Drawing.Point(122, 59)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(398, 23)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.TextBox1.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-<<<<<<< HEAD
         Me.Label2.Location = New System.Drawing.Point(37, 45)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
-        Me.Label2.Location = New System.Drawing.Point(42, 60)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 20)
+        Me.Label2.Size = New System.Drawing.Size(55, 16)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Buscar"
         '
@@ -158,17 +120,10 @@ Partial Class Mantenimiento_Cliente
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button3.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.Button3.Location = New System.Drawing.Point(413, 493)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(115, 40)
-=======
-        Me.Button3.Location = New System.Drawing.Point(472, 657)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(131, 53)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Button3.TabIndex = 9
         Me.Button3.Text = "Eliminar"
         Me.Button3.UseVisualStyleBackColor = False
@@ -189,43 +144,19 @@ Partial Class Mantenimiento_Cliente
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-<<<<<<< HEAD
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(360, 561)
-=======
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(411, 748)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Panel2.TabIndex = 1
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(145, 40)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(101, 100)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 12
-        Me.PictureBox1.TabStop = False
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Image = CType(resources.GetObject("Label8.Image"), System.Drawing.Image)
-<<<<<<< HEAD
         Me.Label8.Location = New System.Drawing.Point(146, 42)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(0, 15)
-=======
-        Me.Label8.Location = New System.Drawing.Point(167, 56)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(0, 20)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Label8.TabIndex = 11
         '
         'Label7
@@ -233,15 +164,10 @@ Partial Class Mantenimiento_Cliente
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label7.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.Label7.Location = New System.Drawing.Point(124, 178)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
-        Me.Label7.Location = New System.Drawing.Point(142, 237)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(27, 20)
+        Me.Label7.Size = New System.Drawing.Size(24, 17)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "00"
         '
@@ -251,17 +177,10 @@ Partial Class Mantenimiento_Cliente
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button2.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.Button2.Location = New System.Drawing.Point(205, 362)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(115, 40)
-=======
-        Me.Button2.Location = New System.Drawing.Point(234, 483)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(131, 53)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Button2.TabIndex = 8
         Me.Button2.Text = "Modificar"
         Me.Button2.UseVisualStyleBackColor = False
@@ -272,64 +191,36 @@ Partial Class Mantenimiento_Cliente
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button1.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.Button1.Location = New System.Drawing.Point(36, 362)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(115, 40)
-=======
-        Me.Button1.Location = New System.Drawing.Point(41, 483)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(131, 53)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Nuevo"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'TextBox4
         '
-<<<<<<< HEAD
         Me.TextBox4.Location = New System.Drawing.Point(124, 303)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(196, 23)
-=======
-        Me.TextBox4.Location = New System.Drawing.Point(142, 404)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(223, 27)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.TextBox4.TabIndex = 6
         '
         'TextBox3
         '
-<<<<<<< HEAD
         Me.TextBox3.Location = New System.Drawing.Point(124, 262)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(196, 23)
-=======
-        Me.TextBox3.Location = New System.Drawing.Point(142, 349)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(223, 27)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.TextBox3.TabIndex = 5
         '
         'TextBox2
         '
-<<<<<<< HEAD
         Me.TextBox2.Location = New System.Drawing.Point(124, 219)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(196, 23)
-=======
-        Me.TextBox2.Location = New System.Drawing.Point(142, 292)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(223, 27)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.TextBox2.TabIndex = 4
         '
         'Label6
@@ -337,15 +228,10 @@ Partial Class Mantenimiento_Cliente
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.Label6.Location = New System.Drawing.Point(31, 305)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
-        Me.Label6.Location = New System.Drawing.Point(35, 407)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(81, 20)
+        Me.Label6.Size = New System.Drawing.Size(69, 16)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Teléfono"
         '
@@ -354,15 +240,10 @@ Partial Class Mantenimiento_Cliente
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.Label5.Location = New System.Drawing.Point(31, 263)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
-        Me.Label5.Location = New System.Drawing.Point(35, 351)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(86, 20)
+        Me.Label5.Size = New System.Drawing.Size(73, 16)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Apellidos"
         '
@@ -371,15 +252,10 @@ Partial Class Mantenimiento_Cliente
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label4.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.Label4.Location = New System.Drawing.Point(31, 222)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
-        Me.Label4.Location = New System.Drawing.Point(35, 296)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(74, 20)
+        Me.Label4.Size = New System.Drawing.Size(62, 16)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Nombre"
         '
@@ -388,15 +264,10 @@ Partial Class Mantenimiento_Cliente
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label3.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.Label3.Location = New System.Drawing.Point(31, 179)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
-        Me.Label3.Location = New System.Drawing.Point(35, 239)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(28, 20)
+        Me.Label3.Size = New System.Drawing.Size(22, 16)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "ID"
         '
@@ -429,29 +300,18 @@ Partial Class Mantenimiento_Cliente
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.Label1.Location = New System.Drawing.Point(64, 145)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
-        Me.Label1.Location = New System.Drawing.Point(46, 179)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(287, 20)
+        Me.Label1.Size = New System.Drawing.Size(235, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "MANTENIMIENTO DE CLIENTES"
         '
         'Mantenimiento_Cliente
         '
-<<<<<<< HEAD
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-=======
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(915, 561)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -460,15 +320,6 @@ Partial Class Mantenimiento_Cliente
         Me.Name = "Mantenimiento_Cliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Mantenimiento_Cliente"
-=======
-        Me.ClientSize = New System.Drawing.Size(1046, 748)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.Name = "Mantenimiento_Cliente"
-        Me.Text = "Mantenimiento Cliente"
->>>>>>> b21428dab891b1640cd9fe89479c510850c61c97
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
