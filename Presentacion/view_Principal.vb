@@ -121,7 +121,7 @@ Public Class view_Principal
 
     Private Sub Btn_Producto_Click(sender As Object, e As EventArgs) Handles Btn_Producto.Click
         Activacion_Boton(sender, RGBColors.ColorAzulClaro)
-
+        Abrir_Frm_Hijo(New View_Mantenimiento_Productos)
     End Sub
 
     Private Sub Btn_Mantenimiento_Click(sender As Object, e As EventArgs) Handles Btn_Mantenimiento.Click
@@ -136,6 +136,7 @@ Public Class view_Principal
     'SUBMENU'
     Private Sub Btn_Proveedor_Click(sender As Object, e As EventArgs) Handles Btn_Proveedor.Click
         Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Abrir_Frm_Hijo(New View_Mantenimiento_Proveedores)
     End Sub
 
     Private Sub Btn_Categoria_Click(sender As Object, e As EventArgs) Handles Btn_Categoria.Click
