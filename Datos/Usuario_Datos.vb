@@ -7,6 +7,24 @@ Public Class Usuario_Datos
     'hereda de la clase conexion'
     Inherits Conexion
 
+    Public Sub editar_Perfil(id, nombre, apellido, contraseña, usuario)
+        Using conexion_return = GetConexion()
+            conexion_return.Open()
+            Using command = New SqlCommand()
+                command.Connection = conexion_return
+                command.CommandText = "UPDATE empleado set nombre=@nombre, apellido=@apellido, contraseña =@contraseña,
+                 usuario=@usuario where idempleado = @id"
+                command.Parameters.AddWithValue("@nombre", nombre)
+                command.Parameters.AddWithValue("@apellido", apellido)
+                command.Parameters.AddWithValue("@contraseña", contraseña)
+                command.Parameters.AddWithValue("@usuario", usuario)
+                command.Parameters.AddWithValue("@id", id)
+                command.CommandType = CommandType.Text
+                command.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
     'funcion para el login del usuario'
     Public Function Login(nombre_login As String, password As String) As Boolean
         Using conexion_return = GetConexion()
@@ -27,12 +45,12 @@ Public Class Usuario_Datos
                 'verificación de la consulta'
                 If lector.HasRows Then
                     While lector.Read()
-                        Entidades.id = lector.GetInt32(0)
-                        Entidades.nombre = lector.GetString(1)
-                        Entidades.apellido = lector.GetString(2)
-                        Entidades.contraseña = lector.GetString(3)
-                        Entidades.idRol = lector.GetInt32(4)
-                        Entidades.usuario = lector.GetString(5)
+                        E_Empleado.id = lector.GetInt32(0)
+                        E_Empleado.nombre = lector.GetString(1)
+                        E_Empleado.apellido = lector.GetString(2)
+                        E_Empleado.contraseña = lector.GetString(3)
+                        E_Empleado.idRol = lector.GetInt32(4)
+                        E_Empleado.usuario = lector.GetString(5)
                     End While
                     lector.Dispose()
                     Return True

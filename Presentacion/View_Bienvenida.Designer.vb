@@ -28,10 +28,11 @@ Partial Class View_Bienvenida
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.usuario_Bienvenido = New System.Windows.Forms.Label()
+        Me.lbl_nombre_usuario = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.lbl_apellido_usuario = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,49 +95,61 @@ Partial Class View_Bienvenida
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "BIENVENIDO"
         '
-        'usuario_Bienvenido
+        'lbl_nombre_usuario
         '
-        Me.usuario_Bienvenido.AutoSize = True
-        Me.usuario_Bienvenido.Font = New System.Drawing.Font("Segoe UI Light", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.usuario_Bienvenido.ForeColor = System.Drawing.Color.White
-        Me.usuario_Bienvenido.Location = New System.Drawing.Point(522, 207)
-        Me.usuario_Bienvenido.Name = "usuario_Bienvenido"
-        Me.usuario_Bienvenido.Size = New System.Drawing.Size(89, 37)
-        Me.usuario_Bienvenido.TabIndex = 3
-        Me.usuario_Bienvenido.Text = "Label3"
+        Me.lbl_nombre_usuario.AutoSize = True
+        Me.lbl_nombre_usuario.Font = New System.Drawing.Font("Segoe UI Light", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_nombre_usuario.ForeColor = System.Drawing.Color.White
+        Me.lbl_nombre_usuario.Location = New System.Drawing.Point(451, 179)
+        Me.lbl_nombre_usuario.Name = "lbl_nombre_usuario"
+        Me.lbl_nombre_usuario.Size = New System.Drawing.Size(89, 37)
+        Me.lbl_nombre_usuario.TabIndex = 3
+        Me.lbl_nombre_usuario.Text = "Label3"
         '
         'Timer1
         '
-        Me.Timer1.Interval = 30
+        Me.Timer1.Interval = 20
         '
         'Timer2
         '
-        Me.Timer2.Interval = 30
+        Me.Timer2.Interval = 20
         '
         'ProgressBar1
         '
         Me.ProgressBar1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.ProgressBar1.Location = New System.Drawing.Point(446, 293)
+        Me.ProgressBar1.Location = New System.Drawing.Point(439, 313)
         Me.ProgressBar1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(289, 31)
         Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.ProgressBar1.TabIndex = 4
         '
-        'Formulario_Bienvenida
+        'lbl_apellido_usuario
+        '
+        Me.lbl_apellido_usuario.AutoSize = True
+        Me.lbl_apellido_usuario.Font = New System.Drawing.Font("Segoe UI Light", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_apellido_usuario.ForeColor = System.Drawing.Color.White
+        Me.lbl_apellido_usuario.Location = New System.Drawing.Point(451, 240)
+        Me.lbl_apellido_usuario.Name = "lbl_apellido_usuario"
+        Me.lbl_apellido_usuario.Size = New System.Drawing.Size(89, 37)
+        Me.lbl_apellido_usuario.TabIndex = 5
+        Me.lbl_apellido_usuario.Text = "Label3"
+        '
+        'View_Bienvenida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(767, 428)
+        Me.Controls.Add(Me.lbl_apellido_usuario)
         Me.Controls.Add(Me.ProgressBar1)
-        Me.Controls.Add(Me.usuario_Bienvenido)
+        Me.Controls.Add(Me.lbl_nombre_usuario)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Name = "Formulario_Bienvenida"
+        Me.Name = "View_Bienvenida"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Formulario_Bienvenida"
         Me.Panel1.ResumeLayout(False)
@@ -153,8 +166,9 @@ Partial Class View_Bienvenida
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents usuario_Bienvenido As Label
+    Friend WithEvents lbl_nombre_usuario As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents lbl_apellido_usuario As Label
 End Class

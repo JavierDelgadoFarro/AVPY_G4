@@ -12,7 +12,8 @@ Public Class View_Bienvenida
     End Sub
 
     Private Sub Formulario_Bienvenida_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        usuario_Bienvenido.Text = E_Empleado.nombre & " " & E_Empleado.apellido
+        lbl_nombre_usuario.Text = E_Empleado.nombre
+        lbl_apellido_usuario.Text = E_Empleado.apellido
         ProgressBar1.Value = 0
         Me.Opacity = 0
         Timer1.Start()
@@ -25,5 +26,4 @@ Public Class View_Bienvenida
             Me.Close()
         End If
     End Sub
-
 End Class
