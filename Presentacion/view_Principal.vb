@@ -256,6 +256,9 @@ Public Class view_Principal
         Permisos_Usuario()
     End Sub
     Public Sub Info_Usuario()
+        lbl_usuario.Text = ""
+        lbl_Nombre.Text = ""
+        lbl_apellidos.Text = ""
 
         lbl_usuario.Text = E_Empleado.usuario
         lbl_Nombre.Text = E_Empleado.nombre
