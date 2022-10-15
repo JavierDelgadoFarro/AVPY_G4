@@ -131,6 +131,7 @@ Public Class view_Principal
 
     Private Sub Btn_Configuracion_Click(sender As Object, e As EventArgs) Handles Btn_Configuracion.Click
         Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Abrir_Frm_Hijo(New View_Editar_Perfil)
     End Sub
 
     'SUBMENU'
@@ -149,6 +150,9 @@ Public Class view_Principal
         Abrir_Frm_Hijo(New Mantenimiento_Cliente)
     End Sub
 
+    Private Sub lbl_link_editar_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lbl_link_editar.LinkClicked
+        Abrir_Frm_Hijo(New View_Editar_Perfil)
+    End Sub
 
 #End Region
 
@@ -244,14 +248,18 @@ Public Class view_Principal
             submenu.Visible = False
         End If
     End Sub
+#End Region
 
+#Region "Retornar información"
     Private Sub view_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Info_Usuario()
         Permisos_Usuario()
     End Sub
-    Private Sub Info_Usuario()
-        lbl_Nombre.Text = E_Empleado.nombre + " " + E_Empleado.apellido
+    Public Sub Info_Usuario()
+
         lbl_usuario.Text = E_Empleado.usuario
+        lbl_Nombre.Text = E_Empleado.nombre
+        lbl_apellidos.Text = E_Empleado.apellido
         If E_Empleado.id = Nothing OrElse E_Empleado.id = 0 Then
 
             MessageBox.Show("Error")
@@ -276,6 +284,8 @@ Public Class view_Principal
             Btn_Compras.Visible = False
         End If
     End Sub
+
+
 #End Region
 
 End Class
