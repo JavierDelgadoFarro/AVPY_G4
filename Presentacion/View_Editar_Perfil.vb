@@ -5,6 +5,7 @@ Public Class View_Editar_Perfil
     Private Sub View_Editar_Perfil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Editar_Data_Perfil()
         iniciar_Controles_Contraseña()
+        txt_Vigente_pass.UseSystemPasswordChar = True
     End Sub
 
     Private Sub Editar_Data_Perfil()
@@ -43,6 +44,7 @@ Public Class View_Editar_Perfil
             txt_password.Text = ""
             txt_Confirmar_Pass.Enabled = True
             txt_Confirmar_Pass.Text = ""
+            view_Principal.Info_Usuario()
         ElseIf lbl_link_password.Text = "Cancelar" Then
             reiniciar()
         End If
@@ -77,5 +79,9 @@ Public Class View_Editar_Perfil
     Private Sub btn_Cancelar_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click
         Panel_Editar_Perfil.Visible = False
         reiniciar()
+    End Sub
+
+    Private Sub Panel_Perfil_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Perfil.Paint
+
     End Sub
 End Class
