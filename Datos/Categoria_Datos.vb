@@ -3,13 +3,13 @@ Imports System.Configuration
 Imports Entidades
 
 Public Class Categoria_Datos
-
+    Inherits Conexion
     'Para listar una categoría'
     Public Function Mostrar_categoria() As List(Of E_Categoria)
         Dim lista_categoria As New List(Of E_Categoria)
-        Using cnn As New SqlConnection(My.Settings.cnn)
-            cnn.Open()
-            Dim cmd As New SqlCommand("p_mostrarcategoria", cnn)
+        Using conexion_return = GetConexion()
+            conexion_return.Open()
+            Dim cmd As New SqlCommand("p_mostrarcategoria", conexion_return)
             cmd.CommandType = CommandType.StoredProcedure
             Dim dr As SqlDataReader
             dr = cmd.ExecuteReader
