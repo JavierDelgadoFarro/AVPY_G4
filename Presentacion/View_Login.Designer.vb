@@ -30,7 +30,6 @@ Partial Class View_Login
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_password = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Btn_Login = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -47,15 +46,17 @@ Partial Class View_Login
         Me.TitleBar.Controls.Add(Me.Btn_cerrar)
         Me.TitleBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.TitleBar.Location = New System.Drawing.Point(0, 0)
+        Me.TitleBar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TitleBar.Name = "TitleBar"
-        Me.TitleBar.Size = New System.Drawing.Size(320, 50)
+        Me.TitleBar.Size = New System.Drawing.Size(366, 67)
         Me.TitleBar.TabIndex = 0
         '
         'Btn_Minimizar
         '
         Me.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Btn_Minimizar.Image = Global.Presentacion.My.Resources.Resources.login_minimizar
-        Me.Btn_Minimizar.Location = New System.Drawing.Point(270, 12)
+        Me.Btn_Minimizar.Location = New System.Drawing.Point(309, 16)
+        Me.Btn_Minimizar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Btn_Minimizar.Name = "Btn_Minimizar"
         Me.Btn_Minimizar.Size = New System.Drawing.Size(16, 16)
         Me.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -66,7 +67,8 @@ Partial Class View_Login
         '
         Me.Btn_cerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Btn_cerrar.Image = Global.Presentacion.My.Resources.Resources.login_cerrar
-        Me.Btn_cerrar.Location = New System.Drawing.Point(292, 12)
+        Me.Btn_cerrar.Location = New System.Drawing.Point(334, 16)
+        Me.Btn_cerrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Btn_cerrar.Name = "Btn_cerrar"
         Me.Btn_cerrar.Size = New System.Drawing.Size(16, 16)
         Me.Btn_cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -77,17 +79,19 @@ Partial Class View_Login
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 502)
+        Me.Panel1.Location = New System.Drawing.Point(0, 669)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(320, 15)
+        Me.Panel1.Size = New System.Drawing.Size(366, 20)
         Me.Panel1.TabIndex = 1
         '
         'txt_nombre_login
         '
         Me.txt_nombre_login.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txt_nombre_login.Location = New System.Drawing.Point(55, 237)
+        Me.txt_nombre_login.Location = New System.Drawing.Point(63, 316)
+        Me.txt_nombre_login.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_nombre_login.Name = "txt_nombre_login"
-        Me.txt_nombre_login.Size = New System.Drawing.Size(198, 26)
+        Me.txt_nombre_login.Size = New System.Drawing.Size(226, 30)
         Me.txt_nombre_login.TabIndex = 2
         '
         'Label1
@@ -95,9 +99,9 @@ Partial Class View_Login
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(57, 214)
+        Me.Label1.Location = New System.Drawing.Point(65, 285)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 20)
+        Me.Label1.Size = New System.Drawing.Size(89, 22)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Nombre "
         '
@@ -106,31 +110,20 @@ Partial Class View_Login
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(57, 277)
+        Me.Label2.Location = New System.Drawing.Point(65, 369)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 20)
+        Me.Label2.Size = New System.Drawing.Size(95, 22)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Password"
         '
         'txt_password
         '
         Me.txt_password.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txt_password.Location = New System.Drawing.Point(55, 299)
+        Me.txt_password.Location = New System.Drawing.Point(63, 399)
+        Me.txt_password.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_password.Name = "txt_password"
-        Me.txt_password.Size = New System.Drawing.Size(198, 26)
+        Me.txt_password.Size = New System.Drawing.Size(226, 30)
         Me.txt_password.TabIndex = 4
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.CheckBox1.ForeColor = System.Drawing.Color.Silver
-        Me.CheckBox1.Location = New System.Drawing.Point(55, 331)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(79, 20)
-        Me.CheckBox1.TabIndex = 6
-        Me.CheckBox1.Text = "Recordar"
-        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Btn_Login
         '
@@ -139,9 +132,10 @@ Partial Class View_Login
         Me.Btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Login.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Btn_Login.ForeColor = System.Drawing.Color.White
-        Me.Btn_Login.Location = New System.Drawing.Point(55, 373)
+        Me.Btn_Login.Location = New System.Drawing.Point(63, 497)
+        Me.Btn_Login.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Btn_Login.Name = "Btn_Login"
-        Me.Btn_Login.Size = New System.Drawing.Size(198, 40)
+        Me.Btn_Login.Size = New System.Drawing.Size(226, 53)
         Me.Btn_Login.TabIndex = 7
         Me.Btn_Login.Text = "Login"
         Me.Btn_Login.UseVisualStyleBackColor = False
@@ -151,9 +145,9 @@ Partial Class View_Login
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.LinkColor = System.Drawing.Color.Silver
-        Me.LinkLabel1.Location = New System.Drawing.Point(94, 430)
+        Me.LinkLabel1.Location = New System.Drawing.Point(107, 573)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(129, 15)
+        Me.LinkLabel1.Size = New System.Drawing.Size(163, 20)
         Me.LinkLabel1.TabIndex = 8
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "¿Olvidaste Contraseña?"
@@ -161,23 +155,23 @@ Partial Class View_Login
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Presentacion.My.Resources.Resources.iconoprincipal
-        Me.PictureBox1.Location = New System.Drawing.Point(57, 56)
+        Me.PictureBox1.Location = New System.Drawing.Point(65, 75)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(198, 132)
+        Me.PictureBox1.Size = New System.Drawing.Size(226, 176)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
         'View_Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(320, 517)
+        Me.ClientSize = New System.Drawing.Size(366, 689)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Btn_Login)
-        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txt_password)
         Me.Controls.Add(Me.Label1)
@@ -185,6 +179,7 @@ Partial Class View_Login
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TitleBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "View_Login"
         Me.Opacity = 0.9R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -207,7 +202,6 @@ Partial Class View_Login
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_password As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Btn_Login As Button
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents PictureBox1 As PictureBox

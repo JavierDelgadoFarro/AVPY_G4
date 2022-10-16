@@ -260,10 +260,10 @@ Public Class view_Principal
         lbl_Nombre.Text = ""
         lbl_apellidos.Text = ""
 
-        lbl_usuario.Text = E_Empleado.usuario
-        lbl_Nombre.Text = E_Empleado.nombre
-        lbl_apellidos.Text = E_Empleado.apellido
-        If E_Empleado.id = Nothing OrElse E_Empleado.id = 0 Then
+        lbl_usuario.Text = E_Usuario.usuario
+        lbl_Nombre.Text = E_Usuario.nombre
+        lbl_apellidos.Text = E_Usuario.apellido
+        If E_Usuario.id = Nothing OrElse E_Usuario.id = 0 Then
 
             MessageBox.Show("Error")
             Me.Close()
@@ -278,11 +278,11 @@ Public Class view_Principal
     'vendedor = 3
 
     Private Sub Permisos_Usuario()
-        If E_Empleado.idRol = 2 Then
+        If E_Usuario.idRol = 2 Then
             Btn_Configuracion.Visible = False
             Btn_Pagos.Visible = False
         End If
-        If E_Empleado.idRol = 3 Then
+        If E_Usuario.idRol = 3 Then
             Btn_Configuracion.Visible = False
             Btn_Compras.Visible = False
         End If

@@ -10,16 +10,16 @@ Public Class View_Editar_Perfil
 
     Private Sub Editar_Data_Perfil()
         'Vista'
-        lbl_usuario.Text = E_Empleado.usuario
-        lbl_nombre.Text = E_Empleado.nombre
-        lbl_apellido.Text = E_Empleado.apellido
+        lbl_usuario.Text = E_Usuario.usuario
+        lbl_nombre.Text = E_Usuario.nombre
+        lbl_apellido.Text = E_Usuario.apellido
 
         'Edición'
-        txt_usuario.Text = E_Empleado.usuario
-        txt_nombre.Text = E_Empleado.nombre
-        txt_apellido.Text = E_Empleado.apellido
-        txt_password.Text = E_Empleado.contraseña
-        txt_Confirmar_Pass.Text = E_Empleado.contraseña
+        txt_usuario.Text = E_Usuario.usuario
+        txt_nombre.Text = E_Usuario.nombre
+        txt_apellido.Text = E_Usuario.apellido
+        txt_password.Text = E_Usuario.contraseña
+        txt_Confirmar_Pass.Text = E_Usuario.contraseña
     End Sub
 
     Private Sub iniciar_Controles_Contraseña()
@@ -57,8 +57,8 @@ Public Class View_Editar_Perfil
 
     Private Sub Btn_actualizar_Click(sender As Object, e As EventArgs) Handles Btn_actualizar.Click
         If txt_password.Text = txt_Confirmar_Pass.Text Then
-            If txt_Vigente_pass.Text = E_Empleado.contraseña Then
-                Dim Usuario_Negocio As New Usuario_Negocio(id:=E_Empleado.id,
+            If txt_Vigente_pass.Text = E_Usuario.contraseña Then
+                Dim Usuario_Negocio As New Usuario_Negocio(id:=E_Usuario.id,
                                                            nombre:=txt_nombre.Text,
                                                            apellido:=txt_apellido.Text,
                                                            contraseña:=txt_password.Text,

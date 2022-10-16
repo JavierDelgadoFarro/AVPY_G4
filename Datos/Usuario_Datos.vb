@@ -45,12 +45,12 @@ Public Class Usuario_Datos
                 'verificación de la consulta'
                 If lector.HasRows Then
                     While lector.Read()
-                        E_Empleado.id = lector.GetInt32(0)
-                        E_Empleado.nombre = lector.GetString(1)
-                        E_Empleado.apellido = lector.GetString(2)
-                        E_Empleado.contraseña = lector.GetString(3)
-                        E_Empleado.idRol = lector.GetInt32(4)
-                        E_Empleado.usuario = lector.GetString(5)
+                        E_Usuario.id = lector.GetInt32(0)
+                        E_Usuario.nombre = lector.GetString(1)
+                        E_Usuario.apellido = lector.GetString(2)
+                        E_Usuario.contraseña = lector.GetString(3)
+                        E_Usuario.idRol = lector.GetInt32(4)
+                        E_Usuario.usuario = lector.GetString(5)
                     End While
                     lector.Dispose()
                     Return True
@@ -62,13 +62,13 @@ Public Class Usuario_Datos
     End Function
 
     Public Sub Permiso_Usuario()
-        If E_Empleado.idRol = Cargos_login.administrador Then
+        If E_Usuario.idRol = Cargos_login.administrador Then
 
         End If
-        If E_Empleado.idRol = Cargos_login.almacenero Then
+        If E_Usuario.idRol = Cargos_login.almacenero Then
 
         End If
-        If E_Empleado.idRol = Cargos_login.vendedor Then
+        If E_Usuario.idRol = Cargos_login.vendedor Then
 
         End If
     End Sub

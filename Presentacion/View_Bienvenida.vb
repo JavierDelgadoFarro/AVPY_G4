@@ -3,7 +3,7 @@ Public Class View_Bienvenida
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         ProgressBar1.Value += 1
         If Me.Opacity < 1 Then
-            Me.Opacity += 0.05
+            Me.Opacity += 0.1
         End If
         If ProgressBar1.Value = 100 Then
             Timer1.Stop()
@@ -12,8 +12,8 @@ Public Class View_Bienvenida
     End Sub
 
     Private Sub Formulario_Bienvenida_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lbl_nombre_usuario.Text = E_Empleado.nombre
-        lbl_apellido_usuario.Text = E_Empleado.apellido
+        lbl_nombre_usuario.Text = E_Usuario.nombre
+        lbl_apellido_usuario.Text = E_Usuario.apellido
         ProgressBar1.Value = 0
         Me.Opacity = 0
         Timer1.Start()

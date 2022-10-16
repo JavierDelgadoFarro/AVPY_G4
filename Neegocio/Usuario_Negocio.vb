@@ -5,6 +5,7 @@ Imports Entidades
 Public Class Usuario_Negocio
     Dim usuarioDao As New Usuario_Datos()
 
+#Region "Atributos"
     'Atributos'
 
     Private id
@@ -79,6 +80,7 @@ Public Class Usuario_Negocio
         Me.IdRol1 = idRol
         Me.Usuario1 = usuario
     End Sub
+#End Region
 
     Public Function editar_Perfil() As String
         Try

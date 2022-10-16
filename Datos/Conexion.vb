@@ -7,7 +7,7 @@ Public MustInherit Class Conexion
     Private conexionString As String
     'inicializamos la cadena de conexion'
     Protected Sub New()
-        conexionString = "Data Source=DESKTOP-PH1HUF0;Initial Catalog=Tienda_Rosa;User ID=sistema"
+        conexionString = "Data Source=JAVIERDF\SQLEXPRESS;Initial Catalog=Tienda_Rosa;User ID=sistemas"
     End Sub
 
     Protected Function GetConexion() As SqlConnection
