@@ -23,22 +23,27 @@ Partial Class Mantenimiento_Categoria
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btneliminarcategoria = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btn_buscarcategoria = New System.Windows.Forms.Button()
         Me.DGV_Categoria = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtbuscarcategoria = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnmodificarcategoria = New System.Windows.Forms.Button()
+        Me.btnnuevacategoria = New System.Windows.Forms.Button()
+        Me.txtdescripcioncategoria = New System.Windows.Forms.TextBox()
+        Me.txtnombrecategoria = New System.Windows.Forms.TextBox()
+        Me.labelidcategoria = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -52,6 +57,35 @@ Partial Class Mantenimiento_Categoria
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btneliminarcategoria)
+        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Controls.Add(Me.IconPictureBox1)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.btnmodificarcategoria)
+        Me.Panel2.Controls.Add(Me.btnnuevacategoria)
+        Me.Panel2.Controls.Add(Me.txtdescripcioncategoria)
+        Me.Panel2.Controls.Add(Me.txtnombrecategoria)
+        Me.Panel2.Controls.Add(Me.labelidcategoria)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(781, 511)
+        Me.Panel2.TabIndex = 1
+        '
+        'btneliminarcategoria
+        '
+        Me.btneliminarcategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.btneliminarcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btneliminarcategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btneliminarcategoria.ForeColor = System.Drawing.Color.White
+        Me.btneliminarcategoria.Location = New System.Drawing.Point(659, 432)
+        Me.btneliminarcategoria.Name = "btneliminarcategoria"
+        Me.btneliminarcategoria.Size = New System.Drawing.Size(99, 35)
+        Me.btneliminarcategoria.TabIndex = 13
+        Me.btneliminarcategoria.Text = "Eliminar"
+        Me.btneliminarcategoria.UseVisualStyleBackColor = False
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.GroupBox1)
         Me.Panel2.Controls.Add(Me.IconPictureBox1)
@@ -85,39 +119,65 @@ Partial Class Mantenimiento_Categoria
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btn_buscarcategoria)
         Me.GroupBox1.Controls.Add(Me.DGV_Categoria)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.txtbuscarcategoria)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.GroupBox1.Location = New System.Drawing.Point(304, 28)
         Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(454, 383)
         Me.GroupBox1.Size = New System.Drawing.Size(379, 383)
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LISTA DE CATEGORÍAS"
+        '
+        'btn_buscarcategoria
+        '
+        Me.btn_buscarcategoria.BackColor = System.Drawing.Color.Blue
+        Me.btn_buscarcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_buscarcategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btn_buscarcategoria.ForeColor = System.Drawing.Color.White
+        Me.btn_buscarcategoria.Location = New System.Drawing.Point(321, 33)
+        Me.btn_buscarcategoria.Name = "btn_buscarcategoria"
+        Me.btn_buscarcategoria.Size = New System.Drawing.Size(76, 26)
+        Me.btn_buscarcategoria.TabIndex = 14
+        Me.btn_buscarcategoria.Text = "Buscar"
+        Me.btn_buscarcategoria.UseVisualStyleBackColor = False
         '
         'DGV_Categoria
         '
         Me.DGV_Categoria.AllowUserToAddRows = False
         Me.DGV_Categoria.AllowUserToDeleteRows = False
         Me.DGV_Categoria.BackgroundColor = System.Drawing.SystemColors.AppWorkspace
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         Me.DGV_Categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV_Categoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_Categoria.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_Categoria.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGV_Categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV_Categoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_Categoria.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGV_Categoria.Location = New System.Drawing.Point(16, 74)
         Me.DGV_Categoria.Name = "DGV_Categoria"
         Me.DGV_Categoria.ReadOnly = True
         Me.DGV_Categoria.RowHeadersVisible = False
         Me.DGV_Categoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_Categoria.Size = New System.Drawing.Size(346, 288)
+        Me.DGV_Categoria.Size = New System.Drawing.Size(418, 288)
         Me.DGV_Categoria.TabIndex = 0
         '
         'Column1
@@ -146,20 +206,34 @@ Partial Class Mantenimiento_Categoria
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(90, 38)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(262, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.Column1.DataPropertyName = "idcategoria"
+        Me.Column1.HeaderText = "idcategoria"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 102
         '
-        'Label1
+        'Column2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(25, 40)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Buscar"
+        Me.Column2.DataPropertyName = "nombre"
+        Me.Column2.HeaderText = "nombre"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 120
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "descripcion"
+        Me.Column3.HeaderText = "descripcion"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 193
+        '
+        'txtbuscarcategoria
+        '
+        Me.txtbuscarcategoria.Location = New System.Drawing.Point(46, 37)
+        Me.txtbuscarcategoria.Name = "txtbuscarcategoria"
+        Me.txtbuscarcategoria.Size = New System.Drawing.Size(262, 20)
+        Me.txtbuscarcategoria.TabIndex = 2
         '
         'IconPictureBox1
         '
@@ -186,55 +260,55 @@ Partial Class Mantenimiento_Categoria
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "MANTENIMIENTO DE CATEGORÍA"
         '
-        'Button2
+        'btnmodificarcategoria
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(171, 295)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(99, 35)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Modificar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnmodificarcategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btnmodificarcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnmodificarcategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnmodificarcategoria.ForeColor = System.Drawing.Color.White
+        Me.btnmodificarcategoria.Location = New System.Drawing.Point(171, 295)
+        Me.btnmodificarcategoria.Name = "btnmodificarcategoria"
+        Me.btnmodificarcategoria.Size = New System.Drawing.Size(99, 35)
+        Me.btnmodificarcategoria.TabIndex = 9
+        Me.btnmodificarcategoria.Text = "Modificar"
+        Me.btnmodificarcategoria.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnnuevacategoria
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(41, 296)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(99, 35)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Nuevo"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnnuevacategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.btnnuevacategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnnuevacategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnnuevacategoria.ForeColor = System.Drawing.Color.White
+        Me.btnnuevacategoria.Location = New System.Drawing.Point(41, 296)
+        Me.btnnuevacategoria.Name = "btnnuevacategoria"
+        Me.btnnuevacategoria.Size = New System.Drawing.Size(99, 35)
+        Me.btnnuevacategoria.TabIndex = 7
+        Me.btnnuevacategoria.Text = "Nuevo"
+        Me.btnnuevacategoria.UseVisualStyleBackColor = False
         '
-        'TextBox3
+        'txtdescripcioncategoria
         '
-        Me.TextBox3.Location = New System.Drawing.Point(133, 241)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(139, 23)
-        Me.TextBox3.TabIndex = 8
+        Me.txtdescripcioncategoria.Location = New System.Drawing.Point(133, 241)
+        Me.txtdescripcioncategoria.Name = "txtdescripcioncategoria"
+        Me.txtdescripcioncategoria.Size = New System.Drawing.Size(139, 23)
+        Me.txtdescripcioncategoria.TabIndex = 8
         '
-        'TextBox2
+        'txtnombrecategoria
         '
-        Me.TextBox2.Location = New System.Drawing.Point(133, 199)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(139, 23)
-        Me.TextBox2.TabIndex = 7
+        Me.txtnombrecategoria.Location = New System.Drawing.Point(133, 199)
+        Me.txtnombrecategoria.Name = "txtnombrecategoria"
+        Me.txtnombrecategoria.Size = New System.Drawing.Size(139, 23)
+        Me.txtnombrecategoria.TabIndex = 7
         '
-        'Label5
+        'labelidcategoria
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(130, 167)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(24, 17)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "00"
+        Me.labelidcategoria.AutoSize = True
+        Me.labelidcategoria.ForeColor = System.Drawing.Color.White
+        Me.labelidcategoria.Location = New System.Drawing.Point(130, 167)
+        Me.labelidcategoria.Name = "labelidcategoria"
+        Me.labelidcategoria.Size = New System.Drawing.Size(24, 17)
+        Me.labelidcategoria.TabIndex = 6
+        Me.labelidcategoria.Text = "00"
         '
         'Label4
         '
@@ -269,19 +343,12 @@ Partial Class Mantenimiento_Categoria
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ID"
         '
-        'Panel3
-        '
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(715, 511)
-        Me.Panel3.TabIndex = 2
-        '
         'Mantenimiento_Categoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(715, 513)
+        Me.ClientSize = New System.Drawing.Size(780, 513)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
@@ -304,21 +371,20 @@ Partial Class Mantenimiento_Categoria
     Friend WithEvents Panel2 As Panel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DGV_Categoria As DataGridView
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents txtbuscarcategoria As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents labelidcategoria As Label
+    Friend WithEvents txtdescripcioncategoria As TextBox
+    Friend WithEvents txtnombrecategoria As TextBox
+    Friend WithEvents btnmodificarcategoria As Button
+    Friend WithEvents btnnuevacategoria As Button
+    Friend WithEvents btneliminarcategoria As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents btn_buscarcategoria As Button
 End Class
