@@ -1,8 +1,11 @@
 ﻿Imports Datos
 Imports Entidades
 Public Class Categoria_Negocio
-	Private ObjCategoriaDatos As New Categoria_Datos
-	Public Function MostrarCategorias() As DataTable
-		Return ObjCategoriaDatos.MostrarCategoria
-	End Function
+    Public Function Mostrar_categoria() As List(Of E_Categoria)
+        Dim lista_categoria As New List(Of E_Categoria)
+        Dim obj As New Categoria_Datos
+        lista_categoria = obj.Mostrar_categoria
+        Return lista_categoria
+    End Function
+
 End Class
