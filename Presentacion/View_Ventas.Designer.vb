@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class View_Ventas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class View_Ventas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(View_Ventas))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -30,6 +30,8 @@ Partial Class View_Ventas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_idcliente = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Btn_Actualizar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Cmb_cliente = New System.Windows.Forms.ComboBox()
@@ -50,8 +52,6 @@ Partial Class View_Ventas
         Me.btn_Total_pagar = New System.Windows.Forms.Button()
         Me.Rbtn_Credito = New System.Windows.Forms.RadioButton()
         Me.Lsv_det = New System.Windows.Forms.ListView()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.pnl_ini.SuspendLayout()
@@ -140,6 +140,22 @@ Partial Class View_Ventas
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Cliente"
         '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePicker2.Location = New System.Drawing.Point(348, 105)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(124, 27)
+        Me.DateTimePicker2.TabIndex = 32
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(103, 105)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(164, 27)
+        Me.DateTimePicker1.TabIndex = 31
+        '
         'Btn_Actualizar
         '
         Me.Btn_Actualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(250, Byte), Integer))
@@ -181,7 +197,7 @@ Partial Class View_Ventas
         Me.pnl_ini.Controls.Add(Me.PictureBox1)
         Me.pnl_ini.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.pnl_ini.ForeColor = System.Drawing.Color.Cornsilk
-        Me.pnl_ini.Location = New System.Drawing.Point(54, 69)
+        Me.pnl_ini.Location = New System.Drawing.Point(53, 69)
         Me.pnl_ini.Name = "pnl_ini"
         Me.pnl_ini.Size = New System.Drawing.Size(462, 440)
         Me.pnl_ini.TabIndex = 29
@@ -368,27 +384,11 @@ Partial Class View_Ventas
         '
         'Lsv_det
         '
-        Me.Lsv_det.Location = New System.Drawing.Point(54, 113)
+        Me.Lsv_det.Location = New System.Drawing.Point(53, 112)
         Me.Lsv_det.Name = "Lsv_det"
         Me.Lsv_det.Size = New System.Drawing.Size(450, 355)
         Me.Lsv_det.TabIndex = 18
         Me.Lsv_det.UseCompatibleStateImageBehavior = False
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(103, 105)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(164, 27)
-        Me.DateTimePicker1.TabIndex = 31
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker2.Location = New System.Drawing.Point(348, 105)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(124, 27)
-        Me.DateTimePicker2.TabIndex = 32
         '
         'View_Ventas
         '
@@ -410,7 +410,7 @@ Partial Class View_Ventas
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.lbl_TotalVenta)
         Me.Controls.Add(Me.Label8)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "View_Ventas"
         Me.Text = "VENTAS"
         Me.GroupBox1.ResumeLayout(False)

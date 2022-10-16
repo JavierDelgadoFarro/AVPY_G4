@@ -246,5 +246,4 @@ Public Class View_Mantenimiento_Productos
 
         Return cadena1
     End Function
-
 End Class
