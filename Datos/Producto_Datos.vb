@@ -258,9 +258,7 @@ Public Class Producto_Datos
             conexion_return.Open()
             Dim cmd As New SqlCommand("maxproductos", conexion_return)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int).Direction = ParameterDirection.ReturnValue
             cmd.ExecuteNonQuery()
-            logeo = CType(cmd.Parameters.Item("@RETURN_VALUE").Value, Integer)
             conexion_return.Dispose()
             conexion_return.Close()
         End Using
@@ -278,7 +276,6 @@ Public Class Producto_Datos
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int).Direction = ParameterDirection.ReturnValue
             cmd.ExecuteNonQuery()
-            logeo = CType(cmd.Parameters.Item("@RETURN_VALUE").Value, Integer)
             conexion_return.Dispose()
             conexion_return.Close()
         End Using
@@ -295,7 +292,6 @@ Public Class Producto_Datos
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int).Direction = ParameterDirection.ReturnValue
             cmd.ExecuteNonQuery()
-            logeo = CType(cmd.Parameters.Item("@RETURN_VALUE").Value, Integer)
             conexion_return.Dispose()
             conexion_return.Close()
         End Using
