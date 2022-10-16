@@ -16,9 +16,8 @@ Public Class Categoria_Datos
             While dr.Read
                 Dim reg As New E_Categoria
                 reg.idcategoria = dr.GetValue(0).ToString()
-                reg.ID = dr.GetValue(0).ToString()
-                reg.Nombre = dr.GetValue(1).ToString()
-                reg.Descripcion = dr.GetValue(2).ToString()
+                reg.nombre = dr.GetValue(1).ToString()
+                reg.descripcion = dr.GetValue(2).ToString()
                 lista_categoria.Add(reg)
             End While
             dr.Close()

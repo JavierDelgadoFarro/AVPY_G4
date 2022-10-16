@@ -15,7 +15,7 @@ Public Class View_Ventas
     Private Sub cargarcombo(ByVal combo As ComboBox)
         Dim lista As New List(Of E_Cliente)
         Dim obj As New Cliente_Negocio
-        lista = obj.Mostrarcliente
+        lista = obj.Mostrartodocliente
         combo.DataSource = lista
         combo.DisplayMember = "nombre"
         combo.ValueMember = "idcliente"

@@ -2,13 +2,6 @@
 Imports Datos
 
 Public Class Cliente_Negocio
-    ' para mostrar cliente
-    Public Function Mostrarcliente() As List(Of E_Cliente)
-        Dim lista As New List(Of E_Cliente)
-        Dim obj As New Cliente_Datos
-        lista = obj.Mostrarcliente
-        Return lista
-    End Function
 
     ' para mostrar cliente
     Public Function Mostrartodocliente() As List(Of E_Cliente)
