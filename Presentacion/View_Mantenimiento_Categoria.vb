@@ -16,6 +16,11 @@ Public Class Mantenimiento_Categoria
         End With
     End Sub
 
+    Private Sub Mantenimiento_Categoria_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        personalizargridview(Me.DGV_Categoria)
+        Cargar_gridview()
+    End Sub
+
     Private Sub Cargar_gridview()
         Dim lista_categoria As New List(Of E_Categoria)
         Dim obj As New Categoria_Negocio

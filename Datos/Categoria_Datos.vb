@@ -15,6 +15,7 @@ Public Class Categoria_Datos
             dr = cmd.ExecuteReader
             While dr.Read
                 Dim reg As New E_Categoria
+                reg.idcategoria = dr.GetValue(0).ToString()
                 reg.ID = dr.GetValue(0).ToString()
                 reg.Nombre = dr.GetValue(1).ToString()
                 reg.Descripcion = dr.GetValue(2).ToString()

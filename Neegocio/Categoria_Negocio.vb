@@ -7,5 +7,4 @@ Public Class Categoria_Negocio
         lista_categoria = obj.Mostrar_categoria
         Return lista_categoria
     End Function
-
 End Class
