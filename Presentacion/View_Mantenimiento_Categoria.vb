@@ -15,6 +15,12 @@ Public Class Mantenimiento_Categoria
             .AllowUserToResizeRows = False
         End With
     End Sub
+
+    Private Sub Mantenimiento_Categoria_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        personalizargridview(Me.DGV_Categoria)
+        Cargar_gridview()
+    End Sub
+
     Private Sub Cargar_gridview()
         Dim lista_categoria As New List(Of E_Categoria)
         Dim obj As New Categoria_Negocio
@@ -23,9 +29,18 @@ Public Class Mantenimiento_Categoria
     End Sub
 
     Private Sub Mantenimiento_Categoria_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        DGV_Categoria.AutoGenerateColumns = False
         personalizargridview(Me.DGV_Categoria)
         Cargar_gridview()
     End Sub
 
+    Private Sub DataGridView1_SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DGV_Categoria.SelectionChanged
+        Dim fila As Integer
+        fila = DGV_Categoria.CurrentCell.RowIndex
+        Label3.Text = Me.DGV_Categoria(0, fila).Value.ToString()
+        TextBox2.Text = Me.DGV_Categoria(1, fila).Value.ToString()
+        TextBox3.Text = Me.DGV_Categoria(2, fila).Value.ToString()
+    End Sub
 
 End Class

@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Configuration
 Imports Entidades
+
 Public Class Categoria_Datos
     Inherits Conexion
     'Para listar una categoría'
@@ -15,6 +16,7 @@ Public Class Categoria_Datos
             While dr.Read
                 Dim reg As New E_Categoria
                 reg.idcategoria = dr.GetValue(0).ToString()
+                reg.ID = dr.GetValue(0).ToString()
                 reg.Nombre = dr.GetValue(1).ToString()
                 reg.Descripcion = dr.GetValue(2).ToString()
                 lista_categoria.Add(reg)
