@@ -117,4 +117,5 @@ Public Class Mantenimiento_Categoria
         Dim obj As New Categoria_Negocio
         DGV_Categoria.DataSource = obj.Buscar_categoria(busca)
     End Sub
+
 End Class

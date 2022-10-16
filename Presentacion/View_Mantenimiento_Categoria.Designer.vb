@@ -26,6 +26,8 @@ Partial Class Mantenimiento_Categoria
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btneliminarcategoria = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btn_buscarcategoria = New System.Windows.Forms.Button()
         Me.DGV_Categoria = New System.Windows.Forms.DataGridView()
@@ -33,6 +35,8 @@ Partial Class Mantenimiento_Categoria
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtbuscarcategoria = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnmodificarcategoria = New System.Windows.Forms.Button()
@@ -43,6 +47,7 @@ Partial Class Mantenimiento_Categoria
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGV_Categoria, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +86,36 @@ Partial Class Mantenimiento_Categoria
         Me.btneliminarcategoria.TabIndex = 13
         Me.btneliminarcategoria.Text = "Eliminar"
         Me.btneliminarcategoria.UseVisualStyleBackColor = False
+        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Controls.Add(Me.IconPictureBox1)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.TextBox3)
+        Me.Panel2.Controls.Add(Me.TextBox2)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(715, 513)
+        Me.Panel2.TabIndex = 1
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(584, 426)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(99, 35)
+        Me.Button3.TabIndex = 13
+        Me.Button3.Text = "Eliminar"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -92,6 +127,7 @@ Partial Class Mantenimiento_Categoria
         Me.GroupBox1.Location = New System.Drawing.Point(304, 28)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(454, 383)
+        Me.GroupBox1.Size = New System.Drawing.Size(379, 383)
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LISTA DE CATEGORÍAS"
@@ -116,6 +152,10 @@ Partial Class Mantenimiento_Categoria
         Me.DGV_Categoria.BackgroundColor = System.Drawing.SystemColors.AppWorkspace
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        Me.DGV_Categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV_Categoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
@@ -141,6 +181,30 @@ Partial Class Mantenimiento_Categoria
         Me.DGV_Categoria.TabIndex = 0
         '
         'Column1
+        '
+        Me.Column1.DataPropertyName = "idcategoria"
+        Me.Column1.HeaderText = "idcategoria"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 102
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "nombre"
+        Me.Column2.HeaderText = "nombre"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 120
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "descripcion"
+        Me.Column3.HeaderText = "descripcion"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 120
+        '
+        'TextBox1
         '
         Me.Column1.DataPropertyName = "idcategoria"
         Me.Column1.HeaderText = "idcategoria"
@@ -286,6 +350,7 @@ Partial Class Mantenimiento_Categoria
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(780, 513)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel3)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
