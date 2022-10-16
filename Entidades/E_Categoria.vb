@@ -1,31 +1,31 @@
 ﻿Public Class E_Categoria
-    Private _ID As Integer
-    Public Property ID() As Integer
+    Private _idcategoria As Integer
+    Public Property idcategoria() As Integer
         Get
-            Return _ID
+            Return _idcategoria
         End Get
         Set(ByVal value As Integer)
-            _ID = value
+            _idcategoria = value
         End Set
     End Property
 
-    Private _Nombre As String
-    Public Property Nombre() As String
+    Private _nombre As String
+    Public Property nombre() As String
         Get
-            Return _Nombre
+            Return _nombre
         End Get
         Set(ByVal value As String)
-            _Nombre = value
+            _nombre = value
         End Set
     End Property
 
-    Private _Descripcion As String
-    Public Property Descripcion() As String
+    Private _descripcion As String
+    Public Property descripcion() As String
         Get
-            Return _Descripcion
+            Return _descripcion
         End Get
         Set(ByVal value As String)
-            _Descripcion = value
+            _descripcion = value
         End Set
     End Property
 End Class
