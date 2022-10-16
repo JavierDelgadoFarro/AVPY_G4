@@ -26,8 +26,11 @@ Partial Class Mantenimiento_Categoria
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btneliminarcategoria = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnmodificarcategoria = New System.Windows.Forms.Button()
+        Me.btnnuevacategoria = New System.Windows.Forms.Button()
+        Me.txtdescripcioncategoria = New System.Windows.Forms.TextBox()
+        Me.txtnombrecategoria = New System.Windows.Forms.TextBox()
+        Me.labelidcategoria = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btn_buscarcategoria = New System.Windows.Forms.Button()
         Me.DGV_Categoria = New System.Windows.Forms.DataGridView()
@@ -35,19 +38,11 @@ Partial Class Mantenimiento_Categoria
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtbuscarcategoria = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnmodificarcategoria = New System.Windows.Forms.Button()
-        Me.btnnuevacategoria = New System.Windows.Forms.Button()
-        Me.txtdescripcioncategoria = New System.Windows.Forms.TextBox()
-        Me.txtnombrecategoria = New System.Windows.Forms.TextBox()
-        Me.labelidcategoria = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGV_Categoria, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,20 +53,21 @@ Partial Class Mantenimiento_Categoria
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.Panel2.Controls.Add(Me.btneliminarcategoria)
-        Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Controls.Add(Me.IconPictureBox1)
-        Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.btnmodificarcategoria)
         Me.Panel2.Controls.Add(Me.btnnuevacategoria)
         Me.Panel2.Controls.Add(Me.txtdescripcioncategoria)
         Me.Panel2.Controls.Add(Me.txtnombrecategoria)
         Me.Panel2.Controls.Add(Me.labelidcategoria)
+        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Controls.Add(Me.IconPictureBox1)
+        Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(781, 511)
+        Me.Panel2.Size = New System.Drawing.Size(780, 513)
         Me.Panel2.TabIndex = 1
         '
         'btneliminarcategoria
@@ -86,36 +82,56 @@ Partial Class Mantenimiento_Categoria
         Me.btneliminarcategoria.TabIndex = 13
         Me.btneliminarcategoria.Text = "Eliminar"
         Me.btneliminarcategoria.UseVisualStyleBackColor = False
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Controls.Add(Me.IconPictureBox1)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.TextBox3)
-        Me.Panel2.Controls.Add(Me.TextBox2)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(715, 513)
-        Me.Panel2.TabIndex = 1
         '
-        'Button3
+        'btnmodificarcategoria
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(584, 426)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(99, 35)
-        Me.Button3.TabIndex = 13
-        Me.Button3.Text = "Eliminar"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnmodificarcategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.btnmodificarcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnmodificarcategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnmodificarcategoria.ForeColor = System.Drawing.Color.White
+        Me.btnmodificarcategoria.Location = New System.Drawing.Point(171, 295)
+        Me.btnmodificarcategoria.Name = "btnmodificarcategoria"
+        Me.btnmodificarcategoria.Size = New System.Drawing.Size(99, 35)
+        Me.btnmodificarcategoria.TabIndex = 9
+        Me.btnmodificarcategoria.Text = "Modificar"
+        Me.btnmodificarcategoria.UseVisualStyleBackColor = False
+        '
+        'btnnuevacategoria
+        '
+        Me.btnnuevacategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.btnnuevacategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnnuevacategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnnuevacategoria.ForeColor = System.Drawing.Color.White
+        Me.btnnuevacategoria.Location = New System.Drawing.Point(41, 296)
+        Me.btnnuevacategoria.Name = "btnnuevacategoria"
+        Me.btnnuevacategoria.Size = New System.Drawing.Size(99, 35)
+        Me.btnnuevacategoria.TabIndex = 7
+        Me.btnnuevacategoria.Text = "Nuevo"
+        Me.btnnuevacategoria.UseVisualStyleBackColor = False
+        '
+        'txtdescripcioncategoria
+        '
+        Me.txtdescripcioncategoria.Location = New System.Drawing.Point(133, 241)
+        Me.txtdescripcioncategoria.Name = "txtdescripcioncategoria"
+        Me.txtdescripcioncategoria.Size = New System.Drawing.Size(139, 23)
+        Me.txtdescripcioncategoria.TabIndex = 8
+        '
+        'txtnombrecategoria
+        '
+        Me.txtnombrecategoria.Location = New System.Drawing.Point(133, 199)
+        Me.txtnombrecategoria.Name = "txtnombrecategoria"
+        Me.txtnombrecategoria.Size = New System.Drawing.Size(139, 23)
+        Me.txtnombrecategoria.TabIndex = 7
+        '
+        'labelidcategoria
+        '
+        Me.labelidcategoria.AutoSize = True
+        Me.labelidcategoria.ForeColor = System.Drawing.Color.White
+        Me.labelidcategoria.Location = New System.Drawing.Point(130, 167)
+        Me.labelidcategoria.Name = "labelidcategoria"
+        Me.labelidcategoria.Size = New System.Drawing.Size(24, 17)
+        Me.labelidcategoria.TabIndex = 6
+        Me.labelidcategoria.Text = "00"
         '
         'GroupBox1
         '
@@ -127,7 +143,6 @@ Partial Class Mantenimiento_Categoria
         Me.GroupBox1.Location = New System.Drawing.Point(304, 28)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(454, 383)
-        Me.GroupBox1.Size = New System.Drawing.Size(379, 383)
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LISTA DE CATEGORÍAS"
@@ -150,10 +165,6 @@ Partial Class Mantenimiento_Categoria
         Me.DGV_Categoria.AllowUserToAddRows = False
         Me.DGV_Categoria.AllowUserToDeleteRows = False
         Me.DGV_Categoria.BackgroundColor = System.Drawing.SystemColors.AppWorkspace
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        Me.DGV_Categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_Categoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -181,30 +192,6 @@ Partial Class Mantenimiento_Categoria
         Me.DGV_Categoria.TabIndex = 0
         '
         'Column1
-        '
-        Me.Column1.DataPropertyName = "idcategoria"
-        Me.Column1.HeaderText = "idcategoria"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 102
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "nombre"
-        Me.Column2.HeaderText = "nombre"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 120
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "descripcion"
-        Me.Column3.HeaderText = "descripcion"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 120
-        '
-        'TextBox1
         '
         Me.Column1.DataPropertyName = "idcategoria"
         Me.Column1.HeaderText = "idcategoria"
@@ -260,56 +247,6 @@ Partial Class Mantenimiento_Categoria
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "MANTENIMIENTO DE CATEGORÍA"
         '
-        'btnmodificarcategoria
-        '
-        Me.btnmodificarcategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.btnmodificarcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnmodificarcategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnmodificarcategoria.ForeColor = System.Drawing.Color.White
-        Me.btnmodificarcategoria.Location = New System.Drawing.Point(171, 295)
-        Me.btnmodificarcategoria.Name = "btnmodificarcategoria"
-        Me.btnmodificarcategoria.Size = New System.Drawing.Size(99, 35)
-        Me.btnmodificarcategoria.TabIndex = 9
-        Me.btnmodificarcategoria.Text = "Modificar"
-        Me.btnmodificarcategoria.UseVisualStyleBackColor = False
-        '
-        'btnnuevacategoria
-        '
-        Me.btnnuevacategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.btnnuevacategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnnuevacategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnnuevacategoria.ForeColor = System.Drawing.Color.White
-        Me.btnnuevacategoria.Location = New System.Drawing.Point(41, 296)
-        Me.btnnuevacategoria.Name = "btnnuevacategoria"
-        Me.btnnuevacategoria.Size = New System.Drawing.Size(99, 35)
-        Me.btnnuevacategoria.TabIndex = 7
-        Me.btnnuevacategoria.Text = "Nuevo"
-        Me.btnnuevacategoria.UseVisualStyleBackColor = False
-        '
-        'txtdescripcioncategoria
-        '
-        Me.txtdescripcioncategoria.Location = New System.Drawing.Point(133, 241)
-        Me.txtdescripcioncategoria.Name = "txtdescripcioncategoria"
-        Me.txtdescripcioncategoria.Size = New System.Drawing.Size(139, 23)
-        Me.txtdescripcioncategoria.TabIndex = 8
-        '
-        'txtnombrecategoria
-        '
-        Me.txtnombrecategoria.Location = New System.Drawing.Point(133, 199)
-        Me.txtnombrecategoria.Name = "txtnombrecategoria"
-        Me.txtnombrecategoria.Size = New System.Drawing.Size(139, 23)
-        Me.txtnombrecategoria.TabIndex = 7
-        '
-        'labelidcategoria
-        '
-        Me.labelidcategoria.AutoSize = True
-        Me.labelidcategoria.ForeColor = System.Drawing.Color.White
-        Me.labelidcategoria.Location = New System.Drawing.Point(130, 167)
-        Me.labelidcategoria.Name = "labelidcategoria"
-        Me.labelidcategoria.Size = New System.Drawing.Size(24, 17)
-        Me.labelidcategoria.TabIndex = 6
-        Me.labelidcategoria.Text = "00"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -350,7 +287,6 @@ Partial Class Mantenimiento_Categoria
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(780, 513)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel3)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
