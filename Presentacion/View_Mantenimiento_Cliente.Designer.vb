@@ -39,12 +39,12 @@ Partial Class Mantenimiento_Cliente
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnbuscarcliente = New System.Windows.Forms.Button()
         Me.DGVCliente = New System.Windows.Forms.DataGridView()
-        Me.txtbuscarcliente = New System.Windows.Forms.TextBox()
-        Me.btneliminarcliente = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtbuscarcliente = New System.Windows.Forms.TextBox()
+        Me.btneliminarcliente = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -68,10 +68,11 @@ Partial Class Mantenimiento_Cliente
         Me.Panel1.Controls.Add(Me.txttelefonocliente)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.btneliminarcliente)
-        Me.Panel1.Location = New System.Drawing.Point(-2, 0)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(916, 564)
+        Me.Panel1.Size = New System.Drawing.Size(915, 561)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -253,7 +254,7 @@ Partial Class Mantenimiento_Cliente
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
@@ -266,28 +267,6 @@ Partial Class Mantenimiento_Cliente
         Me.DGVCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVCliente.Size = New System.Drawing.Size(454, 322)
         Me.DGVCliente.TabIndex = 10
-        '
-        'txtbuscarcliente
-        '
-        Me.txtbuscarcliente.Location = New System.Drawing.Point(72, 44)
-        Me.txtbuscarcliente.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.txtbuscarcliente.Name = "txtbuscarcliente"
-        Me.txtbuscarcliente.Size = New System.Drawing.Size(270, 20)
-        Me.txtbuscarcliente.TabIndex = 1
-        '
-        'btneliminarcliente
-        '
-        Me.btneliminarcliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.btneliminarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btneliminarcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btneliminarcliente.ForeColor = System.Drawing.Color.White
-        Me.btneliminarcliente.Location = New System.Drawing.Point(777, 490)
-        Me.btneliminarcliente.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.btneliminarcliente.Name = "btneliminarcliente"
-        Me.btneliminarcliente.Size = New System.Drawing.Size(115, 40)
-        Me.btneliminarcliente.TabIndex = 9
-        Me.btneliminarcliente.Text = "Eliminar"
-        Me.btneliminarcliente.UseVisualStyleBackColor = False
         '
         'Column1
         '
@@ -319,6 +298,28 @@ Partial Class Mantenimiento_Cliente
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
         Me.Column4.Width = 120
+        '
+        'txtbuscarcliente
+        '
+        Me.txtbuscarcliente.Location = New System.Drawing.Point(72, 44)
+        Me.txtbuscarcliente.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtbuscarcliente.Name = "txtbuscarcliente"
+        Me.txtbuscarcliente.Size = New System.Drawing.Size(270, 20)
+        Me.txtbuscarcliente.TabIndex = 1
+        '
+        'btneliminarcliente
+        '
+        Me.btneliminarcliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.btneliminarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btneliminarcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btneliminarcliente.ForeColor = System.Drawing.Color.White
+        Me.btneliminarcliente.Location = New System.Drawing.Point(777, 490)
+        Me.btneliminarcliente.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btneliminarcliente.Name = "btneliminarcliente"
+        Me.btneliminarcliente.Size = New System.Drawing.Size(115, 40)
+        Me.btneliminarcliente.TabIndex = 9
+        Me.btneliminarcliente.Text = "Eliminar"
+        Me.btneliminarcliente.UseVisualStyleBackColor = False
         '
         'Mantenimiento_Cliente
         '

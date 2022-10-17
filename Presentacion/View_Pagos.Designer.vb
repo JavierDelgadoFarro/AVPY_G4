@@ -23,6 +23,8 @@ Partial Class View_Pagos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox_Pagos = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_id_cliente = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Cb_nombre_cliente = New System.Windows.Forms.ComboBox()
@@ -43,6 +45,8 @@ Partial Class View_Pagos
         '
         'GroupBox_Pagos
         '
+        Me.GroupBox_Pagos.Controls.Add(Me.Button1)
+        Me.GroupBox_Pagos.Controls.Add(Me.Label2)
         Me.GroupBox_Pagos.Controls.Add(Me.lbl_id_cliente)
         Me.GroupBox_Pagos.Controls.Add(Me.Label1)
         Me.GroupBox_Pagos.Controls.Add(Me.Cb_nombre_cliente)
@@ -58,10 +62,34 @@ Partial Class View_Pagos
         Me.GroupBox_Pagos.TabStop = False
         Me.GroupBox_Pagos.Text = "Detalles Cliente"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(430, 22)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(77, 34)
+        Me.Button1.TabIndex = 13
+        Me.Button1.Text = "Buscar"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.ForeColor = System.Drawing.Color.Transparent
+        Me.Label2.Location = New System.Drawing.Point(565, 40)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(0, 17)
+        Me.Label2.TabIndex = 8
+        '
         'lbl_id_cliente
         '
         Me.lbl_id_cliente.AutoSize = True
-        Me.lbl_id_cliente.Location = New System.Drawing.Point(544, 30)
+        Me.lbl_id_cliente.Location = New System.Drawing.Point(565, 39)
         Me.lbl_id_cliente.Name = "lbl_id_cliente"
         Me.lbl_id_cliente.Size = New System.Drawing.Size(0, 17)
         Me.lbl_id_cliente.TabIndex = 7
@@ -69,7 +97,7 @@ Partial Class View_Pagos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(465, 30)
+        Me.Label1.Location = New System.Drawing.Point(537, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 6
@@ -111,6 +139,7 @@ Partial Class View_Pagos
         '
         'idVenta
         '
+        Me.idVenta.DataPropertyName = "Id_Venta"
         Me.idVenta.HeaderText = "idVenta"
         Me.idVenta.MinimumWidth = 6
         Me.idVenta.Name = "idVenta"
@@ -119,6 +148,7 @@ Partial Class View_Pagos
         '
         'idProducto
         '
+        Me.idProducto.DataPropertyName = "idproducto"
         Me.idProducto.HeaderText = "idProducto"
         Me.idProducto.MinimumWidth = 6
         Me.idProducto.Name = "idProducto"
@@ -127,6 +157,7 @@ Partial Class View_Pagos
         '
         'importe
         '
+        Me.importe.DataPropertyName = "importe"
         Me.importe.HeaderText = "importe"
         Me.importe.MinimumWidth = 6
         Me.importe.Name = "importe"
@@ -223,12 +254,14 @@ Partial Class View_Pagos
     Friend WithEvents lbl_id_cliente As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents idVenta As DataGridViewTextBoxColumn
-    Friend WithEvents idProducto As DataGridViewTextBoxColumn
-    Friend WithEvents importe As DataGridViewTextBoxColumn
     Friend WithEvents total As Label
     Friend WithEvents monto As Label
     Friend WithEvents lbl_monto_total As Label
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Btn_Pagar As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents idVenta As DataGridViewTextBoxColumn
+    Friend WithEvents idProducto As DataGridViewTextBoxColumn
+    Friend WithEvents importe As DataGridViewTextBoxColumn
 End Class
