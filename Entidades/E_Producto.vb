@@ -52,16 +52,6 @@
         End Set
     End Property
 
-    Private _foto As String
-    Public Property foto() As String
-        Get
-            Return _foto
-        End Get
-        Set(ByVal value As String)
-            _foto = value
-        End Set
-    End Property
-
     Private _idproveedor As Integer
     Public Property idproveedor() As Integer
         Get
@@ -69,6 +59,16 @@
         End Get
         Set(ByVal value As Integer)
             _idproveedor = value
+        End Set
+    End Property
+
+    Private _foto As String
+    Public Property foto() As String
+        Get
+            Return _foto
+        End Get
+        Set(ByVal value As String)
+            _foto = value
         End Set
     End Property
 
