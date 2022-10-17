@@ -3,6 +3,7 @@ Imports System.Drawing.Drawing2D
 Imports System.Runtime.InteropServices
 Imports Negocio
 Imports Entidades
+Imports System.Security
 
 Public Class View_Login
 
@@ -47,13 +48,6 @@ Public Class View_Login
         txt_password.UseSystemPasswordChar = True
     End Sub
 
-    Private Sub Button1_Paint(sender As Object, e As PaintEventArgs) Handles Btn_Login.Paint
-        Dim buttonPath As Drawing2D.GraphicsPath = New Drawing2D.GraphicsPath()
-        Dim myRectangle As Rectangle = Btn_Login.ClientRectangle
-        myRectangle.Inflate(0, 30)
-        buttonPath.AddEllipse(myRectangle)
-        Btn_Login.Region = New Region(buttonPath)
-    End Sub
 
 #End Region
     Public Sub New()
@@ -65,32 +59,76 @@ Public Class View_Login
         PersonalizarIconos()
     End Sub
 
-    Private Sub Btn_Login_Click(sender As Object, e As EventArgs) Handles Btn_Login.Click
-        Dim Usuario_Negocio As New Usuario_Negocio()
-        Dim valido_Login = Usuario_Negocio.Login(txt_nombre_login.Text, txt_password.Text)
-        'validacion de login'
-        If valido_Login = True Then
-            Me.Hide()
-            Dim Frm_Bienvenida As New View_Bienvenida()
-            Frm_Bienvenida.ShowDialog()
-            'mostramos ventana principal y apunta login'
-            Dim frm As New view_Principal()
-            frm.Show()
-            'Recarga el login'
-            AddHandler frm.FormClosed, AddressOf Me.Cerrar_Sesion
+
+    Private Function Validar(ByVal registros As E_Empleado) As Boolean
+        Dim valor As Boolean
+        Dim obj As New Empleado_Negocio
+        valor = obj.Validar(registros)
+        Return valor
+    End Function
+
+    Private Sub logearse()
+        Dim autorizado As Boolean
+        Dim registros As New E_Empleado
+        With registros
+            .usuario = txt_nombre_login.Text
+            .contraseña = txt_password.Text
+        End With
+        autorizado = Validar(registros)
+
+        If autorizado Then
+            'View_Bienvenida.ShowDialog()
+            view_Principal.Show()
+            view_Principal.Text = "Usuario : " + registros.usuario
+
         Else
-            MessageBox.Show("Datos incorrectos")
-            txt_password.Clear()
-            txt_password.Focus()
+            MessageBox.Show("usuario o contraseña incorrecta")
         End If
     End Sub
 
+    Private Sub Btn_Login_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Login.Click
+        logearse()
+    End Sub
+
+
+    Private Sub txt_password_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            e.Handled = True
+            logearse()
+        End If
+    End Sub
+
+
+
+
+
+    '
+    'Private Sub Btn_Login_Click(sender As Object, e As EventArgs) Handles Btn_Login.Click
+    'Dim Usuario_Negocio As New Usuario_Negocio()
+    'Dim valido_Login = Usuario_Negocio.Login(txt_nombre_login.Text, txt_password.Text)
+    ''validacion de login'
+    'If valido_Login = True Then
+    'Me.Hide()
+    'Dim Frm_Bienvenida As New View_Bienvenida()
+    '       Frm_Bienvenida.ShowDialog()
+    ''mostramos ventana principal y apunta login'
+    'Dim frm As New view_Principal()
+    '       frm.Show()
+    ''Recarga el login'
+    'AddHandler() frm.FormClosed, AddressOf Me.Cerrar_Sesion
+    'Else
+    '       MessageBox.Show("Datos incorrectos")
+    '      txt_password.Clear()
+    '     txt_password.Focus()
+    'End If
+    'End Sub
+
     'Cerrar Sesion'
 
-    Private Sub Cerrar_Sesion(sender As Object, e As FormClosedEventArgs)
-        txt_nombre_login.Clear()
-        txt_password.Clear()
-        Me.Show()
-        txt_nombre_login.Focus()
-    End Sub
+    'Private Sub Cerrar_Sesion(sender As Object, e As FormClosedEventArgs)
+    '   txt_nombre_login.Clear()
+    '  txt_password.Clear()
+    'Me.Show()
+    '   txt_nombre_login.Focus()
+    'End Sub
 End Class

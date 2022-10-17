@@ -43,11 +43,6 @@ Partial Class View_Ventas
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lbl_TotalVenta = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Rbtn_Contado = New System.Windows.Forms.RadioButton()
         Me.btn_Total_pagar = New System.Windows.Forms.Button()
         Me.Rbtn_Credito = New System.Windows.Forms.RadioButton()
@@ -56,7 +51,6 @@ Partial Class View_Ventas
         Me.GroupBox2.SuspendLayout()
         Me.pnl_ini.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -197,7 +191,7 @@ Partial Class View_Ventas
         Me.pnl_ini.Controls.Add(Me.PictureBox1)
         Me.pnl_ini.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.pnl_ini.ForeColor = System.Drawing.Color.Cornsilk
-        Me.pnl_ini.Location = New System.Drawing.Point(53, 69)
+        Me.pnl_ini.Location = New System.Drawing.Point(43, 69)
         Me.pnl_ini.Name = "pnl_ini"
         Me.pnl_ini.Size = New System.Drawing.Size(462, 440)
         Me.pnl_ini.TabIndex = 29
@@ -282,66 +276,6 @@ Partial Class View_Ventas
         Me.Label8.Size = New System.Drawing.Size(0, 20)
         Me.Label8.TabIndex = 11
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.White
-        Me.Panel5.Controls.Add(Me.Label7)
-        Me.Panel5.Controls.Add(Me.Label3)
-        Me.Panel5.Controls.Add(Me.Label4)
-        Me.Panel5.Controls.Add(Me.Label9)
-        Me.Panel5.Location = New System.Drawing.Point(54, 77)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(450, 35)
-        Me.Panel5.TabIndex = 25
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(408, 3)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(29, 25)
-        Me.Label7.TabIndex = 23
-        Me.Label7.Text = "Id"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(0, 3)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(167, 25)
-        Me.Label3.TabIndex = 21
-        Me.Label3.Text = "Concepto de Pago"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(191, 1)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 25)
-        Me.Label4.TabIndex = 22
-        Me.Label4.Text = "Precio"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.White
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(285, 3)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(88, 25)
-        Me.Label9.TabIndex = 24
-        Me.Label9.Text = "Cantidad"
-        '
         'Rbtn_Contado
         '
         Me.Rbtn_Contado.AutoSize = True
@@ -407,7 +341,6 @@ Partial Class View_Ventas
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Rbtn_Contado)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.lbl_TotalVenta)
         Me.Controls.Add(Me.Label8)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -420,8 +353,6 @@ Partial Class View_Ventas
         Me.pnl_ini.ResumeLayout(False)
         Me.pnl_ini.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -443,11 +374,6 @@ Partial Class View_Ventas
     Friend WithEvents Label5 As Label
     Friend WithEvents lbl_TotalVenta As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Rbtn_Contado As RadioButton
     Friend WithEvents btn_Total_pagar As Button
     Friend WithEvents Rbtn_Credito As RadioButton

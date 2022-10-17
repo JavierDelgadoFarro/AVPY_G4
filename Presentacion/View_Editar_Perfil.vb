@@ -34,7 +34,7 @@ Public Class View_Editar_Perfil
     Private Sub reiniciar()
         Editar_Data_Perfil()
         iniciar_Controles_Contraseña()
-        view_Principal.Info_Usuario()
+        'view_Principal.Info_Usuario()
     End Sub
 
     Private Sub lbl_link_password_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lbl_link_password.LinkClicked
@@ -44,7 +44,7 @@ Public Class View_Editar_Perfil
             txt_password.Text = ""
             txt_Confirmar_Pass.Enabled = True
             txt_Confirmar_Pass.Text = ""
-            view_Principal.Info_Usuario()
+            'view_Principal.Info_Usuario()
         ElseIf lbl_link_password.Text = "Cancelar" Then
             reiniciar()
         End If
