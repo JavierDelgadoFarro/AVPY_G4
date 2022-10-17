@@ -42,12 +42,12 @@
     End Property
 
 
-    Private _stock As Integer
-    Public Property stock() As Integer
+    Private _stock As Double
+    Public Property stock() As Double
         Get
             Return _stock
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As Double)
             _stock = value
         End Set
     End Property

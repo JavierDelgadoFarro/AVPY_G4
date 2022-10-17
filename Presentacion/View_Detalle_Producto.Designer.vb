@@ -22,6 +22,7 @@ Partial Class View_Detalle_Producto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(View_Detalle_Producto))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtCantidadProducto = New System.Windows.Forms.TextBox()
@@ -37,8 +38,9 @@ Partial Class View_Detalle_Producto
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lbl_nombre = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.lbl_nombre = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -59,17 +61,15 @@ Partial Class View_Detalle_Producto
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(0, 1)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(897, 568)
+        Me.Panel1.Size = New System.Drawing.Size(785, 426)
         Me.Panel1.TabIndex = 2
         '
         'txtCantidadProducto
         '
-        Me.txtCantidadProducto.Location = New System.Drawing.Point(147, 372)
-        Me.txtCantidadProducto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCantidadProducto.Location = New System.Drawing.Point(129, 279)
         Me.txtCantidadProducto.Name = "txtCantidadProducto"
-        Me.txtCantidadProducto.Size = New System.Drawing.Size(262, 27)
+        Me.txtCantidadProducto.Size = New System.Drawing.Size(230, 23)
         Me.txtCantidadProducto.TabIndex = 6
         '
         'Label2
@@ -77,9 +77,9 @@ Partial Class View_Detalle_Producto
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(50, 373)
+        Me.Label2.Location = New System.Drawing.Point(44, 280)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 20)
+        Me.Label2.Size = New System.Drawing.Size(69, 16)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Cantidad"
         '
@@ -89,10 +89,9 @@ Partial Class View_Detalle_Producto
         Me.btnAceptarDetalleProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAceptarDetalleProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnAceptarDetalleProducto.ForeColor = System.Drawing.Color.White
-        Me.btnAceptarDetalleProducto.Location = New System.Drawing.Point(99, 484)
-        Me.btnAceptarDetalleProducto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnAceptarDetalleProducto.Location = New System.Drawing.Point(87, 363)
         Me.btnAceptarDetalleProducto.Name = "btnAceptarDetalleProducto"
-        Me.btnAceptarDetalleProducto.Size = New System.Drawing.Size(99, 44)
+        Me.btnAceptarDetalleProducto.Size = New System.Drawing.Size(87, 33)
         Me.btnAceptarDetalleProducto.TabIndex = 20
         Me.btnAceptarDetalleProducto.Text = "Aceptar"
         Me.btnAceptarDetalleProducto.UseVisualStyleBackColor = False
@@ -103,10 +102,9 @@ Partial Class View_Detalle_Producto
         Me.btnCancelarDetalleProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarDetalleProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnCancelarDetalleProducto.ForeColor = System.Drawing.Color.White
-        Me.btnCancelarDetalleProducto.Location = New System.Drawing.Point(259, 484)
-        Me.btnCancelarDetalleProducto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnCancelarDetalleProducto.Location = New System.Drawing.Point(227, 363)
         Me.btnCancelarDetalleProducto.Name = "btnCancelarDetalleProducto"
-        Me.btnCancelarDetalleProducto.Size = New System.Drawing.Size(99, 44)
+        Me.btnCancelarDetalleProducto.Size = New System.Drawing.Size(87, 33)
         Me.btnCancelarDetalleProducto.TabIndex = 11
         Me.btnCancelarDetalleProducto.Text = "Cancelar"
         Me.btnCancelarDetalleProducto.UseVisualStyleBackColor = False
@@ -114,10 +112,10 @@ Partial Class View_Detalle_Producto
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(158, 20)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(138, 15)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(138, 133)
+        Me.PictureBox1.Size = New System.Drawing.Size(121, 100)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 19
         Me.PictureBox1.TabStop = False
@@ -127,10 +125,10 @@ Partial Class View_Detalle_Producto
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(128, 171)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label7.Location = New System.Drawing.Point(112, 128)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(246, 20)
+        Me.Label7.Size = New System.Drawing.Size(198, 16)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "DETALLE DE PRODUCTOS"
         '
@@ -142,11 +140,9 @@ Partial Class View_Detalle_Producto
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox2.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox2.Location = New System.Drawing.Point(26, 225)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox2.Location = New System.Drawing.Point(23, 169)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox2.Size = New System.Drawing.Size(409, 205)
+        Me.GroupBox2.Size = New System.Drawing.Size(358, 154)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         '
@@ -154,9 +150,9 @@ Partial Class View_Detalle_Producto
         '
         Me.lbl_precio.AutoSize = True
         Me.lbl_precio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_precio.Location = New System.Drawing.Point(149, 96)
+        Me.lbl_precio.Location = New System.Drawing.Point(130, 72)
         Me.lbl_precio.Name = "lbl_precio"
-        Me.lbl_precio.Size = New System.Drawing.Size(19, 20)
+        Me.lbl_precio.Size = New System.Drawing.Size(15, 16)
         Me.lbl_precio.TabIndex = 5
         Me.lbl_precio.Text = "1"
         '
@@ -164,9 +160,9 @@ Partial Class View_Detalle_Producto
         '
         Me.lbl_stock.AutoSize = True
         Me.lbl_stock.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_stock.Location = New System.Drawing.Point(149, 39)
+        Me.lbl_stock.Location = New System.Drawing.Point(130, 29)
         Me.lbl_stock.Name = "lbl_stock"
-        Me.lbl_stock.Size = New System.Drawing.Size(19, 20)
+        Me.lbl_stock.Size = New System.Drawing.Size(15, 16)
         Me.lbl_stock.TabIndex = 4
         Me.lbl_stock.Text = "1"
         '
@@ -174,9 +170,9 @@ Partial Class View_Detalle_Producto
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(24, 96)
+        Me.Label9.Location = New System.Drawing.Point(21, 72)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(63, 20)
+        Me.Label9.Size = New System.Drawing.Size(52, 16)
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "Precio"
         '
@@ -184,9 +180,9 @@ Partial Class View_Detalle_Producto
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(24, 39)
+        Me.Label1.Location = New System.Drawing.Point(21, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 20)
+        Me.Label1.Size = New System.Drawing.Size(46, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Stock"
         '
@@ -195,10 +191,9 @@ Partial Class View_Detalle_Producto
         Me.Panel2.AutoSize = True
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Location = New System.Drawing.Point(461, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel2.Location = New System.Drawing.Point(403, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(438, 568)
+        Me.Panel2.Size = New System.Drawing.Size(383, 426)
         Me.Panel2.TabIndex = 15
         '
         'GroupBox1
@@ -207,41 +202,39 @@ Partial Class View_Detalle_Producto
         Me.GroupBox1.Controls.Add(Me.lbl_nombre)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 37)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(19, 28)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(391, 491)
+        Me.GroupBox1.Size = New System.Drawing.Size(342, 368)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LISTA DE DETALLE DE PRODUCTOS"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Location = New System.Drawing.Point(43, 64)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(228, 243)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 7
+        Me.PictureBox2.TabStop = False
         '
         'lbl_nombre
         '
         Me.lbl_nombre.AutoSize = True
         Me.lbl_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_nombre.Location = New System.Drawing.Point(146, 41)
+        Me.lbl_nombre.Location = New System.Drawing.Point(128, 31)
         Me.lbl_nombre.Name = "lbl_nombre"
-        Me.lbl_nombre.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_nombre.Size = New System.Drawing.Size(40, 16)
         Me.lbl_nombre.TabIndex = 6
         Me.lbl_nombre.Text = "texto"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(49, 86)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(261, 324)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 7
-        Me.PictureBox2.TabStop = False
-        '
         'View_Detalle_Producto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(894, 567)
+        Me.ClientSize = New System.Drawing.Size(782, 425)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "View_Detalle_Producto"
         Me.Text = "View_Detalle_Producto"
         Me.Panel1.ResumeLayout(False)
@@ -273,4 +266,5 @@ Partial Class View_Detalle_Producto
     Friend WithEvents lbl_stock As Label
     Friend WithEvents lbl_nombre As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class
