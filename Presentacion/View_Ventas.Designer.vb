@@ -43,11 +43,6 @@ Partial Class View_Ventas
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lbl_TotalVenta = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Rbtn_Contado = New System.Windows.Forms.RadioButton()
         Me.btn_Total_pagar = New System.Windows.Forms.Button()
         Me.Rbtn_Credito = New System.Windows.Forms.RadioButton()
@@ -56,7 +51,6 @@ Partial Class View_Ventas
         Me.GroupBox2.SuspendLayout()
         Me.pnl_ini.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -67,7 +61,11 @@ Partial Class View_Ventas
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
+
         Me.GroupBox1.Location = New System.Drawing.Point(500, 40)
+
+        Me.GroupBox1.Location = New System.Drawing.Point(577, 46)
+
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -203,10 +201,17 @@ Partial Class View_Ventas
         Me.pnl_ini.Controls.Add(Me.PictureBox1)
         Me.pnl_ini.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.pnl_ini.ForeColor = System.Drawing.Color.Cornsilk
+
         Me.pnl_ini.Location = New System.Drawing.Point(46, 52)
         Me.pnl_ini.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnl_ini.Name = "pnl_ini"
         Me.pnl_ini.Size = New System.Drawing.Size(404, 330)
+
+        Me.pnl_ini.Location = New System.Drawing.Point(38, 52)
+        Me.pnl_ini.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.pnl_ini.Name = "pnl_ini"
+        Me.pnl_ini.Size = New System.Drawing.Size(404, 337)
+
         Me.pnl_ini.TabIndex = 29
         '
         'Label10
@@ -274,11 +279,17 @@ Partial Class View_Ventas
         Me.lbl_TotalVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.lbl_TotalVenta.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lbl_TotalVenta.ForeColor = System.Drawing.Color.White
+
         Me.lbl_TotalVenta.Location = New System.Drawing.Point(214, 356)
         Me.lbl_TotalVenta.Name = "lbl_TotalVenta"
         Me.lbl_TotalVenta.Size = New System.Drawing.Size(221, 28)
+
+        Me.lbl_TotalVenta.Location = New System.Drawing.Point(256, 355)
+        Me.lbl_TotalVenta.Name = "lbl_TotalVenta"
+        Me.lbl_TotalVenta.Size = New System.Drawing.Size(53, 28)
+
         Me.lbl_TotalVenta.TabIndex = 27
-        Me.lbl_TotalVenta.Text = "                           0. 00"
+        Me.lbl_TotalVenta.Text = "0.00"
         '
         'Label8
         '
@@ -290,6 +301,7 @@ Partial Class View_Ventas
         Me.Label8.Size = New System.Drawing.Size(0, 15)
         Me.Label8.TabIndex = 11
         '
+
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.White
@@ -351,6 +363,7 @@ Partial Class View_Ventas
         Me.Label9.TabIndex = 24
         Me.Label9.Text = "Cantidad"
         '
+
         'Rbtn_Contado
         '
         Me.Rbtn_Contado.AutoSize = True
@@ -407,8 +420,13 @@ Partial Class View_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1150, 566)
+
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1231, 566)
+
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lbl_idcliente)
         Me.Controls.Add(Me.Label1)
@@ -420,7 +438,6 @@ Partial Class View_Ventas
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Rbtn_Contado)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.lbl_TotalVenta)
         Me.Controls.Add(Me.Label8)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -435,8 +452,6 @@ Partial Class View_Ventas
         Me.pnl_ini.ResumeLayout(False)
         Me.pnl_ini.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -458,11 +473,6 @@ Partial Class View_Ventas
     Friend WithEvents Label5 As Label
     Friend WithEvents lbl_TotalVenta As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Rbtn_Contado As RadioButton
     Friend WithEvents btn_Total_pagar As Button
     Friend WithEvents Rbtn_Credito As RadioButton

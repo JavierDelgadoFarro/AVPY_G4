@@ -131,7 +131,7 @@ Public Class view_Principal
 
     Private Sub Btn_Configuracion_Click(sender As Object, e As EventArgs) Handles Btn_Configuracion.Click
         Activacion_Boton(sender, RGBColors.ColorAzulClaro)
-        Abrir_Frm_Hijo(New View_Editar_Perfil)
+        'Abrir_Frm_Hijo(New View_Editar_Perfil)
     End Sub
 
     'SUBMENU'
@@ -250,43 +250,43 @@ Public Class view_Principal
     End Sub
 #End Region
 
-#Region "Retornar información"
-    Private Sub view_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Info_Usuario()
-        Permisos_Usuario()
-    End Sub
-    Public Sub Info_Usuario()
-        lbl_usuario.Text = ""
-        lbl_Nombre.Text = ""
-        lbl_apellidos.Text = ""
+    '#Region "Retornar información"
+    '  Private Sub view_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    'Info_Usuario()
+    '      Permisos_Usuario()
+    '  End Sub
+    '   Public Sub Info_Usuario()
+    '       lbl_usuario.Text = ""
+    '      lbl_Nombre.Text = ""
+    '      lbl_apellidos.Text = ""
 
-        lbl_usuario.Text = E_Usuario.usuario
-        lbl_Nombre.Text = E_Usuario.nombre
-        lbl_apellidos.Text = E_Usuario.apellido
-        If E_Usuario.id = Nothing OrElse E_Usuario.id = 0 Then
+    '      lbl_usuario.Text = E_Usuario.usuario
+    '    lbl_Nombre.Text = E_Usuario.nombre
+    'lbl_apellidos.Text = E_Usuario.apellido
+    'If E_Usuario.id = Nothing OrElse E_Usuario.id = 0 Then
 
-            MessageBox.Show("Error")
-            Me.Close()
-        End If
-    End Sub
+    '        MessageBox.Show("Error")
+    '  Me.Close()
+    '    End If
+    '    End Sub
 
-#End Region
+    '#End Region
 
 #Region "Permisos de usuarios"
-    'administrador = 1
+    '  'administrador = 1
     'almacenero = 2
     'vendedor = 3
 
-    Private Sub Permisos_Usuario()
-        If E_Usuario.idRol = 2 Then
-            Btn_Configuracion.Visible = False
-            Btn_Pagos.Visible = False
-        End If
-        If E_Usuario.idRol = 3 Then
-            Btn_Configuracion.Visible = False
-            Btn_Compras.Visible = False
-        End If
-    End Sub
+    ' Private Sub Permisos_Usuario()
+    'If E_Usuario.idRol = 2 Then
+    '        Btn_Configuracion.Visible = False
+    '        Btn_Pagos.Visible = False
+    'End If
+    'If E_Usuario.idRol = 3 Then
+    '       Btn_Configuracion.Visible = False
+    '        Btn_Compras.Visible = False
+    'End If
+    ' End Sub
 
 
 #End Region

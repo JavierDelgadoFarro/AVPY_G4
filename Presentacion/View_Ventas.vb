@@ -15,7 +15,7 @@ Public Class View_Ventas
     Private Sub Venta_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.BackColor = Color.BlueViolet
         panel.AutoScroll = True
-        panel.Location = New System.Drawing.Point(500, 85)
+        panel.Location = New System.Drawing.Point(685, 215)
         panel.Name = "Panel1"
         panel.Size = New System.Drawing.Size(540, 580)
         'Se agrega al formulario'

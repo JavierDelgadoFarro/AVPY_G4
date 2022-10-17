@@ -6,8 +6,10 @@ Public Class Producto_Datos
     Inherits Conexion
     Public Function Mostrarproducto(ByVal id As Integer) As List(Of E_Producto)
         Dim lista As New List(Of E_Producto)
+
         Using conexion_return = GetConexion()
             conexion_return.Open()
+
             Dim cmd As New SqlCommand("p_producto", conexion_return)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@idcategoria", id)
@@ -35,6 +37,7 @@ Public Class Producto_Datos
         Dim lista As New List(Of E_Producto)
         Using conexion_return = GetConexion()
             conexion_return.Open()
+
             Dim cmd As New SqlCommand("p_preciostock", conexion_return)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@idproducto", id)
@@ -258,7 +261,9 @@ Public Class Producto_Datos
             conexion_return.Open()
             Dim cmd As New SqlCommand("maxproductos", conexion_return)
             cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int).Direction = ParameterDirection.ReturnValue
             cmd.ExecuteNonQuery()
+            logeo = CType(cmd.Parameters.Item("@RETURN_VALUE").Value, Integer)
             conexion_return.Dispose()
             conexion_return.Close()
         End Using
@@ -276,6 +281,7 @@ Public Class Producto_Datos
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int).Direction = ParameterDirection.ReturnValue
             cmd.ExecuteNonQuery()
+            logeo = CType(cmd.Parameters.Item("@RETURN_VALUE").Value, Integer)
             conexion_return.Dispose()
             conexion_return.Close()
         End Using
@@ -292,6 +298,7 @@ Public Class Producto_Datos
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int).Direction = ParameterDirection.ReturnValue
             cmd.ExecuteNonQuery()
+            logeo = CType(cmd.Parameters.Item("@RETURN_VALUE").Value, Integer)
             conexion_return.Dispose()
             conexion_return.Close()
         End Using
