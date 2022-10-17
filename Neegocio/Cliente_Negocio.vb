@@ -30,4 +30,10 @@ Public Class Cliente_Negocio
         Dim Datos As New Cliente_Datos
         Datos.modificar_cliente(registros)
     End Sub
+
+    'Eliminar Cliente' 
+    Public Sub Eliminar_cliente(ByVal registros As E_Cliente)
+        Dim Datos As New Cliente_Datos
+        Datos.Eliminar_Cliente(registros)
+    End Sub
 End Class

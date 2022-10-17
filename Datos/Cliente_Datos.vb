@@ -119,7 +119,22 @@ Public Class Cliente_Datos
         End Using
     End Sub
 
+    'Eliminar Cliente'
+    Public Sub Eliminar_Cliente(ByVal registros As E_Cliente)
+        Using conexion_return = GetConexion()
+            conexion_return.Open()
 
+            Dim cmd As New SqlCommand("p_eliminarcliente", conexion_return)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@idcliente", registros.IdCliente)
+            End With
+            cmd.ExecuteNonQuery()
+            conexion_return.Close()
+            conexion_return.Dispose()
+        End Using
+    End Sub
 
 
 End Class

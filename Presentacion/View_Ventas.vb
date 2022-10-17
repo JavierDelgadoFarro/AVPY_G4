@@ -152,11 +152,11 @@ Public Class View_Ventas
 
             'Picturebox'
             Me.txt(i).Size = New System.Drawing.Size(130, 130)
-            Me.txt(i).Name = lista.Item(i - 1).idproducto
+            Me.txt(i).Name = lista.Item(i).idproducto
             Me.txt(i).SizeMode = PictureBoxSizeMode.StretchImage
             Me.txt(i).BorderStyle = BorderStyle.FixedSingle
-            If File.Exists(My.Application.Info.DirectoryPath + "\imagenes\productos\" + lista.Item(i - 1).foto) Then 'Comprobamos que el archivo existe'
-                Me.txt(i).Load(My.Application.Info.DirectoryPath + "\imagenes\productos\" + lista.Item(i - 1).foto)
+            If File.Exists(Application.StartupPath + "\imagenes\productos\" + lista.Item(i - 1).foto) Then 'Comprobamos que el archivo existe'
+                Me.txt(i).Load(Application.StartupPath + "\imagenes\productos\" + lista.Item(i - 1).foto)
             End If
 
             contador = contador + 1
@@ -255,9 +255,9 @@ Public Class View_Ventas
 
     Private Sub Cmb_cliente_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If Cmb_cliente.SelectedIndex >= 0 Then
-            Label5.Text = Cmb_cliente.SelectedValue.ToString
+            lbl_idcliente.Text = Cmb_cliente.SelectedValue.ToString
         Else
-            Label5.Text = ""
+            lbl_idcliente.Text = ""
         End If
     End Sub
 
@@ -295,7 +295,7 @@ Public Class View_Ventas
         Rbtn_Contado.Checked = True
         Me.Lsv_det.Items.Clear()
         lbl_TotalVenta.Text = "0.00"
-        Label5.Text = ""
+        lbl_idcliente.Text = ""
         Cmb_categoria.SelectedIndex = -1
         Cb_filtro.Checked = False
         TextBox2.Text = ""
@@ -305,7 +305,7 @@ Public Class View_Ventas
     End Sub
 
     Private Sub btn_cobrar_Click(sender As Object, e As EventArgs) Handles btn_Total_pagar.Click
-        If Label5.Text = " " Then
+        If lbl_idcliente.Text = " " Then
             MessageBox.Show("Debe seleccionar un cliente")
             Cmb_cliente.Focus()
             Exit Sub

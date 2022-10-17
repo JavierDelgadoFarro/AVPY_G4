@@ -90,7 +90,7 @@ Public Class View_Mantenimiento_Proveedores
     End Sub
 
     'Modificar proveedor'
-    Private Sub Modificar_categoria()
+    Private Sub Modificar_proveedor()
         Dim Entidad As New E_Proveedor
         Dim Negocio As New Proveedor_Negocio
         With Entidad
@@ -105,11 +105,11 @@ Public Class View_Mantenimiento_Proveedores
         Negocio.Modificar_Proveedor(Entidad)
     End Sub
     Private Sub btnmodificarproveedor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodificarproveedor.Click
-        Modificar_categoria()
+        Modificar_proveedor()
         cargargridview()
     End Sub
 
-    'Eliminar categoria'
+    'Eliminar proveedor'
     Private Sub Eliminar_proveedor()
         Dim Entidad As New E_Proveedor
         Dim Negocio As New Proveedor_Negocio
@@ -129,7 +129,7 @@ Public Class View_Mantenimiento_Proveedores
         cargargridview()
     End Sub
 
-    'Buscar Categoria'
+    'Buscar proveedor'
 
     Private Sub btnbuscarproveedor_Click(sender As Object, e As EventArgs) Handles btnbuscarproveedor.Click
         Dim busca = txtbuscarproveedor.Text
