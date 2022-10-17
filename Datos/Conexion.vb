@@ -6,9 +6,7 @@
 Public MustInherit Class Conexion
     Private conexionString As String
     'inicializamos la cadena de conexion'
-
-        conexionString = "Data Source=LAPTOP-7QMM155H\SQLEXPRESS;Initial Catalog=Tienda_Rosa;Integrated Security=True"
-
+    Protected Sub New()
         conexionString = "Data Source=DESKTOP-PH1HUF0;Initial Catalog=Tienda_Rosa;User ID=sistema"
     End Sub
 
