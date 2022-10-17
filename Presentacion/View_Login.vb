@@ -67,6 +67,8 @@ Public Class View_Login
         Return valor
     End Function
 
+
+
     Private Sub logearse()
         Dim autorizado As Boolean
         Dim registros As New E_Empleado
@@ -78,11 +80,15 @@ Public Class View_Login
 
         If autorizado Then
             'View_Bienvenida.ShowDialog()
+            Me.Hide()
             view_Principal.Show()
             view_Principal.Text = "Usuario : " + registros.usuario
-
+            'Recarga el login'
+            AddHandler view_Principal.FormClosed, AddressOf Me.Cerrar_Sesion
         Else
             MessageBox.Show("usuario o contraseña incorrecta")
+            txt_password.Clear()
+            txt_password.Focus()
         End If
     End Sub
 
@@ -98,37 +104,11 @@ Public Class View_Login
         End If
     End Sub
 
+    Private Sub Cerrar_Sesion(sender As Object, e As FormClosedEventArgs)
+        txt_nombre_login.Clear()
+        txt_password.Clear()
+        Me.Show()
+        txt_nombre_login.Focus()
+    End Sub
 
-
-
-
-    '
-    'Private Sub Btn_Login_Click(sender As Object, e As EventArgs) Handles Btn_Login.Click
-    'Dim Usuario_Negocio As New Usuario_Negocio()
-    'Dim valido_Login = Usuario_Negocio.Login(txt_nombre_login.Text, txt_password.Text)
-    ''validacion de login'
-    'If valido_Login = True Then
-    'Me.Hide()
-    'Dim Frm_Bienvenida As New View_Bienvenida()
-    '       Frm_Bienvenida.ShowDialog()
-    ''mostramos ventana principal y apunta login'
-    'Dim frm As New view_Principal()
-    '       frm.Show()
-    ''Recarga el login'
-    'AddHandler() frm.FormClosed, AddressOf Me.Cerrar_Sesion
-    'Else
-    '       MessageBox.Show("Datos incorrectos")
-    '      txt_password.Clear()
-    '     txt_password.Focus()
-    'End If
-    'End Sub
-
-    'Cerrar Sesion'
-
-    'Private Sub Cerrar_Sesion(sender As Object, e As FormClosedEventArgs)
-    '   txt_nombre_login.Clear()
-    '  txt_password.Clear()
-    'Me.Show()
-    '   txt_nombre_login.Focus()
-    'End Sub
 End Class

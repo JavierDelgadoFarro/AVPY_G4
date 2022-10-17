@@ -26,7 +26,6 @@ Public Class Mantenimiento_Cliente
     Private Sub Mantenimiento_Cliente_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.ForeColor = Color.Black
         personalizargridview(Me.DGVCliente)
-        DGVCliente.AutoGenerateColumns = False
         cargargridview()
 
     End Sub

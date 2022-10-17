@@ -22,7 +22,7 @@ Public Class Producto_Datos
                 reg.idcategoria = dr.GetValue(2).ToString()
                 reg.precio = dr.GetValue(3).ToString()
                 reg.stock = dr.GetValue(4).ToString()
-                reg.idproveedor = dr.GetValue(5).ToString
+                reg.idproveedor = dr.GetValue(5).ToString()
                 reg.foto = dr.GetValue(6).ToString()
                 lista.Add(reg)
             End While
@@ -112,7 +112,7 @@ Public Class Producto_Datos
                 reg.idcategoria = dr.GetValue(2).ToString()
                 reg.precio = dr.GetValue(3).ToString()
                 reg.stock = dr.GetValue(4).ToString()
-                reg.idproveedor = dr.GetValue(5).ToString
+                reg.idproveedor = dr.GetValue(5).ToString()
                 reg.foto = dr.GetValue(6).ToString()
                 lista.Add(reg)
             End While
@@ -165,8 +165,8 @@ Public Class Producto_Datos
                 reg.idcategoria = dr.GetValue(2).ToString()
                 reg.precio = dr.GetValue(3).ToString()
                 reg.stock = dr.GetValue(4).ToString()
-                reg.foto = dr.GetValue(5).ToString()
-                reg.idproveedor = dr.GetValue(6).ToString
+                reg.idproveedor = dr.GetValue(5).ToString()
+                reg.foto = dr.GetValue(6).ToString()
                 lista.Add(reg)
             End While
             dr.Close()
@@ -194,8 +194,8 @@ Public Class Producto_Datos
                 reg.idcategoria = dr.GetValue(2).ToString()
                 reg.precio = dr.GetValue(3).ToString()
                 reg.stock = dr.GetValue(4).ToString()
-                reg.foto = dr.GetValue(5).ToString()
-                reg.idproveedor = dr.GetValue(6).ToString
+                reg.idproveedor = dr.GetValue(5).ToString()
+                reg.foto = dr.GetValue(6).ToString()
                 lista.Add(reg)
             End While
             dr.Close()
