@@ -50,6 +50,7 @@ Partial Class view_Principal
         Me.Icon_Form_Actual = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel_Secundario = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.lbl_id = New System.Windows.Forms.Label()
         Me.Panel_Menu.SuspendLayout()
         Me.Panel_Mantenimiento.SuspendLayout()
         Me.Panel_Logo.SuspendLayout()
@@ -367,6 +368,7 @@ Partial Class view_Principal
         'Barra_Titulo
         '
         Me.Barra_Titulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.Barra_Titulo.Controls.Add(Me.lbl_id)
         Me.Barra_Titulo.Controls.Add(Me.lbl_apellidos)
         Me.Barra_Titulo.Controls.Add(Me.lbl_link_editar)
         Me.Barra_Titulo.Controls.Add(Me.lbl_usuario)
@@ -531,6 +533,16 @@ Partial Class view_Principal
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
+        'lbl_id
+        '
+        Me.lbl_id.AutoSize = True
+        Me.lbl_id.Location = New System.Drawing.Point(710, 55)
+        Me.lbl_id.Name = "lbl_id"
+        Me.lbl_id.Size = New System.Drawing.Size(45, 20)
+        Me.lbl_id.TabIndex = 11
+        Me.lbl_id.Text = "lbl_id"
+        Me.lbl_id.Visible = False
+        '
         'view_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -592,4 +604,5 @@ Partial Class view_Principal
     Friend WithEvents lbl_Nombre As Label
     Friend WithEvents lbl_link_editar As LinkLabel
     Friend WithEvents lbl_apellidos As Label
+    Friend WithEvents lbl_id As Label
 End Class

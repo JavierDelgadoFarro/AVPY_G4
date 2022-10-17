@@ -35,7 +35,7 @@
                 With oreg
                     .SubItems.Add(lbl_precio.Text) 'Precio'
                     .SubItems.Add(txtCantidadProducto.Text)  'Cantidad'
-                    .SubItems.Add(PictureBox2.Name) 'Codigo del producto'
+                    .SubItems.Add(pic_Producto.Name) 'Codigo del producto'
                     View_Ventas.Lsv_det.Items.Add(oreg) 'Agregamos todo esto al listview'
                 End With
                 'Sumamos el total'
@@ -76,8 +76,4 @@
         Next
         Return posicion
     End Function
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 End Class

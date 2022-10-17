@@ -24,7 +24,7 @@ Partial Class View_Ventas
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(View_Ventas))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txt_producto = New System.Windows.Forms.TextBox()
         Me.Cb_filtro = New System.Windows.Forms.CheckBox()
         Me.Cmb_categoria = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,40 +55,34 @@ Partial Class View_Ventas
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.txt_producto)
         Me.GroupBox1.Controls.Add(Me.Cb_filtro)
         Me.GroupBox1.Controls.Add(Me.Cmb_categoria)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-
-        Me.GroupBox1.Location = New System.Drawing.Point(500, 40)
-
-        Me.GroupBox1.Location = New System.Drawing.Point(577, 46)
-
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GroupBox1.Location = New System.Drawing.Point(659, 61)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox1.Size = New System.Drawing.Size(615, 91)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(703, 121)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Buscar Producto"
         '
-        'TextBox2
+        'txt_producto
         '
-        Me.TextBox2.Location = New System.Drawing.Point(81, 43)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(199, 23)
-        Me.TextBox2.TabIndex = 17
+        Me.txt_producto.Location = New System.Drawing.Point(93, 57)
+        Me.txt_producto.Name = "txt_producto"
+        Me.txt_producto.Size = New System.Drawing.Size(227, 27)
+        Me.txt_producto.TabIndex = 17
         '
         'Cb_filtro
         '
         Me.Cb_filtro.AutoSize = True
-        Me.Cb_filtro.Location = New System.Drawing.Point(304, 45)
-        Me.Cb_filtro.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Cb_filtro.Location = New System.Drawing.Point(347, 60)
         Me.Cb_filtro.Name = "Cb_filtro"
-        Me.Cb_filtro.Size = New System.Drawing.Size(70, 21)
+        Me.Cb_filtro.Size = New System.Drawing.Size(82, 24)
         Me.Cb_filtro.TabIndex = 16
         Me.Cb_filtro.Text = "Filtrar"
         Me.Cb_filtro.UseVisualStyleBackColor = True
@@ -96,29 +90,28 @@ Partial Class View_Ventas
         'Cmb_categoria
         '
         Me.Cmb_categoria.FormattingEnabled = True
-        Me.Cmb_categoria.Location = New System.Drawing.Point(381, 43)
-        Me.Cmb_categoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Cmb_categoria.Location = New System.Drawing.Point(435, 57)
         Me.Cmb_categoria.Name = "Cmb_categoria"
-        Me.Cmb_categoria.Size = New System.Drawing.Size(208, 25)
+        Me.Cmb_categoria.Size = New System.Drawing.Size(237, 28)
         Me.Cmb_categoria.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(10, 46)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(11, 61)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 16)
+        Me.Label2.Size = New System.Drawing.Size(74, 20)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Nombre"
         '
         'lbl_idcliente
         '
         Me.lbl_idcliente.AutoSize = True
-        Me.lbl_idcliente.Location = New System.Drawing.Point(358, 397)
+        Me.lbl_idcliente.Location = New System.Drawing.Point(409, 529)
         Me.lbl_idcliente.Name = "lbl_idcliente"
-        Me.lbl_idcliente.Size = New System.Drawing.Size(54, 15)
+        Me.lbl_idcliente.Size = New System.Drawing.Size(68, 20)
         Me.lbl_idcliente.TabIndex = 30
         Me.lbl_idcliente.Text = "idCliente"
         Me.lbl_idcliente.Visible = False
@@ -132,11 +125,11 @@ Partial Class View_Ventas
         Me.GroupBox2.Controls.Add(Me.Cmb_cliente)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(27, 418)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GroupBox2.Location = New System.Drawing.Point(31, 557)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox2.Size = New System.Drawing.Size(452, 125)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(517, 167)
         Me.GroupBox2.TabIndex = 17
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Cliente"
@@ -144,20 +137,20 @@ Partial Class View_Ventas
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker2.Location = New System.Drawing.Point(304, 79)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(347, 105)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(109, 23)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(124, 27)
         Me.DateTimePicker2.TabIndex = 32
+        Me.DateTimePicker2.Visible = False
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(90, 79)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(103, 105)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(144, 23)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(164, 27)
         Me.DateTimePicker1.TabIndex = 31
+        Me.DateTimePicker1.Visible = False
         '
         'Btn_Actualizar
         '
@@ -165,10 +158,10 @@ Partial Class View_Ventas
         Me.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Actualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Btn_Actualizar.ForeColor = System.Drawing.Color.White
-        Me.Btn_Actualizar.Location = New System.Drawing.Point(304, 30)
-        Me.Btn_Actualizar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Btn_Actualizar.Location = New System.Drawing.Point(347, 40)
+        Me.Btn_Actualizar.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Btn_Actualizar.Name = "Btn_Actualizar"
-        Me.Btn_Actualizar.Size = New System.Drawing.Size(109, 29)
+        Me.Btn_Actualizar.Size = New System.Drawing.Size(125, 39)
         Me.Btn_Actualizar.TabIndex = 8
         Me.Btn_Actualizar.Text = "Actualizar"
         Me.Btn_Actualizar.UseVisualStyleBackColor = False
@@ -178,20 +171,19 @@ Partial Class View_Ventas
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(5, 37)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(6, 49)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(62, 16)
+        Me.Label6.Size = New System.Drawing.Size(74, 20)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Nombre"
         '
         'Cmb_cliente
         '
         Me.Cmb_cliente.FormattingEnabled = True
-        Me.Cmb_cliente.Location = New System.Drawing.Point(74, 34)
-        Me.Cmb_cliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Cmb_cliente.Location = New System.Drawing.Point(85, 45)
         Me.Cmb_cliente.Name = "Cmb_cliente"
-        Me.Cmb_cliente.Size = New System.Drawing.Size(213, 25)
+        Me.Cmb_cliente.Size = New System.Drawing.Size(243, 28)
         Me.Cmb_cliente.TabIndex = 12
         '
         'pnl_ini
@@ -201,36 +193,27 @@ Partial Class View_Ventas
         Me.pnl_ini.Controls.Add(Me.PictureBox1)
         Me.pnl_ini.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.pnl_ini.ForeColor = System.Drawing.Color.Cornsilk
-
-        Me.pnl_ini.Location = New System.Drawing.Point(46, 52)
-        Me.pnl_ini.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.pnl_ini.Location = New System.Drawing.Point(28, 102)
         Me.pnl_ini.Name = "pnl_ini"
-        Me.pnl_ini.Size = New System.Drawing.Size(404, 330)
-
-        Me.pnl_ini.Location = New System.Drawing.Point(38, 52)
-        Me.pnl_ini.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pnl_ini.Name = "pnl_ini"
-        Me.pnl_ini.Size = New System.Drawing.Size(404, 337)
-
+        Me.pnl_ini.Size = New System.Drawing.Size(475, 352)
         Me.pnl_ini.TabIndex = 29
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.Location = New System.Drawing.Point(22, 224)
+        Me.Label10.Location = New System.Drawing.Point(25, 299)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(316, 30)
+        Me.Label10.Size = New System.Drawing.Size(398, 38)
         Me.Label10.TabIndex = 1
         Me.Label10.Text = "EL carrito de venta está vacío"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Presentacion.My.Resources.Resources.ferreteria_icono
-        Me.PictureBox1.Location = New System.Drawing.Point(98, 70)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(112, 93)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(190, 109)
+        Me.PictureBox1.Size = New System.Drawing.Size(217, 145)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -240,10 +223,10 @@ Partial Class View_Ventas
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(128, 26)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(146, 35)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(210, 16)
+        Me.Label1.Size = New System.Drawing.Size(260, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "DETALLE DE FACTURACIÓN"
         '
@@ -254,9 +237,9 @@ Partial Class View_Ventas
         Me.Label12.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(228, 356)
+        Me.Label12.Location = New System.Drawing.Point(261, 475)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(30, 21)
+        Me.Label12.Size = New System.Drawing.Size(37, 28)
         Me.Label12.TabIndex = 28
         Me.Label12.Text = "S/."
         '
@@ -265,10 +248,10 @@ Partial Class View_Ventas
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(47, 398)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(54, 531)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(105, 16)
+        Me.Label5.Size = New System.Drawing.Size(125, 20)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Tipo de Venta"
         '
@@ -279,15 +262,9 @@ Partial Class View_Ventas
         Me.lbl_TotalVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.lbl_TotalVenta.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lbl_TotalVenta.ForeColor = System.Drawing.Color.White
-
-        Me.lbl_TotalVenta.Location = New System.Drawing.Point(214, 356)
+        Me.lbl_TotalVenta.Location = New System.Drawing.Point(438, 475)
         Me.lbl_TotalVenta.Name = "lbl_TotalVenta"
-        Me.lbl_TotalVenta.Size = New System.Drawing.Size(221, 28)
-
-        Me.lbl_TotalVenta.Location = New System.Drawing.Point(256, 355)
-        Me.lbl_TotalVenta.Name = "lbl_TotalVenta"
-        Me.lbl_TotalVenta.Size = New System.Drawing.Size(53, 28)
-
+        Me.lbl_TotalVenta.Size = New System.Drawing.Size(64, 35)
         Me.lbl_TotalVenta.TabIndex = 27
         Me.lbl_TotalVenta.Text = "0.00"
         '
@@ -295,22 +272,20 @@ Partial Class View_Ventas
         '
         Me.Label8.AutoSize = True
         Me.Label8.Image = CType(resources.GetObject("Label8.Image"), System.Drawing.Image)
-        Me.Label8.Location = New System.Drawing.Point(157, 40)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(179, 53)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(0, 15)
+        Me.Label8.Size = New System.Drawing.Size(0, 20)
         Me.Label8.TabIndex = 11
         '
-
         'Rbtn_Contado
         '
         Me.Rbtn_Contado.AutoSize = True
         Me.Rbtn_Contado.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Rbtn_Contado.ForeColor = System.Drawing.Color.White
-        Me.Rbtn_Contado.Location = New System.Drawing.Point(166, 393)
-        Me.Rbtn_Contado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Rbtn_Contado.Location = New System.Drawing.Point(190, 524)
         Me.Rbtn_Contado.Name = "Rbtn_Contado"
-        Me.Rbtn_Contado.Size = New System.Drawing.Size(84, 24)
+        Me.Rbtn_Contado.Size = New System.Drawing.Size(102, 29)
         Me.Rbtn_Contado.TabIndex = 16
         Me.Rbtn_Contado.TabStop = True
         Me.Rbtn_Contado.Text = "Contado"
@@ -323,10 +298,9 @@ Partial Class View_Ventas
         Me.btn_Total_pagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_Total_pagar.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btn_Total_pagar.ForeColor = System.Drawing.Color.White
-        Me.btn_Total_pagar.Location = New System.Drawing.Point(47, 355)
-        Me.btn_Total_pagar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btn_Total_pagar.Location = New System.Drawing.Point(54, 473)
         Me.btn_Total_pagar.Name = "btn_Total_pagar"
-        Me.btn_Total_pagar.Size = New System.Drawing.Size(171, 27)
+        Me.btn_Total_pagar.Size = New System.Drawing.Size(195, 36)
         Me.btn_Total_pagar.TabIndex = 19
         Me.btn_Total_pagar.Text = "Total a Pagar"
         Me.btn_Total_pagar.UseVisualStyleBackColor = False
@@ -336,10 +310,9 @@ Partial Class View_Ventas
         Me.Rbtn_Credito.AutoSize = True
         Me.Rbtn_Credito.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Rbtn_Credito.ForeColor = System.Drawing.Color.White
-        Me.Rbtn_Credito.Location = New System.Drawing.Point(256, 393)
-        Me.Rbtn_Credito.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Rbtn_Credito.Location = New System.Drawing.Point(293, 524)
         Me.Rbtn_Credito.Name = "Rbtn_Credito"
-        Me.Rbtn_Credito.Size = New System.Drawing.Size(76, 24)
+        Me.Rbtn_Credito.Size = New System.Drawing.Size(91, 29)
         Me.Rbtn_Credito.TabIndex = 17
         Me.Rbtn_Credito.TabStop = True
         Me.Rbtn_Credito.Text = "Crédito"
@@ -347,24 +320,22 @@ Partial Class View_Ventas
         '
         'Lsv_det
         '
-        Me.Lsv_det.Location = New System.Drawing.Point(46, 84)
-        Me.Lsv_det.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Lsv_det.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Lsv_det.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Lsv_det.FullRowSelect = True
+        Me.Lsv_det.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None
+        Me.Lsv_det.Location = New System.Drawing.Point(28, 107)
         Me.Lsv_det.Name = "Lsv_det"
-        Me.Lsv_det.Size = New System.Drawing.Size(394, 267)
-        Me.Lsv_det.TabIndex = 18
+        Me.Lsv_det.Size = New System.Drawing.Size(475, 347)
+        Me.Lsv_det.TabIndex = 514
         Me.Lsv_det.UseCompatibleStateImageBehavior = False
         '
         'View_Ventas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1150, 566)
-
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1231, 566)
-
+        Me.ClientSize = New System.Drawing.Size(1407, 755)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lbl_idcliente)
         Me.Controls.Add(Me.Label1)
@@ -379,7 +350,6 @@ Partial Class View_Ventas
         Me.Controls.Add(Me.lbl_TotalVenta)
         Me.Controls.Add(Me.Label8)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "View_Ventas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "VENTAS"
@@ -409,13 +379,13 @@ Partial Class View_Ventas
     Friend WithEvents Label1 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents lbl_TotalVenta As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Rbtn_Contado As RadioButton
     Friend WithEvents btn_Total_pagar As Button
     Friend WithEvents Rbtn_Credito As RadioButton
     Friend WithEvents Lsv_det As ListView
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txt_producto As TextBox
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Public WithEvents lbl_TotalVenta As Label
 End Class

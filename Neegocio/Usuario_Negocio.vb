@@ -82,18 +82,18 @@ Public Class Usuario_Negocio
     End Sub
 #End Region
 
-    Public Function editar_Perfil() As String
-        Try
-            usuarioDao.editar_Perfil(Id1, Nombre1, Apellido1, Contraseña1, Usuario1)
-            Login(Usuario1, Contraseña1)
-            Return "Perfil actualizado satisfactoriamente"
-        Catch ex As Exception
-            Return "Error , Usuario ya existente"
-        End Try
-    End Function
-    Public Function Login(nombre_login As String, password As String) As Boolean
-        Return usuarioDao.Login(nombre_login, password)
-    End Function
+    'Public Function editar_Perfil() As String
+    'Try
+    ' usuarioDao.editar_Perfil(Id1, Nombre1, Apellido1, Contraseña1, Usuario1)
+    '  Login(Usuario1, Contraseña1)
+    'Return "Perfil actualizado satisfactoriamente"
+    'Catch ex As Exception
+    'Return "Error , Usuario ya existente"
+    'End Try
+    ' End Function
+    'Public Function Login(nombre_login As String, password As String) As Boolean
+    'Return usuarioDao.Login(nombre_login, password)
+    'End Function
 
 
 
