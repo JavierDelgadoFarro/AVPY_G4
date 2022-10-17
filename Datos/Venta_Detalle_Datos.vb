@@ -1,8 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Imports Entidades
-
-
 Public Class Venta_Detalle_Datos
     Inherits Conexion
     Public Sub Nueva_VentaDetalle(ByVal registros As E_Venta_Detalle)
@@ -39,8 +37,8 @@ Public Class Venta_Detalle_Datos
             While dr.Read
                 Dim reg As New E_Venta_Detalle
                 reg.Id_Venta = dr.GetValue(0).ToString
-                reg.idproducto = dr.GetValue(1).ToString()
-                reg.importe = dr.GetValue(2).ToString() 'aqui importe representa importe - montopagado'
+                reg.IdProducto = dr.GetValue(1).ToString()
+                reg.Importe = dr.GetValue(2).ToString() 'aqui importe representa importe - montopagado'
                 lista.Add(reg)
             End While
             dr.Close()

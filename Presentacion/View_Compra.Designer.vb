@@ -27,6 +27,7 @@ Partial Class View_Compra
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.LabelId = New System.Windows.Forms.Label()
         Me.dateFechaCompra = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.comboComprobante = New System.Windows.Forms.ComboBox()
@@ -35,7 +36,6 @@ Partial Class View_Compra
         Me.txtNumeroComprobante = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtIdProveedor = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cbxFiltroProducto = New System.Windows.Forms.ComboBox()
@@ -45,16 +45,23 @@ Partial Class View_Compra
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnAgregarCompra = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtSubTotal = New System.Windows.Forms.TextBox()
+        Me.listCompras = New System.Windows.Forms.ListView()
+        Me.CheckPorcentaje = New System.Windows.Forms.CheckBox()
+        Me.CheckIgv = New System.Windows.Forms.CheckBox()
+        Me.LabelImporteTotal = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.LabelPorcentaje = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.LabelIgv = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.LabelSubTotal = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.listCompras = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.listCompras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -65,15 +72,15 @@ Partial Class View_Compra
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Location = New System.Drawing.Point(-4, -4)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(790, 529)
+        Me.Panel1.Size = New System.Drawing.Size(967, 656)
         Me.Panel1.TabIndex = 0
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(138, 15)
+        Me.PictureBox1.Location = New System.Drawing.Point(172, 39)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(121, 100)
@@ -86,7 +93,7 @@ Partial Class View_Compra
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(156, 123)
+        Me.Label7.Location = New System.Drawing.Point(190, 156)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(81, 16)
@@ -95,6 +102,7 @@ Partial Class View_Compra
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.LabelId)
         Me.GroupBox3.Controls.Add(Me.dateFechaCompra)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.comboComprobante)
@@ -103,16 +111,24 @@ Partial Class View_Compra
         Me.GroupBox3.Controls.Add(Me.txtNumeroComprobante)
         Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Controls.Add(Me.Label3)
-        Me.GroupBox3.Controls.Add(Me.txtIdProveedor)
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox3.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox3.Location = New System.Drawing.Point(23, 301)
+        Me.GroupBox3.Location = New System.Drawing.Point(44, 404)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(358, 205)
         Me.GroupBox3.TabIndex = 17
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "PROVEEDOR"
+        '
+        'LabelId
+        '
+        Me.LabelId.AutoSize = True
+        Me.LabelId.Location = New System.Drawing.Point(127, 19)
+        Me.LabelId.Name = "LabelId"
+        Me.LabelId.Size = New System.Drawing.Size(45, 13)
+        Me.LabelId.TabIndex = 24
+        Me.LabelId.Text = "Label9"
         '
         'dateFechaCompra
         '
@@ -185,14 +201,6 @@ Partial Class View_Compra
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Nombre"
         '
-        'txtIdProveedor
-        '
-        Me.txtIdProveedor.Location = New System.Drawing.Point(128, 16)
-        Me.txtIdProveedor.Name = "txtIdProveedor"
-        Me.txtIdProveedor.Size = New System.Drawing.Size(181, 20)
-        Me.txtIdProveedor.TabIndex = 2
-        Me.txtIdProveedor.Visible = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -212,7 +220,7 @@ Partial Class View_Compra
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox2.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox2.Location = New System.Drawing.Point(23, 169)
+        Me.GroupBox2.Location = New System.Drawing.Point(44, 236)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(358, 114)
         Me.GroupBox2.TabIndex = 3
@@ -250,9 +258,9 @@ Partial Class View_Compra
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(21, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 16)
+        Me.Label1.Size = New System.Drawing.Size(62, 16)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Buscar"
+        Me.Label1.Text = "Nombre"
         '
         'Panel2
         '
@@ -260,9 +268,9 @@ Partial Class View_Compra
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.Panel2.Controls.Add(Me.btnAgregarCompra)
         Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Location = New System.Drawing.Point(403, 3)
+        Me.Panel2.Location = New System.Drawing.Point(452, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(383, 523)
+        Me.Panel2.Size = New System.Drawing.Size(512, 650)
         Me.Panel2.TabIndex = 15
         '
         'btnAgregarCompra
@@ -271,7 +279,7 @@ Partial Class View_Compra
         Me.btnAgregarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregarCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnAgregarCompra.ForeColor = System.Drawing.Color.White
-        Me.btnAgregarCompra.Location = New System.Drawing.Point(256, 457)
+        Me.btnAgregarCompra.Location = New System.Drawing.Point(346, 560)
         Me.btnAgregarCompra.Name = "btnAgregarCompra"
         Me.btnAgregarCompra.Size = New System.Drawing.Size(87, 33)
         Me.btnAgregarCompra.TabIndex = 11
@@ -280,26 +288,116 @@ Partial Class View_Compra
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.txtSubTotal)
-        Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.listCompras)
+        Me.GroupBox1.Controls.Add(Me.CheckPorcentaje)
+        Me.GroupBox1.Controls.Add(Me.CheckIgv)
+        Me.GroupBox1.Controls.Add(Me.LabelImporteTotal)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.LabelPorcentaje)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.LabelIgv)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.LabelSubTotal)
+        Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox1.Location = New System.Drawing.Point(17, 68)
+        Me.GroupBox1.Location = New System.Drawing.Point(91, 66)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(342, 368)
+        Me.GroupBox1.Size = New System.Drawing.Size(342, 451)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LISTA DE COMPRAS"
         '
-        'txtSubTotal
+        'listCompras
         '
-        Me.txtSubTotal.Location = New System.Drawing.Point(228, 312)
-        Me.txtSubTotal.Name = "txtSubTotal"
-        Me.txtSubTotal.Size = New System.Drawing.Size(98, 20)
-        Me.txtSubTotal.TabIndex = 17
-        Me.txtSubTotal.Text = "0.00"
-        Me.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.listCompras.Location = New System.Drawing.Point(29, 39)
+        Me.listCompras.Name = "listCompras"
+        Me.listCompras.Size = New System.Drawing.Size(284, 252)
+        Me.listCompras.TabIndex = 12
+        Me.listCompras.UseCompatibleStateImageBehavior = False
+        '
+        'CheckPorcentaje
+        '
+        Me.CheckPorcentaje.AutoSize = True
+        Me.CheckPorcentaje.Location = New System.Drawing.Point(43, 384)
+        Me.CheckPorcentaje.Name = "CheckPorcentaje"
+        Me.CheckPorcentaje.Size = New System.Drawing.Size(42, 17)
+        Me.CheckPorcentaje.TabIndex = 26
+        Me.CheckPorcentaje.Text = "2%"
+        Me.CheckPorcentaje.UseVisualStyleBackColor = True
+        '
+        'CheckIgv
+        '
+        Me.CheckIgv.AutoSize = True
+        Me.CheckIgv.Location = New System.Drawing.Point(43, 347)
+        Me.CheckIgv.Name = "CheckIgv"
+        Me.CheckIgv.Size = New System.Drawing.Size(47, 17)
+        Me.CheckIgv.TabIndex = 25
+        Me.CheckIgv.Text = "IGV"
+        Me.CheckIgv.UseVisualStyleBackColor = True
+        '
+        'LabelImporteTotal
+        '
+        Me.LabelImporteTotal.AutoSize = True
+        Me.LabelImporteTotal.Location = New System.Drawing.Point(281, 414)
+        Me.LabelImporteTotal.Name = "LabelImporteTotal"
+        Me.LabelImporteTotal.Size = New System.Drawing.Size(32, 13)
+        Me.LabelImporteTotal.TabIndex = 24
+        Me.LabelImporteTotal.Text = "0.00"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(152, 414)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(82, 13)
+        Me.Label14.TabIndex = 23
+        Me.Label14.Text = "Importe Total"
+        '
+        'LabelPorcentaje
+        '
+        Me.LabelPorcentaje.AutoSize = True
+        Me.LabelPorcentaje.Location = New System.Drawing.Point(281, 385)
+        Me.LabelPorcentaje.Name = "LabelPorcentaje"
+        Me.LabelPorcentaje.Size = New System.Drawing.Size(32, 13)
+        Me.LabelPorcentaje.TabIndex = 22
+        Me.LabelPorcentaje.Text = "0.00"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(152, 385)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(23, 13)
+        Me.Label12.TabIndex = 21
+        Me.Label12.Text = "2%"
+        '
+        'LabelIgv
+        '
+        Me.LabelIgv.AutoSize = True
+        Me.LabelIgv.Location = New System.Drawing.Point(281, 348)
+        Me.LabelIgv.Name = "LabelIgv"
+        Me.LabelIgv.Size = New System.Drawing.Size(32, 13)
+        Me.LabelIgv.TabIndex = 20
+        Me.LabelIgv.Text = "0.00"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(152, 348)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(55, 13)
+        Me.Label10.TabIndex = 19
+        Me.Label10.Text = "IGV 18%"
+        '
+        'LabelSubTotal
+        '
+        Me.LabelSubTotal.AutoSize = True
+        Me.LabelSubTotal.Location = New System.Drawing.Point(281, 316)
+        Me.LabelSubTotal.Name = "LabelSubTotal"
+        Me.LabelSubTotal.Size = New System.Drawing.Size(32, 13)
+        Me.LabelSubTotal.TabIndex = 18
+        Me.LabelSubTotal.Text = "0.00"
         '
         'Label8
         '
@@ -311,26 +409,11 @@ Partial Class View_Compra
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "SubTotal"
         '
-        'listCompras
-        '
-        Me.listCompras.AllowUserToAddRows = False
-        Me.listCompras.AllowUserToDeleteRows = False
-        Me.listCompras.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.listCompras.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.listCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.listCompras.Location = New System.Drawing.Point(22, 31)
-        Me.listCompras.Name = "listCompras"
-        Me.listCompras.ReadOnly = True
-        Me.listCompras.RowHeadersVisible = False
-        Me.listCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.listCompras.Size = New System.Drawing.Size(304, 259)
-        Me.listCompras.TabIndex = 0
-        '
         'View_Compra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(781, 520)
+        Me.ClientSize = New System.Drawing.Size(966, 656)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "View_Compra"
@@ -345,7 +428,6 @@ Partial Class View_Compra
         Me.Panel2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.listCompras, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -353,12 +435,10 @@ Partial Class View_Compra
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents listCompras As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txtBuscarProducto As TextBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents txtIdProveedor As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents cbxFiltroProducto As ComboBox
     Friend WithEvents checkFiltro As CheckBox
@@ -373,6 +453,16 @@ Partial Class View_Compra
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label7 As Label
     Friend WithEvents btnAgregarCompra As Button
-    Friend WithEvents txtSubTotal As TextBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents LabelIgv As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents LabelSubTotal As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents CheckPorcentaje As CheckBox
+    Friend WithEvents CheckIgv As CheckBox
+    Friend WithEvents LabelImporteTotal As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents LabelPorcentaje As Label
+    Friend WithEvents LabelId As Label
+    Friend WithEvents listCompras As ListView
 End Class

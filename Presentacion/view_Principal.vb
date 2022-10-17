@@ -1,6 +1,8 @@
 ﻿Imports System.Runtime.InteropServices
 Imports FontAwesome.Sharp
 Imports Entidades
+Imports Negocio
+
 Public Class view_Principal
     'Se declaran campos de forma ´privada y un panel para el color izquierdo del botón'
 
@@ -249,6 +251,8 @@ Public Class view_Principal
         End If
     End Sub
 #End Region
+
+
 
     '#Region "Retornar información"
     '  Private Sub view_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load

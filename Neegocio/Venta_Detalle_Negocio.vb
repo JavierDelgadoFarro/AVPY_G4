@@ -2,8 +2,6 @@
 Imports Entidades
 
 Public Class Venta_Detalle_Negocio
-
-
     Public Sub Nueva_VentaDetalle(ByVal registros As E_Venta_Detalle)
         Dim Datos As New Venta_Detalle_Datos
         Datos.Nueva_VentaDetalle(registros)

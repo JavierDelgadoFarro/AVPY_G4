@@ -13,7 +13,7 @@ Public Class View_Ventas
         cargarcombo(Cmb_cliente)
     End Sub
     Private Sub Venta_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.BackColor = Color.BlueViolet
+
         panel.AutoScroll = True
         panel.Location = New System.Drawing.Point(685, 215)
         panel.Name = "Panel1"
@@ -24,6 +24,7 @@ Public Class View_Ventas
         Dim num As Integer
         num = contarproducto()
         mostrarproducto(num)
+
         With Lsv_det
             .View = View.Details
             .Columns.Add("Producto", 230)
@@ -36,8 +37,6 @@ Public Class View_Ventas
     End Sub
 
 #Region "Mostrar Cliente"
-
-
     Private Sub cargarcombo(ByVal combo As ComboBox)
         Dim lista As New List(Of E_Cliente)
         Dim obj As New Cliente_Negocio
@@ -70,15 +69,15 @@ Public Class View_Ventas
         Dim listaProductos As New List(Of E_Producto)
         If Cb_filtro.Checked And Cmb_categoria.SelectedIndex >= 0 Then
             If IsNumeric(Cmb_categoria.SelectedValue) Then
-                listaProductos = obj.buscarnomcat(Me.TextBox2.Text, Cmb_categoria.SelectedValue)
-                cuenta = obj.contarproductospornomycat(Me.TextBox2.Text, Cmb_categoria.SelectedValue)
+                listaProductos = obj.buscarnomcat(Me.txt_producto.Text, Cmb_categoria.SelectedValue)
+                cuenta = obj.contarproductospornomycat(Me.txt_producto.Text, Cmb_categoria.SelectedValue)
                 dibuja(cuenta, listaProductos)
             End If
         Else
 
-            listaProductos = obj.buscartodoproducto(Me.TextBox2.Text)
+            listaProductos = obj.buscartodoproducto(Me.txt_producto.Text)
 
-            cuenta = contarproductoporfiltro(TextBox2.Text)
+            cuenta = contarproductoporfiltro(txt_producto.Text)
             dibuja(cuenta, listaProductos)
         End If
     End Sub
@@ -198,9 +197,9 @@ Public Class View_Ventas
         View_Detalle_Producto.lbl_stock.Text = listaProductos.Item(0).stock
         View_Detalle_Producto.lbl_precio.Text = listaProductos.Item(0).precio
         If File.Exists(picture.ImageLocation) Then
-            View_Detalle_Producto.PictureBox2.Load(picture.ImageLocation) 'copiamos la imagen de un picturebox a otro'
+            View_Detalle_Producto.pic_Producto.Load(picture.ImageLocation) 'copiamos la imagen de un picturebox a otro'
         End If
-        View_Detalle_Producto.PictureBox2.Name = picture.Name
+        View_Detalle_Producto.pic_Producto.Name = picture.Name
         View_Detalle_Producto.lbl_nombre.Text = picture.Text
         View_Detalle_Producto.Show() 'Abrimos el formulario detalle producto '
         pnl_ini.Visible = False
@@ -255,12 +254,13 @@ Public Class View_Ventas
 
     Private Sub Cmb_cliente_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If Cmb_cliente.SelectedIndex >= 0 Then
-            Label5.Text = Cmb_cliente.SelectedValue.ToString
+            lbl_idcliente.Text = Cmb_cliente.SelectedValue.ToString
         Else
-            Label5.Text = ""
+            lbl_idcliente.Text = ""
         End If
     End Sub
 
+    'verificar'
     Private Sub Cmb_categoria_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         verifica(Cmb_categoria)
     End Sub
@@ -278,6 +278,7 @@ Public Class View_Ventas
         End If
     End Sub
 
+    'actualizar'
     Private Sub Cb_filtro_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cb_filtro.CheckedChanged
         If Cb_filtro.Checked Then
             verifica(Cmb_categoria)
@@ -295,17 +296,17 @@ Public Class View_Ventas
         Rbtn_Contado.Checked = True
         Me.Lsv_det.Items.Clear()
         lbl_TotalVenta.Text = "0.00"
-        Label5.Text = ""
+        lbl_idcliente.Text = ""
         Cmb_categoria.SelectedIndex = -1
         Cb_filtro.Checked = False
-        TextBox2.Text = ""
+        txt_producto.Text = ""
         DateTimePicker1.Value = Now
         DateTimePicker2.Value = Date.Now.ToLocalTime
         pnl_ini.Visible = True
     End Sub
 
     Private Sub btn_cobrar_Click(sender As Object, e As EventArgs) Handles btn_Total_pagar.Click
-        If Label5.Text = " " Then
+        If lbl_idcliente.Text = " " Then
             MessageBox.Show("Debe seleccionar un cliente")
             Cmb_cliente.Focus()
             Exit Sub

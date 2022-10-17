@@ -1,7 +1,10 @@
-﻿Imports Entidades
+﻿Imports System.Windows.Documents
+Imports Entidades
 Imports Negocio
 Imports Presentacion
 Public Class View_Editar_Perfil
+    Dim lista3 As New List(Of E_Empleado)
+    Dim obj2 As New Empleado_Negocio
     Private Sub View_Editar_Perfil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Editar_Data_Perfil()
         iniciar_Controles_Contraseña()
@@ -9,17 +12,20 @@ Public Class View_Editar_Perfil
     End Sub
 
     Private Sub Editar_Data_Perfil()
+
+
+        lista3 = obj2.empleado(view_Principal.lbl_id.Text)
         'Vista'
-        lbl_usuario.Text = E_Usuario.usuario
-        lbl_nombre.Text = E_Usuario.nombre
-        lbl_apellido.Text = E_Usuario.apellido
+        lbl_usuario.Text = lista3.Item(0).usuario
+        lbl_nombre.Text = lista3.Item(0).nombres
+        lbl_apellido.Text = lista3.Item(0).apellidos
 
         'Edición'
-        txt_usuario.Text = E_Usuario.usuario
-        txt_nombre.Text = E_Usuario.nombre
-        txt_apellido.Text = E_Usuario.apellido
-        txt_password.Text = E_Usuario.contraseña
-        txt_Confirmar_Pass.Text = E_Usuario.contraseña
+        txt_usuario.Text = lista3.Item(0).usuario
+        txt_nombre.Text = lista3.Item(0).nombres
+        txt_apellido.Text = lista3.Item(0).apellidos
+        txt_password.Text = lista3.Item(0).contraseña
+        txt_Confirmar_Pass.Text = lista3.Item(0).contraseña
     End Sub
 
     Private Sub iniciar_Controles_Contraseña()
@@ -34,7 +40,6 @@ Public Class View_Editar_Perfil
     Private Sub reiniciar()
         Editar_Data_Perfil()
         iniciar_Controles_Contraseña()
-        'view_Principal.Info_Usuario()
     End Sub
 
     Private Sub lbl_link_password_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lbl_link_password.LinkClicked
@@ -44,7 +49,6 @@ Public Class View_Editar_Perfil
             txt_password.Text = ""
             txt_Confirmar_Pass.Enabled = True
             txt_Confirmar_Pass.Text = ""
-            'view_Principal.Info_Usuario()
         ElseIf lbl_link_password.Text = "Cancelar" Then
             reiniciar()
         End If
@@ -56,15 +60,16 @@ Public Class View_Editar_Perfil
     End Sub
 
     Private Sub Btn_actualizar_Click(sender As Object, e As EventArgs) Handles Btn_actualizar.Click
+        lista3 = obj2.empleado(view_Principal.lbl_id.Text)
         If txt_password.Text = txt_Confirmar_Pass.Text Then
-            If txt_Vigente_pass.Text = E_Usuario.contraseña Then
-                Dim Usuario_Negocio As New Usuario_Negocio(id:=E_Usuario.id,
-                                                           nombre:=txt_nombre.Text,
-                                                           apellido:=txt_apellido.Text,
-                                                           contraseña:=txt_password.Text,
-                                                           idRol:=Nothing,
-                                                           usuario:=txt_usuario.Text)
-                Dim result = Usuario_Negocio.editar_Perfil()
+            If txt_Vigente_pass.Text = lista3.Item(0).contraseña Then
+                Dim Empleado_Negocio As New Empleado_Negocio(id:=lista3.Item(0).idempleado,
+                                                            nombre:=lista3.Item(0).nombres,
+                                                           apellido:=lista3.Item(0).apellidos,
+                                                          contraseña:=lista3.Item(0).contraseña,
+                                                            idRol:=Nothing,
+                                                          usuario:=lista3.Item(0).usuario)
+                Dim result = Empleado_Negocio.editar_Perfil(id, nombre, apellido, contraseña, idRol, usuario)
                 MessageBox.Show(result)
                 reiniciar()
                 Panel_Editar_Perfil.Visible = False
