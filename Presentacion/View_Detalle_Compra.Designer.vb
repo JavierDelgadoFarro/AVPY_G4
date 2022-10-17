@@ -29,19 +29,20 @@ Partial Class View_Detalle_Compra
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.importeDetalle = New System.Windows.Forms.DomainUpDown()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.importeDetalle = New System.Windows.Forms.NumericUpDown()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.listDetalleCompras = New System.Windows.Forms.DataGridView()
+        Me.PictureBox = New System.Windows.Forms.PictureBox()
+        Me.lbl_nombre1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.listDetalleCompras, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -109,9 +110,9 @@ Partial Class View_Detalle_Compra
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.txtCantidad)
         Me.GroupBox2.Controls.Add(Me.importeDetalle)
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.txtCantidad)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox2.ForeColor = System.Drawing.Color.WhiteSmoke
@@ -121,13 +122,20 @@ Partial Class View_Detalle_Compra
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         '
+        'txtCantidad
+        '
+        Me.txtCantidad.Location = New System.Drawing.Point(106, 27)
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(230, 20)
+        Me.txtCantidad.TabIndex = 21
+        '
         'importeDetalle
         '
         Me.importeDetalle.Location = New System.Drawing.Point(106, 71)
         Me.importeDetalle.Name = "importeDetalle"
         Me.importeDetalle.Size = New System.Drawing.Size(230, 20)
         Me.importeDetalle.TabIndex = 4
-        Me.importeDetalle.Text = "1,00"
+        Me.importeDetalle.Text = "1"
         '
         'Label9
         '
@@ -138,13 +146,6 @@ Partial Class View_Detalle_Compra
         Me.Label9.Size = New System.Drawing.Size(59, 16)
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "Importe"
-        '
-        'txtCantidad
-        '
-        Me.txtCantidad.Location = New System.Drawing.Point(106, 29)
-        Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(230, 20)
-        Me.txtCantidad.TabIndex = 2
         '
         'Label1
         '
@@ -163,12 +164,13 @@ Partial Class View_Detalle_Compra
         Me.Panel2.Controls.Add(Me.GroupBox1)
         Me.Panel2.Location = New System.Drawing.Point(403, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(383, 426)
+        Me.Panel2.Size = New System.Drawing.Size(382, 426)
         Me.Panel2.TabIndex = 15
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.listDetalleCompras)
+        Me.GroupBox1.Controls.Add(Me.PictureBox)
+        Me.GroupBox1.Controls.Add(Me.lbl_nombre1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.GroupBox1.Location = New System.Drawing.Point(19, 28)
@@ -178,20 +180,25 @@ Partial Class View_Detalle_Compra
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LISTA DE DETALLE DE COMPRAS"
         '
-        'listDetalleCompras
+        'PictureBox
         '
-        Me.listDetalleCompras.AllowUserToAddRows = False
-        Me.listDetalleCompras.AllowUserToDeleteRows = False
-        Me.listDetalleCompras.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.listDetalleCompras.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.listDetalleCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.listDetalleCompras.Location = New System.Drawing.Point(22, 31)
-        Me.listDetalleCompras.Name = "listDetalleCompras"
-        Me.listDetalleCompras.ReadOnly = True
-        Me.listDetalleCompras.RowHeadersVisible = False
-        Me.listDetalleCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.listDetalleCompras.Size = New System.Drawing.Size(304, 317)
-        Me.listDetalleCompras.TabIndex = 0
+        Me.PictureBox.Location = New System.Drawing.Point(57, 79)
+        Me.PictureBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox.Name = "PictureBox"
+        Me.PictureBox.Size = New System.Drawing.Size(228, 243)
+        Me.PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox.TabIndex = 9
+        Me.PictureBox.TabStop = False
+        '
+        'lbl_nombre1
+        '
+        Me.lbl_nombre1.AutoSize = True
+        Me.lbl_nombre1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_nombre1.Location = New System.Drawing.Point(142, 46)
+        Me.lbl_nombre1.Name = "lbl_nombre1"
+        Me.lbl_nombre1.Size = New System.Drawing.Size(40, 16)
+        Me.lbl_nombre1.TabIndex = 8
+        Me.lbl_nombre1.Text = "texto"
         '
         'View_Detalle_Compra
         '
@@ -209,7 +216,8 @@ Partial Class View_Detalle_Compra
         Me.GroupBox2.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.listDetalleCompras, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -217,14 +225,15 @@ Partial Class View_Detalle_Compra
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents txtCantidad As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents btnCancelarDetalle As Button
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents listDetalleCompras As DataGridView
     Friend WithEvents btnAceptarDetalle As Button
-    Friend WithEvents importeDetalle As DomainUpDown
+    Friend WithEvents btnCancelarDetalle As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents importeDetalle As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label9 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents PictureBox As PictureBox
+    Friend WithEvents lbl_nombre1 As Label
+    Friend WithEvents txtCantidad As TextBox
 End Class
