@@ -3,7 +3,7 @@ Imports Entidades
 Imports Datos
 
 Public Class Empleado_Negocio
-    Dim usuarioDao As New Usuario_Datos()
+    Dim empleado_Dao As New Empleado_Datos()
 
     'Para El login
     Public Function Validar(ByVal registros As E_Empleado) As Boolean
@@ -22,6 +22,13 @@ Public Class Empleado_Negocio
         Return lista
     End Function
 
+
+    Public Function empleado(ByVal id As Int32) As List(Of E_Empleado)
+        Dim lista_empleado As New List(Of E_Empleado)
+        Dim obj As New Empleado_Datos
+        lista_empleado = obj.empleado(id)
+        Return lista_empleado
+    End Function
 
 #Region "Atributos"
     'Atributos'
@@ -101,17 +108,13 @@ Public Class Empleado_Negocio
 #End Region
 
 
-    Public Function editar_Perfil() As String
+    Public Function editar_Perfil(Id1, Nombre1, Apellido1, Contraseña1, IdRol1, Usuario1) As String
         Try
-            usuarioDao.editar_Perfil(Id1, Nombre1, Apellido1, Contraseña1, Usuario1)
-            Login(Usuario1, Contraseña1)
+            empleado_Dao.editar_Perfil(Id1, Nombre1, Apellido1, Contraseña1, IdRol1, Usuario1)
             Return "Perfil actualizado satisfactoriamente"
         Catch ex As Exception
             Return "Error , Usuario ya existente"
         End Try
-    End Function
-    Public Function Login(nombre_login As String, password As String) As Boolean
-        Return usuarioDao.Login(nombre_login, password)
     End Function
 
 End Class

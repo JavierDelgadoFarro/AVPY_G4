@@ -4,8 +4,11 @@ Imports System.Runtime.InteropServices
 Imports Negocio
 Imports Entidades
 Imports System.Security
+Imports System.Data.SqlClient
+Imports System.Windows.Documents
 
 Public Class View_Login
+
 
 #Region "Formulario Login"
     Private Sub Btn_cerrar_Click(sender As Object, e As EventArgs) Handles Btn_cerrar.Click
@@ -70,6 +73,7 @@ Public Class View_Login
 
 
     Private Sub logearse()
+
         Dim autorizado As Boolean
         Dim registros As New E_Empleado
         With registros
@@ -83,6 +87,7 @@ Public Class View_Login
             Me.Hide()
             view_Principal.Show()
             view_Principal.Text = "Usuario : " + registros.usuario
+            Recuperar_info()
             'Recarga el login'
             AddHandler view_Principal.FormClosed, AddressOf Me.Cerrar_Sesion
         Else
@@ -91,6 +96,37 @@ Public Class View_Login
             txt_password.Focus()
         End If
     End Sub
+
+
+    '  'administrador = 1
+    'almacenero = 2
+    'vendedor = 3
+
+    Private Sub Recuperar_info()
+        'para recuperar el id del empleado
+        Dim lista2 As New List(Of E_Empleado)
+        Dim lista3 As New List(Of E_Empleado)
+        Dim obj2 As New Empleado_Negocio
+        lista2 = obj2.obtener_idempleado(Mid(view_Principal.Text, 11, view_Principal.Text.Length))
+        Dim id = lista2.Item(0).idempleado
+
+        lista3 = obj2.empleado(id)
+
+        view_Principal.lbl_Nombre.Text = lista3.Item(0).nombres
+        view_Principal.lbl_id.Text = lista3.Item(0).idempleado
+        view_Principal.lbl_apellidos.Text = lista3.Item(0).apellidos
+        view_Principal.lbl_usuario.Text = lista3.Item(0).usuario
+
+        If lista3.Item(0).id_rol = 2 Then
+            view_Principal.Btn_Configuracion.Visible = False
+            view_Principal.Btn_Pagos.Visible = False
+        End If
+        If lista3.Item(0).id_rol = 3 Then
+            view_Principal.Btn_Configuracion.Visible = False
+            view_Principal.Btn_Compras.Visible = False
+        End If
+    End Sub
+
 
     Private Sub Btn_Login_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Login.Click
         logearse()
@@ -110,5 +146,6 @@ Public Class View_Login
         Me.Show()
         txt_nombre_login.Focus()
     End Sub
+
 
 End Class
