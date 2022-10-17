@@ -88,9 +88,10 @@ Partial Class View_Mantenimiento_Proveedores
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.btneliminarproveedor)
         Me.Panel3.Controls.Add(Me.GroupBox1)
-        Me.Panel3.Location = New System.Drawing.Point(0, 2)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1100, 651)
+        Me.Panel3.Size = New System.Drawing.Size(1102, 653)
         Me.Panel3.TabIndex = 1
         '
         'btnmodificarproveedor
@@ -305,7 +306,7 @@ Partial Class View_Mantenimiento_Proveedores
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
