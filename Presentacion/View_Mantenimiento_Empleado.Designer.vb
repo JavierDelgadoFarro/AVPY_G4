@@ -39,17 +39,17 @@ Partial Class View_Mantenimiento_Empleado
         Me.ComboBoxRol = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DGVEmpleado = New System.Windows.Forms.DataGridView()
-        Me.btnbuscarEmpleado = New System.Windows.Forms.Button()
-        Me.txtbuscarEmpleado = New System.Windows.Forms.TextBox()
-        Me.btnmodificarEmpleado = New System.Windows.Forms.Button()
-        Me.btnnuevoEmpleado = New System.Windows.Forms.Button()
-        Me.btneliminarEmpleado = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnbuscarEmpleado = New System.Windows.Forms.Button()
+        Me.txtbuscarEmpleado = New System.Windows.Forms.TextBox()
+        Me.btnmodificarEmpleado = New System.Windows.Forms.Button()
+        Me.btnnuevoEmpleado = New System.Windows.Forms.Button()
+        Me.btneliminarEmpleado = New System.Windows.Forms.Button()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGVEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,7 +70,7 @@ Partial Class View_Mantenimiento_Empleado
         'IconPictureBox1
         '
         Me.IconPictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Person
+        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup
         Me.IconPictureBox1.IconColor = System.Drawing.Color.White
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 67
@@ -237,6 +237,51 @@ Partial Class View_Mantenimiento_Empleado
         Me.DGVEmpleado.Size = New System.Drawing.Size(662, 322)
         Me.DGVEmpleado.TabIndex = 27
         '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "idempleado"
+        Me.Column1.HeaderText = "idempleado"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "nombres"
+        Me.Column2.HeaderText = "nombres"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 130
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "apellidos"
+        Me.Column3.HeaderText = "apellidos"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 130
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "contraseña"
+        Me.Column4.HeaderText = "contraseña"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 120
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "id_rol"
+        Me.Column5.HeaderText = "id_rol"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "usuario"
+        Me.Column6.HeaderText = "usuario"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
         'btnbuscarEmpleado
         '
         Me.btnbuscarEmpleado.BackColor = System.Drawing.Color.Red
@@ -300,51 +345,6 @@ Partial Class View_Mantenimiento_Empleado
         Me.btneliminarEmpleado.TabIndex = 35
         Me.btneliminarEmpleado.Text = "Eliminar"
         Me.btneliminarEmpleado.UseVisualStyleBackColor = False
-        '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "idempleado"
-        Me.Column1.HeaderText = "idempleado"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "nombres"
-        Me.Column2.HeaderText = "nombres"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 130
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "apellidos"
-        Me.Column3.HeaderText = "apellidos"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 130
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "contraseña"
-        Me.Column4.HeaderText = "contraseña"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 120
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "id_rol"
-        Me.Column5.HeaderText = "id_rol"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "usuario"
-        Me.Column6.HeaderText = "usuario"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
         '
         'View_Mantenimiento_Empleado
         '
