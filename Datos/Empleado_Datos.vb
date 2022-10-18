@@ -81,26 +81,27 @@ Public Class Empleado_Datos
         Return lista_empleado
     End Function
 
-
-    Public Sub editar_Perfil(id, nombre, apellido, contraseña, idrol, usuario)
+    Public Sub modificar_perfil(ByVal registros As E_Empleado)
         Using conexion_return = GetConexion()
             conexion_return.Open()
-            Using command = New SqlCommand()
-                command.Connection = conexion_return
-                command.CommandText = "UPDATE empleado set nombre=@nombre, apellido=@apellido, contraseña =@contraseña,
-                idrol =@idrol, usuario=@usuario where idempleado = @id"
-                command.Parameters.AddWithValue("@nombre", nombre)
-                command.Parameters.AddWithValue("@apellido", apellido)
-                command.Parameters.AddWithValue("@contraseña", contraseña)
-                command.Parameters.AddWithValue("@idrol", idrol)
-                command.Parameters.AddWithValue("@usuario", usuario)
-                command.Parameters.AddWithValue("@id", id)
-                command.CommandType = CommandType.Text
-                command.ExecuteNonQuery()
-            End Using
+
+            Dim cmd As New SqlCommand("p_modificarempleado", conexion_return)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("idempleado", registros.idempleado)
+                .AddWithValue("@nombre", registros.nombres)
+                .AddWithValue("@apellido", registros.apellidos)
+                .AddWithValue("@contraseña", registros.contraseña)
+                .AddWithValue("@idrol", registros.id_rol)
+                .AddWithValue("@usuario", registros.usuario)
+
+            End With
+            cmd.ExecuteNonQuery()
+            conexion_return.Dispose()
+            conexion_return.Close()
         End Using
     End Sub
-
     'funcion para el login del usuario'
 
 
