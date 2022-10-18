@@ -14,7 +14,7 @@ Public Class View_Mantenimiento_Proveedores
             .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
             .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
             .RowHeadersVisible = False
-            .DefaultCellStyle.SelectionBackColor = Color.Yellow
+            .DefaultCellStyle.SelectionBackColor = Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(189, Byte), Integer), CType(CType(89, Byte), Integer))
             .DefaultCellStyle.SelectionForeColor = Color.Black
             .AllowUserToResizeRows = False
         End With
@@ -52,7 +52,7 @@ Public Class View_Mantenimiento_Proveedores
         txtbuscarproveedor.Enabled = bol
     End Sub
 
-    Private Sub btnagregarproveedor_Click(sender As Object, e As EventArgs) Handles btnagregarproveedor.Click
+    Private Sub btnagregarproveedor_Click(sender As Object, e As EventArgs) 
         If btnagregarproveedor.Text = "Nuevo" Then
             btnagregarproveedor.Text = "Guardar"
             limpiar()
@@ -104,7 +104,7 @@ Public Class View_Mantenimiento_Proveedores
 
         Negocio.Modificar_Proveedor(Entidad)
     End Sub
-    Private Sub btnmodificarproveedor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodificarproveedor.Click
+    Private Sub btnmodificarproveedor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
         Modificar_proveedor()
         cargargridview()
     End Sub
@@ -124,16 +124,18 @@ Public Class View_Mantenimiento_Proveedores
 
         Negocio.Eliminar_proveedor(Entidad)
     End Sub
-    Private Sub btneliminarcategoria_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btneliminarproveedor.Click
+    Private Sub btneliminarcategoria_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
         Eliminar_proveedor()
         cargargridview()
     End Sub
 
     'Buscar proveedor'
 
-    Private Sub btnbuscarproveedor_Click(sender As Object, e As EventArgs) Handles btnbuscarproveedor.Click
+    Private Sub btnbuscarproveedor_Click(sender As Object, e As EventArgs) 
         Dim busca = txtbuscarproveedor.Text
         Dim obj As New Proveedor_Negocio
         DGV_Proveedor.DataSource = obj.Buscar_Proveedor(busca)
     End Sub
+
+
 End Class

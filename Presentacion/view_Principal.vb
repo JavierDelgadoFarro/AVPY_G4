@@ -43,7 +43,7 @@ Public Class view_Principal
             'cambio de color de boton'
             Btn_Actual.BackColor = RGBColors.ColorBlanco
             'cambio de color de texto a color definido'
-            Btn_Actual.ForeColor = Color_Actual
+            Btn_Actual.ForeColor = RGBColors.ColorOscuro
             'cambio de color de icono a paramtro color'
             Btn_Actual.IconColor = Color_Actual
             'Alineación de texto al centro'
@@ -73,7 +73,7 @@ Public Class view_Principal
     'DESACTIVA BOTON'
     Private Sub Desactivar_Boton()
         If Btn_Actual IsNot Nothing Then
-            Btn_Actual.BackColor = RGBColors.ColorAzulOscuro
+            Btn_Actual.BackColor = RGBColors.ColorOscuro
             Btn_Actual.ForeColor = Color.Silver
             Btn_Actual.IconColor = Color.Silver
             Btn_Actual.TextAlign = ContentAlignment.MiddleLeft
@@ -107,53 +107,53 @@ Public Class view_Principal
     'EVENTOS DE BOTONES'
 #Region "Eventos"
     Private Sub Btn_Ventas_Click(sender As Object, e As EventArgs) Handles Btn_Ventas.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New View_Ventas)
     End Sub
 
     Private Sub Btn_Compras_Click(sender As Object, e As EventArgs) Handles Btn_Compras.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New View_Compra)
     End Sub
 
     Private Sub Btn_Pagos_Click(sender As Object, e As EventArgs) Handles Btn_Pagos.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New View_Pagos)
     End Sub
 
     Private Sub Btn_Producto_Click(sender As Object, e As EventArgs) Handles Btn_Producto.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New View_Mantenimiento_Productos)
     End Sub
 
     Private Sub Btn_Mantenimiento_Click(sender As Object, e As EventArgs) Handles Btn_Mantenimiento.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         MostrarSubmenu(Panel_Mantenimiento)
     End Sub
 
     Private Sub Btn_Configuracion_Click(sender As Object, e As EventArgs) Handles Btn_Configuracion.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         'Abrir_Frm_Hijo(New View_Editar_Perfil)
     End Sub
 
     'SUBMENU'
     Private Sub Btn_Proveedor_Click(sender As Object, e As EventArgs) Handles Btn_Proveedor.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New View_Mantenimiento_Proveedores)
     End Sub
 
     Private Sub Btn_Categoria_Click(sender As Object, e As EventArgs) Handles Btn_Categoria.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New Mantenimiento_Categoria)
     End Sub
 
     Private Sub Btn_Cliente_Click(sender As Object, e As EventArgs) Handles Btn_Cliente.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New Mantenimiento_Cliente)
     End Sub
 
     Private Sub btnEmpleado_Click(sender As Object, e As EventArgs) Handles btnEmpleado.Click
-        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New View_Mantenimiento_Empleado)
     End Sub
 
@@ -176,7 +176,7 @@ Public Class view_Principal
     Private Sub Reset()
         Desactivar_Boton()
         Icon_Form_Actual.IconChar = IconChar.None
-        Icon_Form_Actual.IconColor = RGBColors.ColorAzulOscuro
+        Icon_Form_Actual.IconColor = RGBColors.ColorOscuro
         Title_Actual.Text = ""
 
     End Sub
@@ -255,6 +255,7 @@ Public Class view_Principal
             submenu.Visible = False
         End If
     End Sub
+
 
 #End Region
 

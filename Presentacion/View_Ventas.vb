@@ -15,7 +15,7 @@ Public Class View_Ventas
     Private Sub Venta_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         panel.AutoScroll = True
-        panel.Location = New System.Drawing.Point(685, 215)
+        panel.Location = New System.Drawing.Point(510, 215)
         panel.Name = "Panel1"
         panel.Size = New System.Drawing.Size(540, 580)
         'Se agrega al formulario'
@@ -61,27 +61,7 @@ Public Class View_Ventas
     End Sub
 #End Region
 
-#Region "Buscar Producto"
-    'para buscar un producto'
-    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim cuenta As Integer
-        Dim obj As New Producto_Negocio
-        Dim listaProductos As New List(Of E_Producto)
-        If Cb_filtro.Checked And Cmb_categoria.SelectedIndex >= 0 Then
-            If IsNumeric(Cmb_categoria.SelectedValue) Then
-                listaProductos = obj.buscarnomcat(Me.txt_producto.Text, Cmb_categoria.SelectedValue)
-                cuenta = obj.contarproductospornomycat(Me.txt_producto.Text, Cmb_categoria.SelectedValue)
-                dibuja(cuenta, listaProductos)
-            End If
-        Else
 
-            listaProductos = obj.buscartodoproducto(Me.txt_producto.Text)
-
-            cuenta = contarproductoporfiltro(txt_producto.Text)
-            dibuja(cuenta, listaProductos)
-        End If
-    End Sub
-#End Region
     Private Sub btnvender_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
     End Sub
 
@@ -299,7 +279,6 @@ Public Class View_Ventas
         lbl_idcliente.Text = ""
         Cmb_categoria.SelectedIndex = -1
         Cb_filtro.Checked = False
-        txt_producto.Text = ""
         DateTimePicker1.Value = Now
         DateTimePicker2.Value = Date.Now.ToLocalTime
         pnl_ini.Visible = True
@@ -472,7 +451,4 @@ Public Class View_Ventas
         Return posicion
     End Function
 
-    Private Sub pnl_ini_Paint(sender As Object, e As PaintEventArgs) Handles pnl_ini.Paint
-
-    End Sub
 End Class

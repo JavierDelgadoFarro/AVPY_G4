@@ -19,7 +19,7 @@ Public Class View_Mantenimiento_Productos
             .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
             .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
             .RowHeadersVisible = False
-            .DefaultCellStyle.SelectionBackColor = Color.Yellow
+            .DefaultCellStyle.SelectionBackColor = Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(189, Byte), Integer), CType(CType(89, Byte), Integer))
             .DefaultCellStyle.SelectionForeColor = Color.Black
             .AllowUserToResizeRows = False
         End With
@@ -60,7 +60,7 @@ Public Class View_Mantenimiento_Productos
     End Sub
 
     'Para Buscar El producto'
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarproducto.TextChanged
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) 
         Dim lista As New List(Of E_Producto)
         Dim obj As New Producto_Negocio
         lista = obj.buscartodoproducto(txtbuscarproducto.Text)
@@ -81,7 +81,7 @@ Public Class View_Mantenimiento_Productos
         buscarencombo(cbcategoriaproducto, Me.DGV_Productos(2, fila).Value.ToString())
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnnuevoproducto.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
         If btnnuevoproducto.Text = "Nuevo" Then
             btnnuevoproducto.Text = "Guardar"
             habilitar_deshabitar(False)
@@ -187,7 +187,7 @@ Public Class View_Mantenimiento_Productos
         End If
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles subirfotoproducto.Click
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
         abriropen()
     End Sub
 
@@ -227,7 +227,7 @@ Public Class View_Mantenimiento_Productos
     End Sub
 
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodificarproducto.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
         modificar()
         cargargridview()
     End Sub
@@ -246,4 +246,10 @@ Public Class View_Mantenimiento_Productos
 
         Return cadena1
     End Function
+
+    Private Sub Btn_buscar_Click(sender As Object, e As EventArgs) Handles Btn_buscar.Click
+        Dim busca = txtbuscarproducto.Text
+        Dim obj As New Producto_Negocio
+        DGV_Productos.DataSource = obj.buscartodoproducto(busca)
+    End Sub
 End Class

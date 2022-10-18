@@ -284,23 +284,6 @@ Public Class View_Compra
     End Sub
 
 
-    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscarProducto.TextChanged
-        Dim cuenta As Integer
-        Dim obj As New Producto_Negocio
-        Dim listaProductos As New List(Of E_Producto)
-        If checkFiltro.Checked And cbxCategoria.SelectedIndex >= 0 Then
-            If IsNumeric(cbxCategoria.SelectedValue) Then
-                listaProductos = obj.buscarnomcat(Me.txtBuscarProducto.Text, cbxCategoria.SelectedValue)
-                cuenta = obj.contarproductospornomycat(Me.txtBuscarProducto.Text, cbxCategoria.SelectedValue)
-                dibuja(cuenta, listaProductos)
-            End If
-
-        Else
-            listaProductos = obj.buscartodoproducto(Me.txtBuscarProducto.Text)
-            cuenta = contarproductoporfiltro(txtBuscarProducto.Text)
-            dibuja(cuenta, listaProductos)
-        End If
-    End Sub
 
     'Devuelve la cantidad de productos segun el nombre '
     Private Function contarproductoporfiltro(ByVal nombre As String) As Integer
@@ -361,7 +344,6 @@ Public Class View_Compra
         lbl_Igv.Text = "0.00"
         lbl_2_por.Text = "0.00"
         lbl_total.Text = "0.00"
-        txtBuscarProducto.Text = ""
         checkFiltro.Checked = False
         cbxCategoria.SelectedIndex = -1
     End Sub
@@ -412,4 +394,6 @@ Public Class View_Compra
         Me.Dispose()
         Me.Close()
     End Sub
+
+
 End Class

@@ -10,7 +10,7 @@ Public Class Mantenimiento_Cliente
             .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
             .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
             .RowHeadersVisible = False
-            .DefaultCellStyle.SelectionBackColor = Color.Yellow
+            .DefaultCellStyle.SelectionBackColor = Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(189, Byte), Integer), CType(CType(89, Byte), Integer))
             .DefaultCellStyle.SelectionForeColor = Color.Black
             .AllowUserToResizeRows = False
         End With
@@ -121,4 +121,6 @@ Public Class Mantenimiento_Cliente
         Dim obj As New Cliente_Negocio
         DGVCliente.DataSource = obj.buscacliente(busca)
     End Sub
+
+
 End Class

@@ -15,7 +15,7 @@ Public Class Mantenimiento_Categoria
             .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
             .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
             .RowHeadersVisible = False
-            .DefaultCellStyle.SelectionBackColor = Color.Yellow
+            .DefaultCellStyle.SelectionBackColor = Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(189, Byte), Integer), CType(CType(89, Byte), Integer))
             .DefaultCellStyle.SelectionForeColor = Color.Black
             .AllowUserToResizeRows = False
         End With
@@ -117,5 +117,6 @@ Public Class Mantenimiento_Categoria
         Dim obj As New Categoria_Negocio
         DGV_Categoria.DataSource = obj.Buscar_categoria(busca)
     End Sub
+
 
 End Class
