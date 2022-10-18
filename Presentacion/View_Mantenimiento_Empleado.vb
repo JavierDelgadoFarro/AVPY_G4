@@ -2,6 +2,8 @@
 Imports Negocio
 
 Public Class View_Mantenimiento_Empleado
+
+    'mostrar todos los empleados'
     Private Sub View_Mantenimiento_Empleado_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.ForeColor = Color.Black
         personalizargridviewEmpleado(Me.DGVEmpleado)
@@ -28,4 +30,18 @@ Public Class View_Mantenimiento_Empleado
         lista_empleado = obj.Mostrartodoempleado
         DGVEmpleado.DataSource = lista_empleado
     End Sub
+
+
+    'Agregar Cliente'
+    Private Sub limpiar()
+        labelIdEmpleado.Text = ""
+        TextNombreEmpleado.Text = ""
+        TextApellidoEmpleado.Text = ""
+        TextContraseñaEmpleado.Text = ""
+        ComboBoxRol.Text = ""
+        TextUsuarioEmpleado.Text = ""
+
+        ComboBoxRol.SelectedIndex = -1
+    End Sub
+
 End Class

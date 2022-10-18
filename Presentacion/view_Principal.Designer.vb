@@ -26,6 +26,7 @@ Partial Class view_Principal
         Me.Btn_Cerrar_Sesion = New FontAwesome.Sharp.IconButton()
         Me.Btn_Configuracion = New FontAwesome.Sharp.IconButton()
         Me.Panel_Mantenimiento = New System.Windows.Forms.Panel()
+        Me.btnEmpleado = New FontAwesome.Sharp.IconButton()
         Me.Btn_Cliente = New FontAwesome.Sharp.IconButton()
         Me.Btn_Categoria = New FontAwesome.Sharp.IconButton()
         Me.Btn_Proveedor = New FontAwesome.Sharp.IconButton()
@@ -96,7 +97,7 @@ Partial Class view_Principal
         Me.Btn_Cerrar_Sesion.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.Btn_Cerrar_Sesion.IconSize = 35
         Me.Btn_Cerrar_Sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Cerrar_Sesion.Location = New System.Drawing.Point(0, 734)
+        Me.Btn_Cerrar_Sesion.Location = New System.Drawing.Point(0, 618)
         Me.Btn_Cerrar_Sesion.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Btn_Cerrar_Sesion.Name = "Btn_Cerrar_Sesion"
         Me.Btn_Cerrar_Sesion.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
@@ -119,7 +120,7 @@ Partial Class view_Principal
         Me.Btn_Configuracion.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.Btn_Configuracion.IconSize = 35
         Me.Btn_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Configuracion.Location = New System.Drawing.Point(0, 674)
+        Me.Btn_Configuracion.Location = New System.Drawing.Point(0, 573)
         Me.Btn_Configuracion.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Btn_Configuracion.Name = "Btn_Configuracion"
         Me.Btn_Configuracion.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
@@ -134,15 +135,38 @@ Partial Class view_Principal
         '
         Me.Panel_Mantenimiento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel_Mantenimiento.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Panel_Mantenimiento.Controls.Add(Me.btnEmpleados)
+        Me.Panel_Mantenimiento.Controls.Add(Me.btnEmpleado)
         Me.Panel_Mantenimiento.Controls.Add(Me.Btn_Cliente)
         Me.Panel_Mantenimiento.Controls.Add(Me.Btn_Categoria)
         Me.Panel_Mantenimiento.Controls.Add(Me.Btn_Proveedor)
         Me.Panel_Mantenimiento.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Mantenimiento.Location = New System.Drawing.Point(0, 400)
         Me.Panel_Mantenimiento.Name = "Panel_Mantenimiento"
-        Me.Panel_Mantenimiento.Size = New System.Drawing.Size(271, 141)
+        Me.Panel_Mantenimiento.Size = New System.Drawing.Size(220, 173)
         Me.Panel_Mantenimiento.TabIndex = 7
+        '
+        'btnEmpleado
+        '
+        Me.btnEmpleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.btnEmpleado.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnEmpleado.FlatAppearance.BorderSize = 0
+        Me.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEmpleado.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnEmpleado.ForeColor = System.Drawing.Color.Silver
+        Me.btnEmpleado.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup
+        Me.btnEmpleado.IconColor = System.Drawing.Color.White
+        Me.btnEmpleado.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEmpleado.IconSize = 35
+        Me.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEmpleado.Location = New System.Drawing.Point(0, 119)
+        Me.btnEmpleado.Name = "btnEmpleado"
+        Me.btnEmpleado.Padding = New System.Windows.Forms.Padding(51, 0, 23, 0)
+        Me.btnEmpleado.Size = New System.Drawing.Size(220, 54)
+        Me.btnEmpleado.TabIndex = 11
+        Me.btnEmpleado.Text = "Empleados"
+        Me.btnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEmpleado.UseVisualStyleBackColor = False
         '
         'Btn_Cliente
         '
@@ -160,7 +184,7 @@ Partial Class view_Principal
         Me.Btn_Cliente.Location = New System.Drawing.Point(0, 66)
         Me.Btn_Cliente.Name = "Btn_Cliente"
         Me.Btn_Cliente.Padding = New System.Windows.Forms.Padding(51, 0, 23, 0)
-        Me.Btn_Cliente.Size = New System.Drawing.Size(271, 53)
+        Me.Btn_Cliente.Size = New System.Drawing.Size(220, 53)
         Me.Btn_Cliente.TabIndex = 10
         Me.Btn_Cliente.Text = "Clientes"
         Me.Btn_Cliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -375,6 +399,16 @@ Partial Class view_Principal
         Me.Barra_Titulo.Size = New System.Drawing.Size(693, 80)
         Me.Barra_Titulo.TabIndex = 1
         '
+        'lbl_id
+        '
+        Me.lbl_id.AutoSize = True
+        Me.lbl_id.Location = New System.Drawing.Point(710, 55)
+        Me.lbl_id.Name = "lbl_id"
+        Me.lbl_id.Size = New System.Drawing.Size(35, 15)
+        Me.lbl_id.TabIndex = 11
+        Me.lbl_id.Text = "lbl_id"
+        Me.lbl_id.Visible = False
+        '
         'lbl_apellidos
         '
         Me.lbl_apellidos.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -515,16 +549,6 @@ Partial Class view_Principal
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
-        'lbl_id
-        '
-        Me.lbl_id.AutoSize = True
-        Me.lbl_id.Location = New System.Drawing.Point(710, 55)
-        Me.lbl_id.Name = "lbl_id"
-        Me.lbl_id.Size = New System.Drawing.Size(45, 20)
-        Me.lbl_id.TabIndex = 11
-        Me.lbl_id.Text = "lbl_id"
-        Me.lbl_id.Visible = False
-        '
         'view_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -587,4 +611,5 @@ Partial Class view_Principal
     Friend WithEvents lbl_apellidos As Label
     Friend WithEvents lbl_id As Label
     Friend WithEvents btnEmpleados As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnEmpleado As FontAwesome.Sharp.IconButton
 End Class
