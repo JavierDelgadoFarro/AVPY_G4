@@ -81,30 +81,7 @@ Public Class View_Mantenimiento_Productos
         buscarencombo(cbcategoriaproducto, Me.DGV_Productos(2, fila).Value.ToString())
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
-        If btnnuevoproducto.Text = "Nuevo" Then
-            btnnuevoproducto.Text = "Guardar"
-            habilitar_deshabitar(False)
-            limpiarcajas()
-            labelidproducto.Text = Label9.Text
-        ElseIf btnnuevoproducto.Text = "Guardar" Then
-            btnnuevoproducto.Text = "Nuevo"
-            If cbcategoriaproducto.SelectedIndex < 0 Then
-                MessageBox.Show("Debe de seleccionar una categoria")
-                cbcategoriaproducto.Focus()
-                Exit Sub
-            End If
 
-            If cbproveeproducto.SelectedIndex < 0 Then
-                cbproveeproducto.Focus()
-                MessageBox.Show("debe seleccionar un proveedor")
-                Exit Sub
-            End If
-            nuevo_producto()
-            habilitar_deshabitar(True)
-            cargargridview()
-        End If
-    End Sub
 
     'Metodo para agregar un nuevo producto'
     Private Sub nuevo_producto()
@@ -251,5 +228,30 @@ Public Class View_Mantenimiento_Productos
         Dim busca = txtbuscarproducto.Text
         Dim obj As New Producto_Negocio
         DGV_Productos.DataSource = obj.buscartodoproducto(busca)
+    End Sub
+
+    Private Sub btnnuevoproducto_Click(sender As Object, e As EventArgs) Handles btnnuevoproducto.Click
+        If btnnuevoproducto.Text = "Nuevo" Then
+            btnnuevoproducto.Text = "Guardar"
+            habilitar_deshabitar(False)
+            limpiarcajas()
+            labelidproducto.Text = Label9.Text
+        ElseIf btnnuevoproducto.Text = "Guardar" Then
+            btnnuevoproducto.Text = "Nuevo"
+            If cbcategoriaproducto.SelectedIndex < 0 Then
+                MessageBox.Show("Debe de seleccionar una categoria")
+                cbcategoriaproducto.Focus()
+                Exit Sub
+            End If
+
+            If cbproveeproducto.SelectedIndex < 0 Then
+                cbproveeproducto.Focus()
+                MessageBox.Show("debe seleccionar un proveedor")
+                Exit Sub
+            End If
+            nuevo_producto()
+            habilitar_deshabitar(True)
+            cargargridview()
+        End If
     End Sub
 End Class

@@ -15,7 +15,6 @@ Public Class view_Principal
 
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
-        OcultarSubmenu()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         Border_Btn_Actual = New Panel()
 
@@ -126,33 +125,33 @@ Public Class view_Principal
         Abrir_Frm_Hijo(New View_Mantenimiento_Productos)
     End Sub
 
-    Private Sub Btn_Mantenimiento_Click(sender As Object, e As EventArgs) Handles Btn_Mantenimiento.Click
-        Activacion_Boton(sender, RGBColors.ColorNaranja)
-        MostrarSubmenu(Panel_Mantenimiento)
-    End Sub
-
-    Private Sub Btn_Configuracion_Click(sender As Object, e As EventArgs) Handles Btn_Configuracion.Click
-        Activacion_Boton(sender, RGBColors.ColorNaranja)
-        'Abrir_Frm_Hijo(New View_Editar_Perfil)
-    End Sub
-
-    'SUBMENU'
-    Private Sub Btn_Proveedor_Click(sender As Object, e As EventArgs) Handles Btn_Proveedor.Click
+    Private Sub Btn_Mantenimiento_Click(sender As Object, e As EventArgs) Handles Btn_Proveedor.Click
         Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New View_Mantenimiento_Proveedores)
     End Sub
 
-    Private Sub Btn_Categoria_Click(sender As Object, e As EventArgs) Handles Btn_Categoria.Click
+    Private Sub Btn_Configuracion_Click(sender As Object, e As EventArgs) Handles Btn_Reporte.Click
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
+        'reportessss
+    End Sub
+
+    'SUBMENU'
+    Private Sub Btn_Proveedor_Click(sender As Object, e As EventArgs)
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
+        Abrir_Frm_Hijo(New View_Mantenimiento_Proveedores)
+    End Sub
+
+    Private Sub Btn_Categoria_Click(sender As Object, e As EventArgs)
         Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New Mantenimiento_Categoria)
     End Sub
 
-    Private Sub Btn_Cliente_Click(sender As Object, e As EventArgs) Handles Btn_Cliente.Click
+    Private Sub Btn_Cliente_Click(sender As Object, e As EventArgs)
         Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New Mantenimiento_Cliente)
     End Sub
 
-    Private Sub btnEmpleado_Click(sender As Object, e As EventArgs) Handles btnEmpleado.Click
+    Private Sub btnEmpleado_Click(sender As Object, e As EventArgs)
         Activacion_Boton(sender, RGBColors.ColorNaranja)
         Abrir_Frm_Hijo(New View_Mantenimiento_Empleado)
     End Sub
@@ -238,68 +237,23 @@ Public Class view_Principal
             WindowState = FormWindowState.Normal
         End If
     End Sub
-#End Region
 
-    'BOTONES DEL SUB MENU'
-#Region "Sub Menu"
-    'OCULTAR SUBMENU'
-    Private Sub OcultarSubmenu()
-        Panel_Mantenimiento.Visible = False
-    End Sub
-    'MOSTRAR SUBMENU'
-    Private Sub MostrarSubmenu(submenu As Panel)
-        If submenu.Visible = False Then
-            OcultarSubmenu()
-            submenu.Visible = True
-        Else
-            submenu.Visible = False
-        End If
+    Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles btn_empleado.Click
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
+        Abrir_Frm_Hijo(New View_Mantenimiento_Empleado)
     End Sub
 
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles btn_cliente.Click
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
+        Abrir_Frm_Hijo(New Mantenimiento_Cliente)
+    End Sub
 
+    Private Sub btn_categoria_Click_1(sender As Object, e As EventArgs) Handles btn_categoria.Click
+        Activacion_Boton(sender, RGBColors.ColorNaranja)
+        Abrir_Frm_Hijo(New Mantenimiento_Categoria)
+    End Sub
 #End Region
 
 
-
-    '#Region "Retornar información"
-    '  Private Sub view_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    'Info_Usuario()
-    '      Permisos_Usuario()
-    '  End Sub
-    '   Public Sub Info_Usuario()
-    '       lbl_usuario.Text = ""
-    '      lbl_Nombre.Text = ""
-    '      lbl_apellidos.Text = ""
-
-    '      lbl_usuario.Text = E_Usuario.usuario
-    '    lbl_Nombre.Text = E_Usuario.nombre
-    'lbl_apellidos.Text = E_Usuario.apellido
-    'If E_Usuario.id = Nothing OrElse E_Usuario.id = 0 Then
-
-    '        MessageBox.Show("Error")
-    '  Me.Close()
-    '    End If
-    '    End Sub
-
-    '#End Region
-
-#Region "Permisos de usuarios"
-    '  'administrador = 1
-    'almacenero = 2
-    'vendedor = 3
-
-    ' Private Sub Permisos_Usuario()
-    'If E_Usuario.idRol = 2 Then
-    '        Btn_Configuracion.Visible = False
-    '        Btn_Pagos.Visible = False
-    'End If
-    'If E_Usuario.idRol = 3 Then
-    '       Btn_Configuracion.Visible = False
-    '        Btn_Compras.Visible = False
-    'End If
-    ' End Sub
-
-
-#End Region
 
 End Class
