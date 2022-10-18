@@ -52,7 +52,7 @@ Public Class View_Mantenimiento_Proveedores
         txtbuscarproveedor.Enabled = bol
     End Sub
 
-    Private Sub btnagregarproveedor_Click(sender As Object, e As EventArgs) 
+    Private Sub btnagregarproveedor_Click(sender As Object, e As EventArgs) Handles btnagregarproveedor.Click
         If btnagregarproveedor.Text = "Nuevo" Then
             btnagregarproveedor.Text = "Guardar"
             limpiar()

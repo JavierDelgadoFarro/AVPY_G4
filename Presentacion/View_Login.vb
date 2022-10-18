@@ -121,11 +121,11 @@ Public Class View_Login
 
 
         If lista3.Item(0).id_rol = 2 Then
-            view_Principal.Btn_Configuracion.Visible = False
+            view_Principal.Btn_Reporte.Visible = False
             view_Principal.Btn_Pagos.Visible = False
         End If
         If lista3.Item(0).id_rol = 3 Then
-            view_Principal.Btn_Configuracion.Visible = False
+            view_Principal.Btn_Reporte.Visible = False
             view_Principal.Btn_Compras.Visible = False
         End If
     End Sub

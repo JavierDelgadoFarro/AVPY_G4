@@ -23,9 +23,10 @@ Partial Class View_Mantenimiento_Productos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(View_Mantenimiento_Productos))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Btn_buscar = New System.Windows.Forms.Button()
         Me.Labellinea = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -58,7 +59,6 @@ Partial Class View_Mantenimiento_Productos
         Me.Labelid = New System.Windows.Forms.Label()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Btn_buscar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGV_Productos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +101,19 @@ Partial Class View_Mantenimiento_Productos
         Me.Panel1.Size = New System.Drawing.Size(1121, 638)
         Me.Panel1.TabIndex = 0
         '
+        'Btn_buscar
+        '
+        Me.Btn_buscar.BackColor = System.Drawing.Color.ForestGreen
+        Me.Btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_buscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Btn_buscar.ForeColor = System.Drawing.Color.White
+        Me.Btn_buscar.Location = New System.Drawing.Point(1030, 25)
+        Me.Btn_buscar.Name = "Btn_buscar"
+        Me.Btn_buscar.Size = New System.Drawing.Size(71, 27)
+        Me.Btn_buscar.TabIndex = 52
+        Me.Btn_buscar.Text = "Buscar"
+        Me.Btn_buscar.UseVisualStyleBackColor = False
+        '
         'Labellinea
         '
         Me.Labellinea.AutoSize = True
@@ -108,7 +121,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Labellinea.ForeColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.Labellinea.Location = New System.Drawing.Point(-213, 56)
         Me.Labellinea.Name = "Labellinea"
-        Me.Labellinea.Size = New System.Drawing.Size(1700, 16)
+        Me.Labellinea.Size = New System.Drawing.Size(2126, 20)
         Me.Labellinea.TabIndex = 51
         Me.Labellinea.Text = resources.GetString("Labellinea.Text")
         '
@@ -145,7 +158,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(510, 44)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(23, 16)
+        Me.Label9.Size = New System.Drawing.Size(29, 20)
         Me.Label9.TabIndex = 31
         Me.Label9.Text = "00"
         Me.Label9.Visible = False
@@ -156,29 +169,30 @@ Partial Class View_Mantenimiento_Productos
         Me.DGV_Productos.AllowUserToDeleteRows = False
         Me.DGV_Productos.BackgroundColor = System.Drawing.Color.White
         Me.DGV_Productos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_Productos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_Productos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGV_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV_Productos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.DGV_Productos.GridColor = System.Drawing.Color.White
         Me.DGV_Productos.Location = New System.Drawing.Point(27, 28)
         Me.DGV_Productos.Margin = New System.Windows.Forms.Padding(4)
         Me.DGV_Productos.Name = "DGV_Productos"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_Productos.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_Productos.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGV_Productos.RowHeadersVisible = False
+        Me.DGV_Productos.RowHeadersWidth = 51
         Me.DGV_Productos.RowTemplate.Height = 25
         Me.DGV_Productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGV_Productos.Size = New System.Drawing.Size(924, 261)
@@ -188,6 +202,7 @@ Partial Class View_Mantenimiento_Productos
         '
         Me.Column1.DataPropertyName = "idproducto"
         Me.Column1.HeaderText = "idproducto"
+        Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
         Me.Column1.Width = 120
         '
@@ -195,6 +210,7 @@ Partial Class View_Mantenimiento_Productos
         '
         Me.Column2.DataPropertyName = "nombre"
         Me.Column2.HeaderText = "nombre"
+        Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
         Me.Column2.Width = 150
         '
@@ -202,6 +218,7 @@ Partial Class View_Mantenimiento_Productos
         '
         Me.Column3.DataPropertyName = "idcategoria"
         Me.Column3.HeaderText = "idcategoria"
+        Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
         Me.Column3.Width = 130
         '
@@ -209,6 +226,7 @@ Partial Class View_Mantenimiento_Productos
         '
         Me.Column4.DataPropertyName = "precio"
         Me.Column4.HeaderText = "precio"
+        Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         Me.Column4.Width = 120
         '
@@ -216,6 +234,7 @@ Partial Class View_Mantenimiento_Productos
         '
         Me.Column5.DataPropertyName = "stock"
         Me.Column5.HeaderText = "stock"
+        Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         Me.Column5.Width = 120
         '
@@ -223,6 +242,7 @@ Partial Class View_Mantenimiento_Productos
         '
         Me.Column6.DataPropertyName = "idproveedor"
         Me.Column6.HeaderText = "idproveedor "
+        Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         Me.Column6.Width = 130
         '
@@ -230,6 +250,7 @@ Partial Class View_Mantenimiento_Productos
         '
         Me.Column7.DataPropertyName = "foto"
         Me.Column7.HeaderText = "foto"
+        Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.Width = 150
         '
@@ -238,7 +259,7 @@ Partial Class View_Mantenimiento_Productos
         Me.txtbuscarproducto.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.txtbuscarproducto.Location = New System.Drawing.Point(661, 26)
         Me.txtbuscarproducto.Name = "txtbuscarproducto"
-        Me.txtbuscarproducto.Size = New System.Drawing.Size(360, 25)
+        Me.txtbuscarproducto.Size = New System.Drawing.Size(360, 29)
         Me.txtbuscarproducto.TabIndex = 1
         '
         'Label1
@@ -248,7 +269,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(600, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 16)
+        Me.Label1.Size = New System.Drawing.Size(69, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Buscar"
         '
@@ -306,21 +327,21 @@ Partial Class View_Mantenimiento_Productos
         Me.cbproveeproducto.FormattingEnabled = True
         Me.cbproveeproducto.Location = New System.Drawing.Point(673, 131)
         Me.cbproveeproducto.Name = "cbproveeproducto"
-        Me.cbproveeproducto.Size = New System.Drawing.Size(152, 25)
+        Me.cbproveeproducto.Size = New System.Drawing.Size(152, 28)
         Me.cbproveeproducto.TabIndex = 44
         '
         'numstockproducto
         '
         Me.numstockproducto.Location = New System.Drawing.Point(398, 132)
         Me.numstockproducto.Name = "numstockproducto"
-        Me.numstockproducto.Size = New System.Drawing.Size(152, 25)
+        Me.numstockproducto.Size = New System.Drawing.Size(152, 29)
         Me.numstockproducto.TabIndex = 43
         '
         'numprecioproducto
         '
         Me.numprecioproducto.Location = New System.Drawing.Point(156, 132)
         Me.numprecioproducto.Name = "numprecioproducto"
-        Me.numprecioproducto.Size = New System.Drawing.Size(152, 25)
+        Me.numprecioproducto.Size = New System.Drawing.Size(152, 29)
         Me.numprecioproducto.TabIndex = 42
         '
         'cbcategoriaproducto
@@ -328,7 +349,7 @@ Partial Class View_Mantenimiento_Productos
         Me.cbcategoriaproducto.FormattingEnabled = True
         Me.cbcategoriaproducto.Location = New System.Drawing.Point(639, 88)
         Me.cbcategoriaproducto.Name = "cbcategoriaproducto"
-        Me.cbcategoriaproducto.Size = New System.Drawing.Size(152, 25)
+        Me.cbcategoriaproducto.Size = New System.Drawing.Size(152, 28)
         Me.cbcategoriaproducto.TabIndex = 41
         '
         'txtnombreproducto
@@ -336,7 +357,7 @@ Partial Class View_Mantenimiento_Productos
         Me.txtnombreproducto.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.txtnombreproducto.Location = New System.Drawing.Point(306, 88)
         Me.txtnombreproducto.Name = "txtnombreproducto"
-        Me.txtnombreproducto.Size = New System.Drawing.Size(207, 25)
+        Me.txtnombreproducto.Size = New System.Drawing.Size(207, 29)
         Me.txtnombreproducto.TabIndex = 40
         '
         'labelidproducto
@@ -345,7 +366,7 @@ Partial Class View_Mantenimiento_Productos
         Me.labelidproducto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.labelidproducto.Location = New System.Drawing.Point(153, 94)
         Me.labelidproducto.Name = "labelidproducto"
-        Me.labelidproducto.Size = New System.Drawing.Size(24, 17)
+        Me.labelidproducto.Size = New System.Drawing.Size(30, 22)
         Me.labelidproducto.TabIndex = 39
         Me.labelidproducto.Text = "00"
         '
@@ -356,7 +377,7 @@ Partial Class View_Mantenimiento_Productos
         Me.labelproveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.labelproveedor.Location = New System.Drawing.Point(576, 135)
         Me.labelproveedor.Name = "labelproveedor"
-        Me.labelproveedor.Size = New System.Drawing.Size(80, 16)
+        Me.labelproveedor.Size = New System.Drawing.Size(94, 20)
         Me.labelproveedor.TabIndex = 38
         Me.labelproveedor.Text = "Proveedor"
         '
@@ -367,7 +388,7 @@ Partial Class View_Mantenimiento_Productos
         Me.labelstock.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.labelstock.Location = New System.Drawing.Point(346, 137)
         Me.labelstock.Name = "labelstock"
-        Me.labelstock.Size = New System.Drawing.Size(46, 16)
+        Me.labelstock.Size = New System.Drawing.Size(56, 20)
         Me.labelstock.TabIndex = 37
         Me.labelstock.Text = "Stock"
         '
@@ -378,7 +399,7 @@ Partial Class View_Mantenimiento_Productos
         Me.labelprecio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.labelprecio.Location = New System.Drawing.Point(98, 137)
         Me.labelprecio.Name = "labelprecio"
-        Me.labelprecio.Size = New System.Drawing.Size(52, 16)
+        Me.labelprecio.Size = New System.Drawing.Size(63, 20)
         Me.labelprecio.TabIndex = 36
         Me.labelprecio.Text = "Precio"
         '
@@ -389,7 +410,7 @@ Partial Class View_Mantenimiento_Productos
         Me.ñabelcategoria.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ñabelcategoria.Location = New System.Drawing.Point(548, 91)
         Me.ñabelcategoria.Name = "ñabelcategoria"
-        Me.ñabelcategoria.Size = New System.Drawing.Size(75, 16)
+        Me.ñabelcategoria.Size = New System.Drawing.Size(90, 20)
         Me.ñabelcategoria.TabIndex = 35
         Me.ñabelcategoria.Text = "Categoría"
         '
@@ -400,7 +421,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Labelnombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Labelnombre.Location = New System.Drawing.Point(238, 93)
         Me.Labelnombre.Name = "Labelnombre"
-        Me.Labelnombre.Size = New System.Drawing.Size(62, 16)
+        Me.Labelnombre.Size = New System.Drawing.Size(74, 20)
         Me.Labelnombre.TabIndex = 34
         Me.Labelnombre.Text = "Nombre"
         '
@@ -411,7 +432,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Labelid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Labelid.Location = New System.Drawing.Point(97, 94)
         Me.Labelid.Name = "Labelid"
-        Me.Labelid.Size = New System.Drawing.Size(22, 16)
+        Me.Labelid.Size = New System.Drawing.Size(28, 20)
         Me.Labelid.TabIndex = 33
         Me.Labelid.Text = "ID"
         '
@@ -436,26 +457,13 @@ Partial Class View_Mantenimiento_Productos
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(70, 27)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(284, 18)
+        Me.Label6.Size = New System.Drawing.Size(350, 24)
         Me.Label6.TabIndex = 31
         Me.Label6.Text = "MANTENIMIENTO DE PRODUCTOS"
         '
-        'Btn_buscar
-        '
-        Me.Btn_buscar.BackColor = System.Drawing.Color.ForestGreen
-        Me.Btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_buscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Btn_buscar.ForeColor = System.Drawing.Color.White
-        Me.Btn_buscar.Location = New System.Drawing.Point(1030, 25)
-        Me.Btn_buscar.Name = "Btn_buscar"
-        Me.Btn_buscar.Size = New System.Drawing.Size(71, 27)
-        Me.Btn_buscar.TabIndex = 52
-        Me.Btn_buscar.Text = "Buscar"
-        Me.Btn_buscar.UseVisualStyleBackColor = False
-        '
         'View_Mantenimiento_Productos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1121, 638)
         Me.Controls.Add(Me.Panel1)
