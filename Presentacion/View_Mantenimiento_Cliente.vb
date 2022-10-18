@@ -121,4 +121,5 @@ Public Class Mantenimiento_Cliente
         Dim obj As New Cliente_Negocio
         DGVCliente.DataSource = obj.buscacliente(busca)
     End Sub
+
 End Class

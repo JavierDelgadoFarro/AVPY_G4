@@ -27,7 +27,7 @@ Partial Class View_Compra
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.LabelId = New System.Windows.Forms.Label()
+        Me.LabelIdProveedor = New System.Windows.Forms.Label()
         Me.dateFechaCompra = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.comboComprobante = New System.Windows.Forms.ComboBox()
@@ -45,7 +45,6 @@ Partial Class View_Compra
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnAgregarCompra = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.listCompras = New System.Windows.Forms.ListView()
         Me.CheckPorcentaje = New System.Windows.Forms.CheckBox()
         Me.CheckIgv = New System.Windows.Forms.CheckBox()
         Me.LabelImporteTotal = New System.Windows.Forms.Label()
@@ -56,6 +55,7 @@ Partial Class View_Compra
         Me.Label10 = New System.Windows.Forms.Label()
         Me.LabelSubTotal = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.listCompras = New System.Windows.Forms.ListView()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -102,7 +102,7 @@ Partial Class View_Compra
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.LabelId)
+        Me.GroupBox3.Controls.Add(Me.LabelIdProveedor)
         Me.GroupBox3.Controls.Add(Me.dateFechaCompra)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.comboComprobante)
@@ -121,14 +121,14 @@ Partial Class View_Compra
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "PROVEEDOR"
         '
-        'LabelId
+        'LabelIdProveedor
         '
-        Me.LabelId.AutoSize = True
-        Me.LabelId.Location = New System.Drawing.Point(127, 19)
-        Me.LabelId.Name = "LabelId"
-        Me.LabelId.Size = New System.Drawing.Size(45, 13)
-        Me.LabelId.TabIndex = 24
-        Me.LabelId.Text = "Label9"
+        Me.LabelIdProveedor.AutoSize = True
+        Me.LabelIdProveedor.Location = New System.Drawing.Point(126, 17)
+        Me.LabelIdProveedor.Name = "LabelIdProveedor"
+        Me.LabelIdProveedor.Size = New System.Drawing.Size(45, 13)
+        Me.LabelIdProveedor.TabIndex = 25
+        Me.LabelIdProveedor.Text = "Label9"
         '
         'dateFechaCompra
         '
@@ -308,14 +308,6 @@ Partial Class View_Compra
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LISTA DE COMPRAS"
         '
-        'listCompras
-        '
-        Me.listCompras.Location = New System.Drawing.Point(29, 39)
-        Me.listCompras.Name = "listCompras"
-        Me.listCompras.Size = New System.Drawing.Size(284, 252)
-        Me.listCompras.TabIndex = 12
-        Me.listCompras.UseCompatibleStateImageBehavior = False
-        '
         'CheckPorcentaje
         '
         Me.CheckPorcentaje.AutoSize = True
@@ -409,6 +401,15 @@ Partial Class View_Compra
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "SubTotal"
         '
+        'listCompras
+        '
+        Me.listCompras.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.listCompras.Location = New System.Drawing.Point(30, 33)
+        Me.listCompras.Name = "listCompras"
+        Me.listCompras.Size = New System.Drawing.Size(283, 259)
+        Me.listCompras.TabIndex = 27
+        Me.listCompras.UseCompatibleStateImageBehavior = False
+        '
         'View_Compra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -463,6 +464,6 @@ Partial Class View_Compra
     Friend WithEvents LabelImporteTotal As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents LabelPorcentaje As Label
-    Friend WithEvents LabelId As Label
+    Friend WithEvents LabelIdProveedor As Label
     Friend WithEvents listCompras As ListView
 End Class

@@ -152,6 +152,11 @@ Public Class view_Principal
         Abrir_Frm_Hijo(New Mantenimiento_Cliente)
     End Sub
 
+    Private Sub btnEmpleados_Click(sender As Object, e As EventArgs) Handles btnEmpleados.Click
+        Activacion_Boton(sender, RGBColors.ColorAzulClaro)
+        Abrir_Frm_Hijo(New View_Mantenimiento_Empleado)
+    End Sub
+
     Private Sub lbl_link_editar_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lbl_link_editar.LinkClicked
         Abrir_Frm_Hijo(New View_Editar_Perfil)
     End Sub
@@ -250,6 +255,8 @@ Public Class view_Principal
             submenu.Visible = False
         End If
     End Sub
+
+
 #End Region
 
 

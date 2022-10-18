@@ -5,6 +5,13 @@ Imports Datos
 Public Class Empleado_Negocio
     Dim empleado_Dao As New Empleado_Datos()
 
+    Public Function Mostrartodoempleado() As List(Of E_Empleado)
+        Dim lista As New List(Of E_Empleado)
+        Dim obj As New Empleado_Datos
+        lista = obj.Mostrartodoempleado
+        Return lista
+    End Function
+
     'Para El login
     Public Function Validar(ByVal registros As E_Empleado) As Boolean
         Dim valor As Boolean

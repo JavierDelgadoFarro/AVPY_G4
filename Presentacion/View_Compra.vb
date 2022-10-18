@@ -171,9 +171,9 @@ Public Class View_Compra
 
     Private Sub cbxNombreProveedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxNombreProveedor.SelectedIndexChanged
         If cbxNombreProveedor.SelectedIndex >= 0 Then
-            LabelId.Text = cbxNombreProveedor.SelectedValue.ToString
+            LabelIdProveedor.Text = cbxNombreProveedor.SelectedValue.ToString
         Else
-            LabelId.Text = ""
+            LabelIdProveedor.Text = ""
         End If
     End Sub
 
@@ -187,7 +187,7 @@ Public Class View_Compra
             .Fecha = convertirfecha_ansi(dateFechaCompra)
             .IdTipoComprobante = obtenertipocomprobante()
             .IdFactura = txtNumeroComprobante.Text
-            .IdProveedor = LabelId.Text
+            .IdProveedor = LabelIdProveedor.Text
             .ImporteTotal = CDbl(LabelImporteTotal.Text)
             .retencion = CDbl(LabelPorcentaje.Text)
         End With
@@ -339,7 +339,7 @@ Public Class View_Compra
     End Sub
 
     Private Sub limpiar()
-        LabelId.Text = ""
+        LabelIdProveedor.Text = ""
         cbxNombreProveedor.SelectedIndex = -1
         comboComprobante.SelectedIndex = -1
         txtNumeroComprobante.Text = ""

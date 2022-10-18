@@ -3,6 +3,31 @@ Imports Entidades
 Imports System.Data
 Public Class Empleado_Datos
     Inherits Conexion
+
+    Public Function Mostrartodoempleado() As List(Of E_Empleado)
+        Dim lista As New List(Of E_Empleado)
+        Using conexion_return = GetConexion()
+            conexion_return.Open()
+            Dim cmd As New SqlCommand("p_mostrartodoempleado", conexion_return)
+            cmd.CommandType = CommandType.StoredProcedure
+            Dim dr As SqlDataReader
+            dr = cmd.ExecuteReader
+            While dr.Read
+                Dim reg As New E_Empleado
+                reg.idempleado = dr.GetValue(0).ToString()
+                reg.nombres = dr.GetValue(1).ToString()
+                reg.apellidos = dr.GetValue(2).ToString()
+                reg.contraseña = dr.GetValue(3).ToString()
+                reg.id_rol = dr.GetValue(4).ToString()
+                reg.usuario = dr.GetValue(5).ToString()
+                lista.Add(reg)
+            End While
+            dr.Close()
+        End Using
+        Return lista
+    End Function
+
+
     'Para el Login'
 
     Public Function Validar(ByVal registro As E_Empleado) As Boolean
