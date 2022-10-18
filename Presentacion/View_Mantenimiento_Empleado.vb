@@ -8,6 +8,7 @@ Public Class View_Mantenimiento_Empleado
         Me.ForeColor = Color.Black
         personalizargridviewEmpleado(Me.DGVEmpleado)
         cargargridviewEmpleado()
+        cargarcomboRol()
     End Sub
 
     Private Sub personalizargridviewEmpleado(ByVal grid As DataGridView)
@@ -32,7 +33,6 @@ Public Class View_Mantenimiento_Empleado
     End Sub
 
 
-    'Agregar Cliente'
     Private Sub limpiar()
         labelIdEmpleado.Text = ""
         TextNombreEmpleado.Text = ""
@@ -41,6 +41,17 @@ Public Class View_Mantenimiento_Empleado
         ComboBoxRol.Text = ""
         TextUsuarioEmpleado.Text = ""
 
+        ComboBoxRol.SelectedIndex = -1
+    End Sub
+
+    'Para Cargar Al Combobox Rol'
+    Private Sub cargarcomboRol()
+        Dim lista As New List(Of E_Rol)
+        Dim obj As New Rol_Negocio
+        lista = obj.Mostrar_rol
+        ComboBoxRol.DataSource = lista
+        ComboBoxRol.DisplayMember = "descripcion"
+        ComboBoxRol.ValueMember = "idrol"
         ComboBoxRol.SelectedIndex = -1
     End Sub
 
