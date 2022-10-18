@@ -38,6 +38,7 @@ Partial Class View_Mantenimiento_Empleado
         Me.TextUsuarioEmpleado = New System.Windows.Forms.TextBox()
         Me.ComboBoxRol = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LabelOpc = New System.Windows.Forms.Label()
         Me.DGVEmpleado = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -201,6 +202,7 @@ Partial Class View_Mantenimiento_Empleado
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.LabelOpc)
         Me.GroupBox1.Controls.Add(Me.DGVEmpleado)
         Me.GroupBox1.Controls.Add(Me.btnbuscarEmpleado)
         Me.GroupBox1.Controls.Add(Me.txtbuscarEmpleado)
@@ -211,6 +213,16 @@ Partial Class View_Mantenimiento_Empleado
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LISTA DE EMPLEADOS"
+        '
+        'LabelOpc
+        '
+        Me.LabelOpc.AutoSize = True
+        Me.LabelOpc.Location = New System.Drawing.Point(64, 56)
+        Me.LabelOpc.Name = "LabelOpc"
+        Me.LabelOpc.Size = New System.Drawing.Size(19, 15)
+        Me.LabelOpc.TabIndex = 28
+        Me.LabelOpc.Text = "00"
+        Me.LabelOpc.Visible = False
         '
         'DGVEmpleado
         '
@@ -409,4 +421,5 @@ Partial Class View_Mantenimiento_Empleado
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents LabelOpc As Label
 End Class

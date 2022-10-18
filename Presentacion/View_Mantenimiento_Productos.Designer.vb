@@ -142,6 +142,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Label9.Size = New System.Drawing.Size(23, 16)
         Me.Label9.TabIndex = 31
         Me.Label9.Text = "00"
+        Me.Label9.Visible = False
         '
         'DGV_Productos
         '

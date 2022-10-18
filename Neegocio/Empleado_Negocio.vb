@@ -124,4 +124,32 @@ Public Class Empleado_Negocio
         End Try
     End Sub
 
+    'Para Agregar Nuevo Empleado'
+    Public Sub Agregar_Empleado(ByVal registros As E_Empleado)
+        Dim Datos As New Empleado_Datos
+        Datos.Agregar_Empleado(registros)
+    End Sub
+
+    'Para modificar un empleado'
+    Public Sub modificar_Empleado(ByVal registros As E_Empleado)
+        Dim Datos As New Empleado_Datos
+        Datos.modificar_perfil(registros)
+    End Sub
+
+    'Buscar Todo empleado' 
+    Public Function buscartodoempleado(ByVal nombre As String) As List(Of E_Empleado)
+        Dim lista As New List(Of E_Empleado)
+        Dim obj As New Empleado_Datos
+        lista = obj.buscartodoempleado(nombre)
+        Return lista
+    End Function
+
+    'Eliminar Empleado' 
+    Public Sub Eliminar_empleado(ByVal registros As E_Empleado)
+        Dim Datos As New Empleado_Datos
+        Datos.Eliminar_Empleado(registros)
+    End Sub
+
+
+
 End Class
