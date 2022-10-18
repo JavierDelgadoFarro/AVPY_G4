@@ -7,7 +7,12 @@
 		<UseWindowsForms>true</UseWindowsForms>
 		<MyType>WindowsForms</MyType>
 		<UseWPF>False</UseWPF>
+		<ApplicationIcon>iconoprincipal.ico</ApplicationIcon>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="iconoprincipal.ico" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<Import Include="System.Data" />

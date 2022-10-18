@@ -25,17 +25,14 @@ Partial Class View_Editar_Perfil
         Me.Panel_Perfil = New System.Windows.Forms.Panel()
         Me.Btn_Editar_Perfil = New System.Windows.Forms.Button()
         Me.Panel_Editar_Perfil = New System.Windows.Forms.Panel()
+        Me.lbl_contraseña = New System.Windows.Forms.Label()
+        Me.lbl_id = New System.Windows.Forms.Label()
         Me.Btn_actualizar = New System.Windows.Forms.Button()
         Me.btn_Cancelar = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txt_Vigente_pass = New System.Windows.Forms.TextBox()
-        Me.txt_Confirmar_Pass = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.lbl_link_password = New System.Windows.Forms.LinkLabel()
-        Me.txt_password = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txt_apellido = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txt_nombre = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -85,17 +82,14 @@ Partial Class View_Editar_Perfil
         'Panel_Editar_Perfil
         '
         Me.Panel_Editar_Perfil.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.Panel_Editar_Perfil.Controls.Add(Me.lbl_contraseña)
+        Me.Panel_Editar_Perfil.Controls.Add(Me.lbl_id)
         Me.Panel_Editar_Perfil.Controls.Add(Me.Btn_actualizar)
         Me.Panel_Editar_Perfil.Controls.Add(Me.btn_Cancelar)
         Me.Panel_Editar_Perfil.Controls.Add(Me.Label11)
         Me.Panel_Editar_Perfil.Controls.Add(Me.txt_Vigente_pass)
-        Me.Panel_Editar_Perfil.Controls.Add(Me.txt_Confirmar_Pass)
-        Me.Panel_Editar_Perfil.Controls.Add(Me.Label12)
-        Me.Panel_Editar_Perfil.Controls.Add(Me.lbl_link_password)
-        Me.Panel_Editar_Perfil.Controls.Add(Me.txt_password)
         Me.Panel_Editar_Perfil.Controls.Add(Me.Label9)
         Me.Panel_Editar_Perfil.Controls.Add(Me.txt_apellido)
-        Me.Panel_Editar_Perfil.Controls.Add(Me.Label10)
         Me.Panel_Editar_Perfil.Controls.Add(Me.Label8)
         Me.Panel_Editar_Perfil.Controls.Add(Me.txt_nombre)
         Me.Panel_Editar_Perfil.Controls.Add(Me.Label7)
@@ -108,13 +102,37 @@ Partial Class View_Editar_Perfil
         Me.Panel_Editar_Perfil.TabIndex = 8
         Me.Panel_Editar_Perfil.Visible = False
         '
+        'lbl_contraseña
+        '
+        Me.lbl_contraseña.AutoSize = True
+        Me.lbl_contraseña.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.lbl_contraseña.ForeColor = System.Drawing.Color.White
+        Me.lbl_contraseña.Location = New System.Drawing.Point(402, 517)
+        Me.lbl_contraseña.Name = "lbl_contraseña"
+        Me.lbl_contraseña.Size = New System.Drawing.Size(48, 25)
+        Me.lbl_contraseña.TabIndex = 24
+        Me.lbl_contraseña.Text = "pass"
+        Me.lbl_contraseña.Visible = False
+        '
+        'lbl_id
+        '
+        Me.lbl_id.AutoSize = True
+        Me.lbl_id.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.lbl_id.ForeColor = System.Drawing.Color.White
+        Me.lbl_id.Location = New System.Drawing.Point(417, 42)
+        Me.lbl_id.Name = "lbl_id"
+        Me.lbl_id.Size = New System.Drawing.Size(27, 25)
+        Me.lbl_id.TabIndex = 24
+        Me.lbl_id.Text = "id"
+        Me.lbl_id.Visible = False
+        '
         'Btn_actualizar
         '
         Me.Btn_actualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Btn_actualizar.FlatAppearance.BorderColor = System.Drawing.Color.Lime
         Me.Btn_actualizar.FlatAppearance.BorderSize = 0
         Me.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_actualizar.Location = New System.Drawing.Point(277, 578)
+        Me.Btn_actualizar.Location = New System.Drawing.Point(277, 421)
         Me.Btn_actualizar.Name = "Btn_actualizar"
         Me.Btn_actualizar.Size = New System.Drawing.Size(139, 33)
         Me.Btn_actualizar.TabIndex = 23
@@ -123,7 +141,7 @@ Partial Class View_Editar_Perfil
         '
         'btn_Cancelar
         '
-        Me.btn_Cancelar.Location = New System.Drawing.Point(94, 578)
+        Me.btn_Cancelar.Location = New System.Drawing.Point(94, 421)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(139, 33)
         Me.btn_Cancelar.TabIndex = 22
@@ -135,54 +153,18 @@ Partial Class View_Editar_Perfil
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(94, 481)
+        Me.Label11.Location = New System.Drawing.Point(94, 324)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(171, 20)
+        Me.Label11.Size = New System.Drawing.Size(105, 20)
         Me.Label11.TabIndex = 20
-        Me.Label11.Text = "Contraseña vigente"
+        Me.Label11.Text = "Contraseña"
         '
         'txt_Vigente_pass
         '
-        Me.txt_Vigente_pass.Location = New System.Drawing.Point(94, 512)
+        Me.txt_Vigente_pass.Location = New System.Drawing.Point(94, 355)
         Me.txt_Vigente_pass.Name = "txt_Vigente_pass"
         Me.txt_Vigente_pass.Size = New System.Drawing.Size(322, 27)
         Me.txt_Vigente_pass.TabIndex = 21
-        '
-        'txt_Confirmar_Pass
-        '
-        Me.txt_Confirmar_Pass.Location = New System.Drawing.Point(94, 436)
-        Me.txt_Confirmar_Pass.Name = "txt_Confirmar_Pass"
-        Me.txt_Confirmar_Pass.Size = New System.Drawing.Size(322, 27)
-        Me.txt_Confirmar_Pass.TabIndex = 19
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(94, 403)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(191, 20)
-        Me.Label12.TabIndex = 18
-        Me.Label12.Text = "Confirmar contraseña"
-        '
-        'lbl_link_password
-        '
-        Me.lbl_link_password.AutoSize = True
-        Me.lbl_link_password.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lbl_link_password.Location = New System.Drawing.Point(231, 321)
-        Me.lbl_link_password.Name = "lbl_link_password"
-        Me.lbl_link_password.Size = New System.Drawing.Size(126, 20)
-        Me.lbl_link_password.TabIndex = 17
-        Me.lbl_link_password.TabStop = True
-        Me.lbl_link_password.Text = "Editar Contraseña"
-        '
-        'txt_password
-        '
-        Me.txt_password.Location = New System.Drawing.Point(94, 354)
-        Me.txt_password.Name = "txt_password"
-        Me.txt_password.Size = New System.Drawing.Size(322, 27)
-        Me.txt_password.TabIndex = 16
         '
         'Label9
         '
@@ -201,17 +183,6 @@ Partial Class View_Editar_Perfil
         Me.txt_apellido.Name = "txt_apellido"
         Me.txt_apellido.Size = New System.Drawing.Size(322, 27)
         Me.txt_apellido.TabIndex = 15
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(94, 321)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(105, 20)
-        Me.Label10.TabIndex = 14
-        Me.Label10.Text = "Contraseña"
         '
         'Label8
         '
@@ -375,10 +346,8 @@ Partial Class View_Editar_Perfil
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents lbl_usuario As Label
-    Friend WithEvents txt_password As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents txt_apellido As TextBox
-    Friend WithEvents Label10 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents txt_nombre As TextBox
     Friend WithEvents Label7 As Label
@@ -389,7 +358,6 @@ Partial Class View_Editar_Perfil
     Friend WithEvents btn_Cancelar As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents txt_Vigente_pass As TextBox
-    Friend WithEvents txt_Confirmar_Pass As TextBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents lbl_link_password As LinkLabel
+    Friend WithEvents lbl_id As Label
+    Friend WithEvents lbl_contraseña As Label
 End Class
