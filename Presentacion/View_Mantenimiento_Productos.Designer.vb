@@ -121,7 +121,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Labellinea.ForeColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.Labellinea.Location = New System.Drawing.Point(-213, 56)
         Me.Labellinea.Name = "Labellinea"
-        Me.Labellinea.Size = New System.Drawing.Size(2126, 20)
+        Me.Labellinea.Size = New System.Drawing.Size(1700, 16)
         Me.Labellinea.TabIndex = 51
         Me.Labellinea.Text = resources.GetString("Labellinea.Text")
         '
@@ -158,7 +158,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(510, 44)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(29, 20)
+        Me.Label9.Size = New System.Drawing.Size(23, 16)
         Me.Label9.TabIndex = 31
         Me.Label9.Text = "00"
         Me.Label9.Visible = False
@@ -259,7 +259,7 @@ Partial Class View_Mantenimiento_Productos
         Me.txtbuscarproducto.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.txtbuscarproducto.Location = New System.Drawing.Point(661, 26)
         Me.txtbuscarproducto.Name = "txtbuscarproducto"
-        Me.txtbuscarproducto.Size = New System.Drawing.Size(360, 29)
+        Me.txtbuscarproducto.Size = New System.Drawing.Size(360, 25)
         Me.txtbuscarproducto.TabIndex = 1
         '
         'Label1
@@ -269,7 +269,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(600, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 20)
+        Me.Label1.Size = New System.Drawing.Size(55, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Buscar"
         '
@@ -327,21 +327,21 @@ Partial Class View_Mantenimiento_Productos
         Me.cbproveeproducto.FormattingEnabled = True
         Me.cbproveeproducto.Location = New System.Drawing.Point(673, 131)
         Me.cbproveeproducto.Name = "cbproveeproducto"
-        Me.cbproveeproducto.Size = New System.Drawing.Size(152, 28)
+        Me.cbproveeproducto.Size = New System.Drawing.Size(152, 25)
         Me.cbproveeproducto.TabIndex = 44
         '
         'numstockproducto
         '
         Me.numstockproducto.Location = New System.Drawing.Point(398, 132)
         Me.numstockproducto.Name = "numstockproducto"
-        Me.numstockproducto.Size = New System.Drawing.Size(152, 29)
+        Me.numstockproducto.Size = New System.Drawing.Size(152, 25)
         Me.numstockproducto.TabIndex = 43
         '
         'numprecioproducto
         '
         Me.numprecioproducto.Location = New System.Drawing.Point(156, 132)
         Me.numprecioproducto.Name = "numprecioproducto"
-        Me.numprecioproducto.Size = New System.Drawing.Size(152, 29)
+        Me.numprecioproducto.Size = New System.Drawing.Size(152, 25)
         Me.numprecioproducto.TabIndex = 42
         '
         'cbcategoriaproducto
@@ -349,7 +349,7 @@ Partial Class View_Mantenimiento_Productos
         Me.cbcategoriaproducto.FormattingEnabled = True
         Me.cbcategoriaproducto.Location = New System.Drawing.Point(639, 88)
         Me.cbcategoriaproducto.Name = "cbcategoriaproducto"
-        Me.cbcategoriaproducto.Size = New System.Drawing.Size(152, 28)
+        Me.cbcategoriaproducto.Size = New System.Drawing.Size(152, 25)
         Me.cbcategoriaproducto.TabIndex = 41
         '
         'txtnombreproducto
@@ -357,7 +357,7 @@ Partial Class View_Mantenimiento_Productos
         Me.txtnombreproducto.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.txtnombreproducto.Location = New System.Drawing.Point(306, 88)
         Me.txtnombreproducto.Name = "txtnombreproducto"
-        Me.txtnombreproducto.Size = New System.Drawing.Size(207, 29)
+        Me.txtnombreproducto.Size = New System.Drawing.Size(207, 25)
         Me.txtnombreproducto.TabIndex = 40
         '
         'labelidproducto
@@ -366,7 +366,7 @@ Partial Class View_Mantenimiento_Productos
         Me.labelidproducto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.labelidproducto.Location = New System.Drawing.Point(153, 94)
         Me.labelidproducto.Name = "labelidproducto"
-        Me.labelidproducto.Size = New System.Drawing.Size(30, 22)
+        Me.labelidproducto.Size = New System.Drawing.Size(24, 17)
         Me.labelidproducto.TabIndex = 39
         Me.labelidproducto.Text = "00"
         '
@@ -377,7 +377,7 @@ Partial Class View_Mantenimiento_Productos
         Me.labelproveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.labelproveedor.Location = New System.Drawing.Point(576, 135)
         Me.labelproveedor.Name = "labelproveedor"
-        Me.labelproveedor.Size = New System.Drawing.Size(94, 20)
+        Me.labelproveedor.Size = New System.Drawing.Size(80, 16)
         Me.labelproveedor.TabIndex = 38
         Me.labelproveedor.Text = "Proveedor"
         '
@@ -388,7 +388,7 @@ Partial Class View_Mantenimiento_Productos
         Me.labelstock.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.labelstock.Location = New System.Drawing.Point(346, 137)
         Me.labelstock.Name = "labelstock"
-        Me.labelstock.Size = New System.Drawing.Size(56, 20)
+        Me.labelstock.Size = New System.Drawing.Size(46, 16)
         Me.labelstock.TabIndex = 37
         Me.labelstock.Text = "Stock"
         '
@@ -399,7 +399,7 @@ Partial Class View_Mantenimiento_Productos
         Me.labelprecio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.labelprecio.Location = New System.Drawing.Point(98, 137)
         Me.labelprecio.Name = "labelprecio"
-        Me.labelprecio.Size = New System.Drawing.Size(63, 20)
+        Me.labelprecio.Size = New System.Drawing.Size(52, 16)
         Me.labelprecio.TabIndex = 36
         Me.labelprecio.Text = "Precio"
         '
@@ -410,7 +410,7 @@ Partial Class View_Mantenimiento_Productos
         Me.ñabelcategoria.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ñabelcategoria.Location = New System.Drawing.Point(548, 91)
         Me.ñabelcategoria.Name = "ñabelcategoria"
-        Me.ñabelcategoria.Size = New System.Drawing.Size(90, 20)
+        Me.ñabelcategoria.Size = New System.Drawing.Size(75, 16)
         Me.ñabelcategoria.TabIndex = 35
         Me.ñabelcategoria.Text = "Categoría"
         '
@@ -421,7 +421,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Labelnombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Labelnombre.Location = New System.Drawing.Point(238, 93)
         Me.Labelnombre.Name = "Labelnombre"
-        Me.Labelnombre.Size = New System.Drawing.Size(74, 20)
+        Me.Labelnombre.Size = New System.Drawing.Size(62, 16)
         Me.Labelnombre.TabIndex = 34
         Me.Labelnombre.Text = "Nombre"
         '
@@ -432,7 +432,7 @@ Partial Class View_Mantenimiento_Productos
         Me.Labelid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Labelid.Location = New System.Drawing.Point(97, 94)
         Me.Labelid.Name = "Labelid"
-        Me.Labelid.Size = New System.Drawing.Size(28, 20)
+        Me.Labelid.Size = New System.Drawing.Size(22, 16)
         Me.Labelid.TabIndex = 33
         Me.Labelid.Text = "ID"
         '
@@ -457,13 +457,13 @@ Partial Class View_Mantenimiento_Productos
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(70, 27)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(350, 24)
+        Me.Label6.Size = New System.Drawing.Size(284, 18)
         Me.Label6.TabIndex = 31
         Me.Label6.Text = "MANTENIMIENTO DE PRODUCTOS"
         '
         'View_Mantenimiento_Productos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1121, 638)
         Me.Controls.Add(Me.Panel1)
