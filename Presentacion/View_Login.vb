@@ -84,6 +84,7 @@ Public Class View_Login
 
         If autorizado Then
             View_Bienvenida.ShowDialog()
+
             Me.Hide()
             view_Principal.Show()
             view_Principal.Text = "Usuario : " + registros.usuario
@@ -116,6 +117,8 @@ Public Class View_Login
         view_Principal.lbl_id.Text = lista3.Item(0).idempleado
         view_Principal.lbl_apellidos.Text = lista3.Item(0).apellidos
         view_Principal.lbl_usuario.Text = lista3.Item(0).usuario
+
+
 
         If lista3.Item(0).id_rol = 2 Then
             view_Principal.Btn_Configuracion.Visible = False

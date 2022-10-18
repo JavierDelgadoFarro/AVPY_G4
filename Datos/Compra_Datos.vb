@@ -1,9 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 Imports Entidades
-Imports Microsoft.Win32
-
-
 Public Class Compra_Datos
 
     Inherits Conexion
@@ -40,7 +37,7 @@ Public Class Compra_Datos
             dr = cmd.ExecuteReader
             While dr.Read
                 Dim reg As New E_Compra
-                reg.importetotal = IIf(dr.GetValue(0).ToString = "", 0, dr.GetValue(0).ToString())
+                reg.ImporteTotal = IIf(dr.GetValue(0).ToString = "", 0, dr.GetValue(0).ToString())
                 reg.retencion = IIf(dr.GetValue(1).ToString = "", 0, dr.GetValue(1).ToString())
                 lista.Add(reg)
             End While
