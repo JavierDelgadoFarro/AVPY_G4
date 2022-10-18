@@ -114,14 +114,14 @@ Public Class Empleado_Negocio
     End Sub
 #End Region
 
-
-    Public Function editar_Perfil(Id1, Nombre1, Apellido1, Contraseña1, IdRol1, Usuario1) As String
+    Public Sub modificar_perfil(ByVal registros As E_Empleado)
         Try
-            empleado_Dao.editar_Perfil(Id1, Nombre1, Apellido1, Contraseña1, IdRol1, Usuario1)
-            Return "Perfil actualizado satisfactoriamente"
+            Dim Datos As New Empleado_Datos
+            Datos.modificar_perfil(registros)
+            MessageBox.Show("Perfil actualizado satisfactoriamente")
         Catch ex As Exception
-            Return "Error , Usuario ya existente"
+            MessageBox.Show("Error , Usuario ya existente")
         End Try
-    End Function
+    End Sub
 
 End Class
