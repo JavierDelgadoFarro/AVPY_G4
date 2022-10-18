@@ -8,7 +8,7 @@ Public Class Venta_Detalle_Datos
         Using conexion_return = GetConexion()
             conexion_return.Open()
 
-            Dim cmd As New SqlCommand("p_registrarventadetalle", conexion_return)
+            Dim cmd As New SqlCommand("p_regitrarventadetalle", conexion_return)
             cmd.CommandType = CommandType.StoredProcedure
 
             With cmd.Parameters

@@ -83,7 +83,7 @@ Public Class View_Login
         autorizado = Validar(registros)
 
         If autorizado Then
-            'View_Bienvenida.ShowDialog()
+            View_Bienvenida.ShowDialog()
             Me.Hide()
             view_Principal.Show()
             view_Principal.Text = "Usuario : " + registros.usuario
