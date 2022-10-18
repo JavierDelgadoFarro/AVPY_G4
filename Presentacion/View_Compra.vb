@@ -7,13 +7,15 @@ Public Class View_Compra
     Private txt() As PictureBox
     Private lbl() As Label
     Dim panel As New PanelExtended
-
-    Private Sub View_Compra_Load(sender As Object, e As EventArgs)
+    Private Sub Compras_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Me.BackColor = Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.ForeColor = Color.Black
         'Inicializamos el panel'
         panel.AutoScroll = True
         panel.Location = New System.Drawing.Point(480, 85)
-        panel.Name = "Panel1"
+        panel.Name = "Panel5"
         panel.Size = New System.Drawing.Size(550, 580)
+        panel.ForeColor = Color.Purple
 
         'Se agrega al formulario'
         Me.Controls.Add(panel)
@@ -24,6 +26,7 @@ Public Class View_Compra
 
         comboComprobante.Items.Add("Factura")
         comboComprobante.Items.Add("Boleta de Venta")
+
 
         With listCompras
             .View = View.Details
@@ -37,7 +40,6 @@ Public Class View_Compra
 
         cargarcombo()
         cargarcombocategoria()
-
     End Sub
 
     Private Sub cargarcombo()
@@ -54,10 +56,10 @@ Public Class View_Compra
         Dim lista As New List(Of E_Categoria)
         Dim obj As New Categoria_Negocio
         lista = obj.Mostrar_categoria
-        cbxFiltroProducto.DataSource = lista
-        cbxFiltroProducto.DisplayMember = "nombre"
-        cbxFiltroProducto.ValueMember = "idcategoria"
-        cbxFiltroProducto.SelectedIndex = -1
+        cbxCategoria.DataSource = lista
+        cbxCategoria.DisplayMember = "nombre"
+        cbxCategoria.ValueMember = "idcategoria"
+        cbxCategoria.SelectedIndex = -1
     End Sub
 
     Private Sub dibuja(ByVal fin As Integer, ByVal lista As List(Of E_Producto))
@@ -123,11 +125,11 @@ Public Class View_Compra
         Dim listaProductos As New List(Of E_Producto)
         listaProductos = obj.preciostock(picture.Name) 'Se Busca el precio y el stock' 
         If File.Exists(picture.ImageLocation) Then
-            View_Detalle_Compra.PictureBox.Load(picture.ImageLocation) 'copiamos la imagen de un picturebox a otro'
+            PictureBox.Load(picture.ImageLocation) 'copiamos la imagen de un picturebox a otro'
         End If
-        View_Detalle_Compra.PictureBox.Name = picture.Name
-        View_Detalle_Compra.lbl_nombre1.Text = picture.Text
-        View_Detalle_Compra.Show() 'Abrimos el formulario detalle producto '
+        PictureBox.Name = picture.Name
+        lbl_nombre1.Text = picture.Text
+        Panel2.Show() 'Abrimos el formulario detalle producto '
     End Sub
 
     Private Function contarproducto() As Integer
@@ -137,6 +139,7 @@ Public Class View_Compra
         Return valor
     End Function
 
+    'Procedimiento para que se muestren todos los productos en Picturebox'
     Private Sub mostrarproducto(ByVal fin As Integer)
         Dim lista As New List(Of E_Producto)
         Dim obj As New Producto_Negocio
@@ -147,34 +150,35 @@ Public Class View_Compra
     Public Sub verificarcheckboxes()
         Dim igv As Double = 0.18
         If CheckIgv.Checked Then
-            LabelIgv.Text = Str(Math.Round(CDbl(Label7.Text) * igv, 2))
+            lbl_Igv.Text = Str(Math.Round(CDbl(lbl_SubTotal.Text) * igv, 2))
         Else
-            LabelIgv.Text = "0.00"
+            lbl_Igv.Text = "0.00"
         End If
 
-        If CheckPorcentaje.Checked Then
-            Label12.Text = Str(Math.Round((CDbl(Label7.Text) + CDbl(LabelIgv.Text)) * 0.02, 2))
+        If Check2.Checked Then
+            lbl_2_por.Text = Str(Math.Round((CDbl(lbl_SubTotal.Text) + CDbl(lbl_Igv.Text)) * 0.02, 2))
         Else
-            Label12.Text = "0.00"
+            lbl_2_por.Text = "0.00"
         End If
-        Label14.Text = Str(CDbl(Label7.Text) + CDbl(LabelIgv.Text) + CDbl(Label12.Text))
+        lbl_total.Text = Str(CDbl(lbl_SubTotal.Text) + CDbl(lbl_Igv.Text) + CDbl(lbl_2_por.Text))
 
     End Sub
 
-    Private Sub CheckIgv_CheckedChanged(sender As Object, e As EventArgs) Handles CheckIgv.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckIgv.CheckedChanged
         verificarcheckboxes()
     End Sub
 
-    Private Sub CheckPorcentaje_CheckedChanged(sender As Object, e As EventArgs) Handles CheckPorcentaje.CheckedChanged
+    Private Sub CheckBox2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Check2.CheckedChanged
         verificarcheckboxes()
     End Sub
 
-    Private Sub cbxNombreProveedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxNombreProveedor.SelectedIndexChanged
+    Private Sub ComboBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbxNombreProveedor.SelectedIndexChanged
         If cbxNombreProveedor.SelectedIndex >= 0 Then
-            LabelIdProveedor.Text = cbxNombreProveedor.SelectedValue.ToString
+            id_Prov.Text = cbxNombreProveedor.SelectedValue.ToString
         Else
-            LabelIdProveedor.Text = ""
+            id_Prov.Text = ""
         End If
+
     End Sub
 
     Private Sub Nueva_Compra()
@@ -184,12 +188,12 @@ Public Class View_Compra
 
 
         With Entidad
-            .Fecha = convertirfecha_ansi(dateFechaCompra)
-            .IdTipoComprobante = obtenertipocomprobante()
-            .IdFactura = txtNumeroComprobante.Text
-            .IdProveedor = LabelIdProveedor.Text
-            .ImporteTotal = CDbl(LabelImporteTotal.Text)
-            .retencion = CDbl(LabelPorcentaje.Text)
+            .fecha = convertirfecha_ansi(dateFechaCompra)
+            .idtipocomprobante = obtenertipocomprobante()
+            .idfactura = txtNumeroComprobante.Text
+            .idproveedor = id_Prov.Text
+            .importetotal = CDbl(lbl_total.Text)
+            .retencion = CDbl(lbl_2_por.Text)
         End With
         'Agregamos una nueva compra'
         Negocio.Nueva_Compra(Entidad)
@@ -201,9 +205,9 @@ Public Class View_Compra
         For i = 0 To listCompras.Items.Count - 1
 
             With Entidad_detalle
-                .IdProducto = listCompras.Items(i).SubItems(0).Text
-                .Importe = listCompras.Items(i).SubItems(3).Text
-                .Cantidad = listCompras.Items(i).SubItems(2).Text
+                .idproducto = listCompras.Items(i).SubItems(0).Text
+                .importe = listCompras.Items(i).SubItems(3).Text
+                .cantidad = listCompras.Items(i).SubItems(2).Text
             End With
 
             'Agregamos la Compra Detalle'
@@ -250,7 +254,7 @@ Public Class View_Compra
         Return comboComprobante.SelectedIndex
     End Function
 
-    Private Sub btnAgregarCompra_Click(sender As Object, e As EventArgs) Handles btnAgregarCompra.Click
+    Private Sub btnvender_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_comprar.Click
         If cbxNombreProveedor.SelectedIndex < 0 Then
             MessageBox.Show("Seleccione un proveedor")
             cbxNombreProveedor.Focus()
@@ -279,14 +283,15 @@ Public Class View_Compra
         limpiar()
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txtBuscarProducto.TextChanged
+
+    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscarProducto.TextChanged
         Dim cuenta As Integer
         Dim obj As New Producto_Negocio
         Dim listaProductos As New List(Of E_Producto)
-        If checkFiltro.Checked And cbxFiltroProducto.SelectedIndex >= 0 Then
-            If IsNumeric(cbxFiltroProducto.SelectedValue) Then
-                listaProductos = obj.buscarnomcat(Me.txtBuscarProducto.Text, cbxFiltroProducto.SelectedValue)
-                cuenta = obj.contarproductospornomycat(Me.txtBuscarProducto.Text, cbxFiltroProducto.SelectedValue)
+        If checkFiltro.Checked And cbxCategoria.SelectedIndex >= 0 Then
+            If IsNumeric(cbxCategoria.SelectedValue) Then
+                listaProductos = obj.buscarnomcat(Me.txtBuscarProducto.Text, cbxCategoria.SelectedValue)
+                cuenta = obj.contarproductospornomycat(Me.txtBuscarProducto.Text, cbxCategoria.SelectedValue)
                 dibuja(cuenta, listaProductos)
             End If
 
@@ -297,6 +302,7 @@ Public Class View_Compra
         End If
     End Sub
 
+    'Devuelve la cantidad de productos segun el nombre '
     Private Function contarproductoporfiltro(ByVal nombre As String) As Integer
         Dim valor As Integer
         Dim obj As New Producto_Negocio
@@ -317,6 +323,7 @@ Public Class View_Compra
         End If
     End Sub
 
+    'Devuelve la cantidad de productos segun su categoria '
     Private Function contarproductoporcategoria(ByVal id As Integer) As Integer
         Dim valor As Integer
         Dim obj As New Producto_Negocio
@@ -324,45 +331,47 @@ Public Class View_Compra
         Return valor
     End Function
 
-    Private Sub cbxFiltroProducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxFiltroProducto.SelectedIndexChanged
-        verifica(cbxFiltroProducto)
+    Private Sub ComboBox3_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbxCategoria.SelectedIndexChanged
+        verifica(cbxCategoria)
     End Sub
 
-    Private Sub checkFiltro_CheckedChanged(sender As Object, e As EventArgs) Handles checkFiltro.CheckedChanged
+
+    Private Sub CheckBox3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles checkFiltro.CheckedChanged
         If checkFiltro.Checked Then
-            verifica(cbxFiltroProducto)
+            verifica(cbxCategoria)
         Else
             Dim num As Integer
             num = contarproducto()
             mostrarproducto(num)
         End If
+
     End Sub
 
     Private Sub limpiar()
-        LabelIdProveedor.Text = ""
+        id_Prov.Text = ""
         cbxNombreProveedor.SelectedIndex = -1
         comboComprobante.SelectedIndex = -1
         txtNumeroComprobante.Text = ""
         txtNumeroComprobante.BackColor = Color.White
         dateFechaCompra.Value = Now
         listCompras.Items.Clear()
-        CheckPorcentaje.Checked = False
+        Check2.Checked = False
         CheckIgv.Checked = False
-        LabelSubTotal.Text = "0.00"
-        LabelIgv.Text = "0.00"
-        LabelPorcentaje.Text = "0.00"
-        LabelImporteTotal.Text = "0.00"
+        lbl_SubTotal.Text = "0.00"
+        lbl_Igv.Text = "0.00"
+        lbl_2_por.Text = "0.00"
+        lbl_total.Text = "0.00"
         txtBuscarProducto.Text = ""
         checkFiltro.Checked = False
-        cbxFiltroProducto.SelectedIndex = -1
+        cbxCategoria.SelectedIndex = -1
     End Sub
 
-    Private Sub comboComprobante_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comboComprobante.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles comboComprobante.SelectedIndexChanged
         If comboComprobante.SelectedIndex = 1 Then
-            CheckPorcentaje.Enabled = False
-            CheckPorcentaje.Checked = False
+            Check2.Enabled = False
+            Check2.Checked = False
         Else
-            CheckPorcentaje.Enabled = True
+            Check2.Enabled = True
         End If
     End Sub
 
@@ -370,4 +379,37 @@ Public Class View_Compra
 
     End Sub
 
+
+
+    Private Sub btnAceptarDetalle_Click(sender As Object, e As EventArgs) Handles btnAceptarDetalle.Click
+
+        If txtCantidad.Text = "" Then
+            MessageBox.Show("Debe de ingresar una cantidad")
+            Exit Sub
+        End If
+        If txtCantidad.Text = "0" Then
+            MessageBox.Show("Deberia ingresar una cantidad mayor a 0")
+            Exit Sub
+        End If
+        If Not IsNumeric(txtCantidad.Text) Then
+            MessageBox.Show("La Cantidad no es Valida")
+            Exit Sub
+        End If
+
+        Dim oreg As New ListViewItem(PictureBox.Name) 'codigo del producto'
+
+        With oreg
+            .SubItems.Add(lbl_nombre1.Text) 'nombre'
+            .SubItems.Add(txtCantidad.Text)  'Cantidad'
+            .SubItems.Add(importeDetalle.Value) 'importe'
+            listCompras.Items.Add(oreg) 'Agregamos todo esto al listview'
+        End With
+        lbl_SubTotal.Text = CStr(CDbl(lbl_SubTotal.Text) + CDbl(importeDetalle.Value))
+        verificarcheckboxes()
+    End Sub
+
+    Private Sub btnCancelarDetalle_Click(sender As Object, e As EventArgs) Handles btnCancelarDetalle.Click
+        Me.Dispose()
+        Me.Close()
+    End Sub
 End Class
