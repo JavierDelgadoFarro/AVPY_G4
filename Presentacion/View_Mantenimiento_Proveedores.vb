@@ -104,7 +104,7 @@ Public Class View_Mantenimiento_Proveedores
 
         Negocio.Modificar_Proveedor(Entidad)
     End Sub
-    Private Sub btnmodificarproveedor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+    Private Sub btnmodificarproveedor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodificarproveedor.Click
         Modificar_proveedor()
         cargargridview()
     End Sub
@@ -124,18 +124,18 @@ Public Class View_Mantenimiento_Proveedores
 
         Negocio.Eliminar_proveedor(Entidad)
     End Sub
-    Private Sub btneliminarcategoria_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+
+    Private Sub btneliminarproveedor_Click(sender As Object, e As EventArgs) Handles btneliminarproveedor.Click
         Eliminar_proveedor()
         cargargridview()
     End Sub
 
     'Buscar proveedor'
 
-    Private Sub btnbuscarproveedor_Click(sender As Object, e As EventArgs) 
+    Private Sub btnbuscarproveedor_Click_1(sender As Object, e As EventArgs) Handles btnbuscarproveedor.Click
         Dim busca = txtbuscarproveedor.Text
         Dim obj As New Proveedor_Negocio
         DGV_Proveedor.DataSource = obj.Buscar_Proveedor(busca)
     End Sub
-
 
 End Class

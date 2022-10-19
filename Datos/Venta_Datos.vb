@@ -13,8 +13,8 @@ Public Class Venta_Datos
             With cmd.Parameters
                 .AddWithValue("@idcliente", registros.Idcliente)
                 .AddWithValue("@idempleado", registros.Idempleado)
-                .AddWithValue("@idtipoventa", registros.Idtipoventa)
                 .AddWithValue("@fecha", registros.Fecha)
+                .AddWithValue("@idtipoventa", registros.Idtipoventa)
             End With
             cmd.ExecuteNonQuery()
         End Using

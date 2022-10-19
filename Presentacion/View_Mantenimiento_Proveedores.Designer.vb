@@ -96,7 +96,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.Labellinea.ForeColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.Labellinea.Location = New System.Drawing.Point(-309, 55)
         Me.Labellinea.Name = "Labellinea"
-        Me.Labellinea.Size = New System.Drawing.Size(2126, 20)
+        Me.Labellinea.Size = New System.Drawing.Size(1700, 16)
         Me.Labellinea.TabIndex = 78
         Me.Labellinea.Text = resources.GetString("Labellinea.Text")
         '
@@ -130,7 +130,7 @@ Partial Class View_Mantenimiento_Proveedores
         '
         Me.txtbuscarproveedor.Location = New System.Drawing.Point(519, 26)
         Me.txtbuscarproveedor.Name = "txtbuscarproveedor"
-        Me.txtbuscarproveedor.Size = New System.Drawing.Size(465, 26)
+        Me.txtbuscarproveedor.Size = New System.Drawing.Size(465, 22)
         Me.txtbuscarproveedor.TabIndex = 2
         '
         'btnagregarproveedor
@@ -151,7 +151,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.txttelefonoproveedor.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.txttelefonoproveedor.Location = New System.Drawing.Point(642, 125)
         Me.txttelefonoproveedor.Name = "txttelefonoproveedor"
-        Me.txttelefonoproveedor.Size = New System.Drawing.Size(225, 26)
+        Me.txttelefonoproveedor.Size = New System.Drawing.Size(225, 22)
         Me.txttelefonoproveedor.TabIndex = 75
         '
         'Label7
@@ -161,7 +161,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(567, 127)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(81, 20)
+        Me.Label7.Size = New System.Drawing.Size(69, 16)
         Me.Label7.TabIndex = 74
         Me.Label7.Text = "Teléfono"
         '
@@ -170,7 +170,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.txtdireccionproveedor.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.txtdireccionproveedor.Location = New System.Drawing.Point(290, 125)
         Me.txtdireccionproveedor.Name = "txtdireccionproveedor"
-        Me.txtdireccionproveedor.Size = New System.Drawing.Size(225, 26)
+        Me.txtdireccionproveedor.Size = New System.Drawing.Size(225, 22)
         Me.txtdireccionproveedor.TabIndex = 73
         '
         'Label5
@@ -180,7 +180,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(211, 128)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 20)
+        Me.Label5.Size = New System.Drawing.Size(73, 16)
         Me.Label5.TabIndex = 72
         Me.Label5.Text = "Dirección"
         '
@@ -189,7 +189,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.txtrepresentanteproveedor.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.txtrepresentanteproveedor.Location = New System.Drawing.Point(876, 86)
         Me.txtrepresentanteproveedor.Name = "txtrepresentanteproveedor"
-        Me.txtrepresentanteproveedor.Size = New System.Drawing.Size(196, 26)
+        Me.txtrepresentanteproveedor.Size = New System.Drawing.Size(196, 22)
         Me.txtrepresentanteproveedor.TabIndex = 71
         '
         'Label2
@@ -199,7 +199,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(757, 88)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(131, 20)
+        Me.Label2.Size = New System.Drawing.Size(109, 16)
         Me.Label2.TabIndex = 70
         Me.Label2.Text = "Representante"
         '
@@ -208,7 +208,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.txtrucproveedor.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.txtrucproveedor.Location = New System.Drawing.Point(517, 86)
         Me.txtrucproveedor.Name = "txtrucproveedor"
-        Me.txtrucproveedor.Size = New System.Drawing.Size(212, 26)
+        Me.txtrucproveedor.Size = New System.Drawing.Size(212, 22)
         Me.txtrucproveedor.TabIndex = 69
         '
         'Label8
@@ -218,7 +218,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(452, 89)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(75, 20)
+        Me.Label8.Size = New System.Drawing.Size(59, 16)
         Me.Label8.TabIndex = 68
         Me.Label8.Text = "N° RUC"
         '
@@ -227,7 +227,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.txtnombreproveedor.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.txtnombreproveedor.Location = New System.Drawing.Point(208, 86)
         Me.txtnombreproveedor.Name = "txtnombreproveedor"
-        Me.txtnombreproveedor.Size = New System.Drawing.Size(214, 26)
+        Me.txtnombreproveedor.Size = New System.Drawing.Size(214, 22)
         Me.txtnombreproveedor.TabIndex = 67
         '
         'IconPictureBox1
@@ -251,7 +251,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.labelidproveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.labelidproveedor.Location = New System.Drawing.Point(74, 91)
         Me.labelidproveedor.Name = "labelidproveedor"
-        Me.labelidproveedor.Size = New System.Drawing.Size(29, 20)
+        Me.labelidproveedor.Size = New System.Drawing.Size(23, 16)
         Me.labelidproveedor.TabIndex = 66
         Me.labelidproveedor.Text = "00"
         '
@@ -262,7 +262,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(76, 27)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(352, 24)
+        Me.Label6.Size = New System.Drawing.Size(283, 18)
         Me.Label6.TabIndex = 62
         Me.Label6.Text = "MANTENIMIENTO DE PROVEEDOR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -273,7 +273,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(138, 90)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(74, 20)
+        Me.Label4.Size = New System.Drawing.Size(62, 16)
         Me.Label4.TabIndex = 65
         Me.Label4.Text = "Nombre"
         '
@@ -284,7 +284,7 @@ Partial Class View_Mantenimiento_Proveedores
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(27, 91)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(28, 20)
+        Me.Label3.Size = New System.Drawing.Size(22, 16)
         Me.Label3.TabIndex = 64
         Me.Label3.Text = "ID"
         '
@@ -389,7 +389,7 @@ Partial Class View_Mantenimiento_Proveedores
         '
         'View_Mantenimiento_Proveedores
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1101, 654)

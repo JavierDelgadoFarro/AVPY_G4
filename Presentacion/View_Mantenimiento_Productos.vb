@@ -204,7 +204,7 @@ Public Class View_Mantenimiento_Productos
     End Sub
 
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+    Private Sub btnmodificarproducto_Click(sender As Object, e As EventArgs) Handles btnmodificarproducto.Click
         modificar()
         cargargridview()
     End Sub
